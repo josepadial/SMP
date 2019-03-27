@@ -1,0 +1,20 @@
+[PROJECT]
+Target=motores.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=motores.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;U:\SMP\
+[motores.c]
+Type=4
+[mru-list]
+1=motores.c
+[Opened Files]
+1=tarjeta.h
+2=motores.c
+3=
+[Units]
+Count=1
+1=motores (main)

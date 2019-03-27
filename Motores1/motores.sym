@@ -1,0 +1,64 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000808  M1_H
+000818  M2_A
+000828  M3_H
+000838  M4_A
+000848  MAIN
+000848  @cinit1
+000858  @cinit2
+
+Project Directory:
+    U:\SMP\
+
+Project Files:
+    motores.c                                               [25-mar.-19 18:34  CRC=C9D8EA37]
+    tarjeta.h                                               [25-mar.-19 18:24  CRC=55507C43]
+    C:\Program Files (x86)\PICC\Devices\18F4550.h           [03-jul.-13 14:29  CRC=A157EDDE]
+
+Source signature=61D94236
+
+Units:
+    motores (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   motores.xsym
+    Errors:      motores.err
+    Ext Symbols: motores.esym
+    INHX32:      motores.hex
+    Symbols:     motores.sym
+    List:        motores.lst
+    Debug/COFF:  motores.cof
+    Project:     motores.ccspjt
+    Call Tree:   motores.tre
+    Statistics:  motores.STA

@@ -1,0 +1,31 @@
+#include "tarjeta.h" 
+2 #use delay (clock=48000000) 
+3 
+ 
+4 void inicializarTimer0PWM(){ 
+5    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_2|RTCC_8_BIT); 
+6    enable_interrupts(INT_TIMER0); 
+7    enable_interrupts(GLOBAL); 
+8 } 
+9 
+ 
+10 
+ 
+11 void main(){ 
+12    //inicializarTimer0PWM(); 
+13     
+14    while(1){ 
+15       if(IN1){ 
+16          led_off(); 
+17       } 
+18       else{ 
+19          led_on(); 
+20       } 
+21 
+ 
+22    } 
+23        
+24     
+25     
+26 } 
+
