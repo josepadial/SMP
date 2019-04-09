@@ -1,0 +1,21 @@
+[PROJECT]
+Target=motores_with_sensor.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=motores_with_sensor.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\DriversC:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;U:\SMP\Motores + Sensor\
+[motores_with_sensor.c]
+Type=4
+[mru-list]
+1=motores_with_sensor.c
+[Opened Files]
+1=..\Sensor_negro\sensor.c
+2=tarjeta.h
+3=..\Motor + negro + golpe\motores_with_sensorNeGol.c
+4=
+[Units]
+Count=1
+1=motores_with_sensor (main)
