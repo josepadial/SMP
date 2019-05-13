@@ -1,7 +1,7 @@
-D G "__PCH__" 0 30 ""5.008""
-D G "__DEVICE__" 0 30 "4550"
-D G "__DATE__" 0 30 ""08-abr.-19""
-D G "__TIME__" 0 30 ""19:10:49""
+D G "__PCH__" 0 0 ""5.008""
+D G "__DEVICE__" 0 0 ""
+D G "__DATE__" 0 0 ""08-may.-19""
+D G "__TIME__" 0 0 ""16:57:36""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 

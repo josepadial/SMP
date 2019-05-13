@@ -1,9 +1,9 @@
 
-ROM used:   140/16384 (0%)
-            144/16384 (0%) including unused fragments
+ROM used:   86/16384 (0%)
+            90/16384 (0%) including unused fragments
 
             0.1 Average locations per line
-            2.7 Average locations per statement
+            1.8 Average locations per statement
 
 RAM used:   4/2048 (0%) at main() level
             4/2048 (0%) worst case
@@ -13,40 +13,37 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   29    16  31  motores_with_sensor.c
-  151    36  69  tarjeta.h
-  821     0   0  C:\Program Files (x86)\PICC\Devices\18F4550.h
+   25    12  25  motores_with_sensor.c
+  151    36  75  tarjeta.h
+  821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
 ----- -----
- 1001    52 Total
+  997    48 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     14   5    0    48  1.1  M1_H
-0     16   6    0    48  1.1  M2_A
-0     16   6    0    48  1.1  M2_H
-0     14   5    0    48  1.1  M3_H
-0     16   6    0    48  1.1  M4_A
-0     16   6    0    48  1.1  M4_H
-0     44  16    0   169  3.0  MAIN
+0     14   8    0    48  1.1  M1_H
+0     16   9    0    48  1.1  M2_H
+0     16   9    0    48  1.1  M2_P
+0     36  21    0   108  2.7  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               7
-    Statements              52
+    Functions               4
+    Statements              48
     Comments                172
-    Volume (V)              792
-    Difficulty (D)          9.5
-    Effort to implement (E) 7509
-    Time to implement (T)   7 minutes
+    Volume (V)              389
+    Difficulty (D)          5.9
+    Effort to implement (E) 2291
+    Time to implement (T)   2 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    163
+    Maintainability (MI)    73
 
  Segment     Used  Free
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
-00808-07FFE   136  30576  
+00808-07FFE    82  30630  
 
 
 

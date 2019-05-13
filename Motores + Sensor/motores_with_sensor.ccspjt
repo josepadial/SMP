@@ -6,15 +6,15 @@ Compiler=PCH
 [Target Data]
 FileList=motores_with_sensor.c
 [Directories]
-Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\DriversC:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;U:\SMP\Motores + Sensor\
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\DriversC:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;U:\SMP\Motores + Sensor\;C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor\
 [motores_with_sensor.c]
 Type=4
 [mru-list]
 1=motores_with_sensor.c
 [Opened Files]
-1=..\Sensor_negro\sensor.c
+1=motores_with_sensor.c
 2=tarjeta.h
-3=..\Motor + negro + golpe\motores_with_sensorNeGol.c
+3=
 4=
 [Units]
 Count=1
