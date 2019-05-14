@@ -45,9 +45,10 @@ void pulseIn_ECHO_HIGH(){
 
 void main(){
 	
+	enable_interrupts(GLOBAL);
 	
 	while(1){
-		enable_interrupts(GLOBAL);
+		
 		output_high(SR04_TRIGG);
 		delay_ms(10);
 		output_low(SR04_TRIGG);
