@@ -14,18 +14,18 @@ void main(){
    while(1){
       if(!IN1){
          M1_H();
-         M2_P();
+         M2_H();
       }
-      else if(IN2){
+      else if(!IN2){
          M1_P();
          M2_P();
-         delay_ms(50);
+         delay;
          M1_A();
          M2_A();
       }
       else{
          M1_H();
-         M2_H();
+         M2_P();
       }
    }
 }

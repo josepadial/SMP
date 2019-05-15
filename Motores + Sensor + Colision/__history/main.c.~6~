@@ -9,12 +9,12 @@ void inicializarTimer0PWM(){
 }  
  
 void main(){ 
-   //inicializarTimer0PWM(); 
+   inicializarTimer0PWM(); 
     
    while(1){
-      if(!IN1){
+      if(IN1){
          M1_H();
-         M2_P();
+         M2_H();
       }
       else if(IN2){
          M1_P();
@@ -25,7 +25,7 @@ void main(){
       }
       else{
          M1_H();
-         M2_H();
+         M2_P();
       }
    }
 }

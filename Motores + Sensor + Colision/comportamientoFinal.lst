@@ -1,0 +1,513 @@
+CCS PCH C Compiler, Version 5.008, 5967               13-may.-19 16:58
+
+               Filename:   C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor + Colision\comportamientoFinal.lst
+
+               ROM used:   488 bytes (1%)
+                           Largest free fragment is 30228
+               RAM used:   27 (1%) at main() level
+                           28 (1%) worst case
+               Stack used: 4 locations (1 in main + 3 for interrupts)
+               Stack size: 31
+
+*
+0800:  GOTO   0984
+*
+0808:  MOVWF  04
+080A:  MOVFF  FD8,05
+080E:  MOVFF  FE0,06
+0812:  MOVLB  0
+0814:  MOVFF  FE9,0C
+0818:  MOVFF  FEA,07
+081C:  MOVFF  FE1,08
+0820:  MOVFF  FE2,09
+0824:  MOVFF  FD9,0A
+0828:  MOVFF  FDA,0B
+082C:  MOVFF  FF3,12
+0830:  MOVFF  FF4,13
+0834:  MOVFF  FFA,14
+0838:  MOVFF  00,0E
+083C:  MOVFF  01,0F
+0840:  MOVFF  02,10
+0844:  MOVFF  03,11
+0848:  BTFSS  FF2.5
+084A:  GOTO   0854
+084E:  BTFSC  FF2.2
+0850:  GOTO   0914
+0854:  MOVFF  0E,00
+0858:  MOVFF  0F,01
+085C:  MOVFF  10,02
+0860:  MOVFF  11,03
+0864:  MOVFF  0C,FE9
+0868:  MOVFF  07,FEA
+086C:  BSF    07.7
+086E:  MOVFF  08,FE1
+0872:  MOVFF  09,FE2
+0876:  MOVFF  0A,FD9
+087A:  MOVFF  0B,FDA
+087E:  MOVFF  12,FF3
+0882:  MOVFF  13,FF4
+0886:  MOVFF  14,FFA
+088A:  MOVF   04,W
+088C:  MOVFF  06,FE0
+0890:  MOVFF  05,FD8
+0894:  RETFIE 0
+.................... #include "tarjeta.h" 
+.................... #ifndef _TARJETA_ 
+.................... #define _TARJETA_ 
+....................  
+.................... #include <18F4550.h> 
+.................... //////// Standard Header file for the PIC18F4550 device //////////////// 
+.................... #device PIC18F4550 
+*
+0954:  ADDWF  FE8,W
+0956:  CLRF   FF7
+0958:  RLCF   FF7,F
+095A:  ADDLW  6F
+095C:  MOVWF  FF6
+095E:  MOVLW  09
+0960:  ADDWFC FF7,F
+0962:  TBLRD*-
+0964:  MOVF   FF5,W
+0966:  MOVWF  FFA
+0968:  TBLRD*
+096A:  MOVF   FF5,W
+096C:  MOVWF  FF9
+096E:  DATA 28,09
+0970:  DATA 2C,09
+0972:  DATA 38,09
+0974:  DATA 34,09
+0976:  DATA 30,09
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses USBDIV, CPUDIV1, PLL5, HSPLL, NOFCMEN, NOIESO, VREGEN, BORV21, BROWNOUT, NOPUT, WDT32768, NOWDT 
+.................... #fuses MCLR, NOLPT1OSC, NOPBADEN, CCP2C1, NODEBUG, NOXINST, NOICPRT, NOLVP, STVREN, NOPROTECT, NOCPD 
+.................... #fuses NOCPB, NOWRT, NOWRTD, WRTB, NOWRTC, NOEBTR, NOEBTRB 
+....................  
+.................... /*********************************************************** 
+....................       EVITAMOS LA ZONA DE MEMORIA ASIGNADA AL MONITOR 
+.................... ***********************************************************/ 
+....................  
+.................... #define LOADER_END   0x7FF 
+.................... #define LOADER_SIZE   0x6FF 
+....................  
+.................... #build(reset=LOADER_END+1, interrupt=LOADER_END+9) 
+.................... #org 0, LOADER_END {} 
+.................... //#org 0x82A, 0x7FFF 
+....................  
+....................  
+.................... /*********************************************************** 
+....................            FUNCIONES PARA MOVER LOS MOTORES 
+.................... MX_H() : Mueve el motor en sentido horario 
+.................... MX_A() : Mueve el motor en sentido anti-horario 
+.................... MX_P() : Para el motor 
+.................... ***********************************************************/ 
+....................  
+.................... void M1_A(){ 
+....................    output_high(PIN_A1); 
+*
+08E0:  BCF    F92.1
+08E2:  BSF    F89.1
+....................    output_high(PIN_D7); 
+08E4:  BCF    F95.7
+08E6:  BSF    F8C.7
+....................    output_low(PIN_D6); 
+08E8:  BCF    F95.6
+08EA:  BCF    F8C.6
+08EC:  RETURN 0
+.................... } 
+....................  
+.................... void M1_H(){ 
+....................    output_high(PIN_A1); 
+*
+08BC:  BCF    F92.1
+08BE:  BSF    F89.1
+....................    output_low(PIN_D7); 
+08C0:  BCF    F95.7
+08C2:  BCF    F8C.7
+....................    output_high(PIN_D6); 
+08C4:  BCF    F95.6
+08C6:  BSF    F8C.6
+08C8:  RETURN 0
+.................... } 
+....................  
+.................... void M1_P(){ 
+....................    output_high(PIN_A1); 
+*
+0896:  BCF    F92.1
+0898:  BSF    F89.1
+....................    output_low(PIN_D7); 
+089A:  BCF    F95.7
+089C:  BCF    F8C.7
+....................    output_low(PIN_D6); 
+089E:  BCF    F95.6
+08A0:  BCF    F8C.6
+08A2:  GOTO   08B8 (RETURN)
+.................... } 
+....................  
+.................... void M2_A(){ 
+....................    output_high(PIN_A0); 
+*
+08F6:  BCF    F92.0
+08F8:  BSF    F89.0
+....................    output_high(PIN_C2); 
+08FA:  BCF    F94.2
+08FC:  BSF    F8B.2
+....................    output_low(PIN_D5); 
+08FE:  BCF    F95.5
+0900:  BCF    F8C.5
+0902:  RETURN 0
+.................... } 
+....................  
+.................... void M2_H(){ 
+....................    output_high(PIN_A0); 
+*
+08CA:  BCF    F92.0
+08CC:  BSF    F89.0
+....................    output_low(PIN_C2); 
+08CE:  BCF    F94.2
+08D0:  BCF    F8B.2
+....................    output_high(PIN_D5); 
+08D2:  BCF    F95.5
+08D4:  BSF    F8C.5
+08D6:  RETURN 0
+.................... } 
+....................  
+.................... void M2_P(){ 
+....................    output_high(PIN_A0); 
+*
+08A6:  BCF    F92.0
+08A8:  BSF    F89.0
+....................    output_low(PIN_C2); 
+08AA:  BCF    F94.2
+08AC:  BCF    F8B.2
+....................    output_low(PIN_D5); 
+08AE:  BCF    F95.5
+08B0:  BCF    F8C.5
+08B2:  GOTO   08BA (RETURN)
+.................... } 
+....................  
+.................... void M3_A(){ 
+....................    output_high(PIN_A2); 
+....................    output_low(PIN_B2); 
+....................    output_high(PIN_E0); 
+.................... } 
+....................  
+.................... void M3_H(){ 
+....................    output_high(PIN_A2); 
+....................    output_high(PIN_B2); 
+....................    output_low(PIN_E0); 
+.................... } 
+....................  
+.................... void M3_P(){ 
+....................    output_high(PIN_A2); 
+....................    output_low(PIN_B2); 
+....................    output_low(PIN_E0); 
+.................... } 
+....................  
+.................... void M4_A(){ 
+....................    output_high(PIN_A3); 
+....................    output_low(PIN_E2); 
+....................    output_high(PIN_E1); 
+.................... } 
+....................  
+.................... void M4_H(){ 
+....................    output_high(PIN_A3); 
+....................    output_high(PIN_E2); 
+....................    output_low(PIN_E1); 
+.................... } 
+....................  
+.................... void M4_P(){ 
+....................    output_high(PIN_A3); 
+....................    output_low(PIN_E2); 
+....................    output_low(PIN_E1); 
+.................... } 
+....................  
+....................  
+.................... /*********************************************************** 
+....................             MACRO PARA LEER EL PULSADOR P2 
+.................... ***********************************************************/ 
+....................  
+.................... #define P2   (!input(PIN_B4)) 
+....................  
+.................... /*********************************************************** 
+....................               MACROS PARA MANEJAR EL LED 
+.................... ***********************************************************/ 
+....................  
+.................... #define led_on()   output_high(PIN_A5) 
+.................... #define led_off()   output_low(PIN_A5) 
+....................  
+.................... /*********************************************************** 
+....................            DEFINICION DE LAS E/S DIRECTAS 
+.................... ***********************************************************/ 
+....................  
+.................... #define ES0   PIN_A4 
+.................... #define ES1   PIN_B3 
+.................... #define ES2   PIN_B5 
+.................... #define ES3   PIN_B6 
+.................... #define ES4   PIN_B7 
+.................... #define ES5   PIN_C7 
+.................... #define ES6   PIN_C6 
+.................... #define ES7   PIN_C1 
+.................... #define ES8   PIN_C0 
+....................  
+.................... /*********************************************************** 
+....................         MACROS PARA LEER LOS SENSORES FIJOS INX 
+.................... ***********************************************************/ 
+....................  
+.................... #define IN1      input(PIN_D0) 
+.................... #define IN2      input(PIN_D1) 
+.................... #define IN3      input(PIN_D2) 
+.................... #define IN4      input(PIN_D3) 
+.................... #define IN5      input(PIN_D4) 
+.................... //IN6 ES UNA E/S CONFIGURABLE 
+.................... //#define IN6      input(ES0) 
+.................... //#define IN6      input(ES1) 
+.................... // ... O CUALQUIER OTRA E/S DIRECTA 
+....................  
+.................... /*********************************************************** 
+....................             DIRECTIVA PARA EL USO DEL I2C 
+.................... ***********************************************************/ 
+.................... #use I2C(master, sda=PIN_B0, scl=PIN_B1) 
+....................  
+.................... #endif 
+....................  
+....................  
+....................  
+.................... #use delay (clock=48000000) 
+....................  
+.................... #use rs232(baud=9600,xmit=PIN_C6,rcv=PIN_C7,PARITY=N,BITS=8) 
+....................  
+.................... // Movimientos de los motores 
+.................... #define parar 0 
+.................... #define adelante 1 
+.................... #define atras 2 
+.................... #define izquierda 3 
+.................... #define derecha 4 
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... #define estadoInicial 0 
+.................... #define estadoLinea 1 
+.................... #define echarOponente 2 
+....................  
+.................... int estrategia = adelante; 
+.................... int velocidad = 90; 
+.................... int valor = 0; 
+.................... int duracion = 12; 
+.................... int estado = estadoInicial; 
+....................  
+....................  
+.................... void motoresParar(){ 
+....................    M1_P(); 
+08B6:  BRA    0896
+....................    M2_P(); 
+08B8:  BRA    08A6
+08BA:  RETURN 0
+.................... } 
+....................  
+....................  
+.................... void motoresAdelante(){ 
+....................    M1_H(); 
+*
+08D8:  RCALL  08BC
+....................    M2_H(); 
+08DA:  RCALL  08CA
+08DC:  GOTO   093A (RETURN)
+.................... } 
+....................  
+.................... void motoresDerecha(){ 
+....................    M1_A(); 
+*
+08EE:  RCALL  08E0
+....................    M2_H(); 
+08F0:  RCALL  08CA
+08F2:  GOTO   093A (RETURN)
+.................... } 
+....................  
+.................... void motoresIzquierda(){ 
+....................    M1_H(); 
+*
+0904:  RCALL  08BC
+....................    M2_A(); 
+0906:  RCALL  08F6
+0908:  GOTO   093A (RETURN)
+.................... } 
+....................  
+.................... void motoresAtras(){ 
+....................    M1_A(); 
+090C:  RCALL  08E0
+....................    M2_A(); 
+090E:  RCALL  08F6
+0910:  GOTO   093A (RETURN)
+.................... } 
+....................  
+.................... #INT_TIMER0 
+.................... void tmr0_isr(){ 
+....................       valor++; 
+0914:  INCF   18,F
+....................        
+....................       if (valor <= velocidad){ 
+0916:  MOVF   18,W
+0918:  SUBWF  17,W
+091A:  BNC   093C
+....................          switch(estrategia){ 
+091C:  MOVF   16,W
+091E:  ADDLW  FB
+0920:  BC    093A
+0922:  ADDLW  05
+0924:  GOTO   0954
+....................             case parar: 
+....................                motoresParar(); 
+0928:  RCALL  08B6
+....................             break; 
+092A:  BRA    093A
+....................              
+....................             case adelante: 
+....................                motoresAdelante(); 
+092C:  BRA    08D8
+....................             break; 
+092E:  BRA    093A
+....................              
+....................             case derecha: 
+....................                motoresDerecha(); 
+0930:  BRA    08EE
+....................             break; 
+0932:  BRA    093A
+....................              
+....................             case izquierda: 
+....................                motoresIzquierda(); 
+0934:  BRA    0904
+....................             break; 
+0936:  BRA    093A
+....................              
+....................             case atras: 
+....................                motoresAtras(); 
+0938:  BRA    090C
+....................             break; 
+....................          } 
+....................       }else{ 
+093A:  BRA    093E
+....................          motoresParar(); 
+093C:  RCALL  08B6
+....................       } 
+....................       if(valor==0){ 
+093E:  MOVF   18,F
+0940:  BNZ   094E
+....................          if(duracion !=255){ 
+0942:  INCFSZ 19,W
+0944:  BRA    0948
+0946:  BRA    094E
+....................             duracion--; 
+0948:  DECF   19,F
+....................             if(duracion==0){ 
+094A:  MOVF   19,F
+094C:  BNZ   094E
+....................                // para sondear que hay por el campo de batalla 
+....................             } 
+....................      } 
+....................    } 
+094E:  BCF    FF2.2
+0950:  GOTO   0854
+.................... } 
+....................  
+....................  
+....................  
+.................... void inicializarTimer0PWM(){ 
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_2|RTCC_8_BIT); 
+*
+0978:  MOVLW  C0
+097A:  MOVWF  FD5
+....................    enable_interrupts(INT_TIMER0); 
+097C:  BSF    FF2.5
+....................    enable_interrupts(GLOBAL); 
+097E:  IORWF  FF2,F
+0980:  GOTO   09BA (RETURN)
+.................... } 
+....................  
+....................  
+.................... void main(){ 
+0984:  CLRF   FF8
+0986:  BCF    FD0.7
+0988:  BSF    07.7
+098A:  BSF    FB8.3
+098C:  MOVLW  E1
+098E:  MOVWF  FAF
+0990:  MOVLW  04
+0992:  MOVWF  FB0
+0994:  MOVLW  A6
+0996:  MOVWF  FAC
+0998:  MOVLW  90
+099A:  MOVWF  FAB
+099C:  MOVLW  01
+099E:  MOVWF  16
+09A0:  MOVLW  5A
+09A2:  MOVWF  17
+09A4:  CLRF   18
+09A6:  MOVLW  0C
+09A8:  MOVWF  19
+09AA:  CLRF   1A
+09AC:  MOVF   FC1,W
+09AE:  ANDLW  C0
+09B0:  IORLW  0F
+09B2:  MOVWF  FC1
+09B4:  MOVLW  07
+09B6:  MOVWF  FB4
+....................    inicializarTimer0PWM(); 
+09B8:  BRA    0978
+....................    estado = estadoInicial; 
+09BA:  CLRF   1A
+....................    estrategia = atras; 
+09BC:  MOVLW  02
+09BE:  MOVWF  16
+....................    char distanciaARDUINO = 'z'; 
+09C0:  MOVLW  7A
+09C2:  MOVWF  1B
+....................     
+....................    while(1){ 
+....................       if(!IN1){ 
+09C4:  BSF    F95.0
+09C6:  BTFSC  F83.0
+09C8:  BRA    09D4
+....................          led_on(); 
+09CA:  BCF    F92.5
+09CC:  BSF    F89.5
+....................          estrategia = derecha; 
+09CE:  MOVLW  04
+09D0:  MOVWF  16
+....................       } 
+09D2:  BRA    09E8
+....................       else if(!IN2){ 
+09D4:  BSF    F95.1
+09D6:  BTFSC  F83.1
+09D8:  BRA    09E4
+....................          led_on(); 
+09DA:  BCF    F92.5
+09DC:  BSF    F89.5
+....................          estrategia = atras; 
+09DE:  MOVLW  02
+09E0:  MOVWF  16
+....................       } 
+09E2:  BRA    09E8
+....................       else{ 
+....................          estrategia = adelante; 
+09E4:  MOVLW  01
+09E6:  MOVWF  16
+....................       } 
+09E8:  BRA    09C4
+....................    } 
+.................... } 
+....................  
+09EA:  SLEEP 
+
+Configuration Fuses:
+   Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO
+   Word  2: 1E3F   NOPUT BROWNOUT BORV21 VREGEN NOWDT WDT32768
+   Word  3: 8100   CCP2C1 NOPBADEN NOLPT1OSC MCLR
+   Word  4: 0081   STVREN NOLVP ICSP1 NOXINST NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: A00F   NOWRT NOWRTC WRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

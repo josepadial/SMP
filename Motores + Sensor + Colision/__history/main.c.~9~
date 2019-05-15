@@ -16,10 +16,12 @@ void main(){
          M1_H();
          M2_P();
       }
-      else if(IN2){
-         M1_P();
-         M2_P();
-         delay_ms(50);
+      else if(!IN2){
+         if(!IN2){
+            M1_P();
+            M2_P();
+            delay_ms(50);
+         }
          M1_A();
          M2_A();
       }

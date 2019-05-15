@@ -12,7 +12,7 @@ void main(){
    //inicializarTimer0PWM(); 
     
    while(1){
-      if(!IN1){
+      if(IN1){
          M1_H();
          M2_P();
       }

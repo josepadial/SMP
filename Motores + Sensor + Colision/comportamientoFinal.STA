@@ -1,0 +1,61 @@
+
+ROM used:   488/16384 (1%)
+            492/16384 (2%) including unused fragments
+
+            0.4 Average locations per line
+            5.5 Average locations per statement
+
+RAM used:   27/2048 (1%) at main() level
+            28/2048 (1%) worst case
+
+Stack used: 4 worst case (1 in main + 3 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  123    52  59  comportamientoFinal.c
+  151    36  41  tarjeta.h
+  821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+----- -----
+ 1095    88 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     14   1    0    48  1.1  M1_A
+0     14   1    0    48  1.1  M1_H
+0     16   2    0    48  1.1  M1_P
+0     14   1    0    48  1.1  M2_A
+0     14   1    0    48  1.1  M2_H
+0     16   2    0    48  1.1  M2_P
+0      6   1    0    21  1.0  motoresParar
+0      8   1    0    21  1.0  motoresAdelante
+0      8   1    0    21  1.0  motoresDerecha
+0      8   1    0    21  1.0  motoresIzquierda
+0      8   1    0    21  1.0  motoresAtras
+0     64   7    0   425  6.4  tmr0_isr
+0     36   4    0             @goto10653
+0     12   1    0    69  1.6  inicializarTimer0PWM
+0    104  11    0   298  3.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               14
+    Statements              88
+    Comments                173
+    Volume (V)              2119
+    Difficulty (D)          23.6
+    Effort to implement (E) 49918
+    Time to implement (T)   46 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   11
+    Maintainability (MI)    78
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-007FE     0  2048  
+00800-00806     4  4  
+00808-00894   142  0  
+00896-07FFE   342  30228  
+
+
+

@@ -1,0 +1,23 @@
+ÀÄcomportamientoFinal
+   ÃÄMAIN  0/104  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÀÄinicializarTimer0PWM  0/12  Ram=0
+   ÀÄtmr0_isr  0/64  Ram=0
+      ÃÄ@goto10653  0/36  Ram=0
+      ÃÄmotoresParar  0/6  Ram=0
+      ³  ÃÄM1_P  0/16  Ram=0
+      ³  ÀÄM2_P  0/16  Ram=0
+      ÃÄmotoresAdelante  0/8  Ram=0
+      ³  ÃÄM1_H  0/14  Ram=0
+      ³  ÀÄM2_H  0/14  Ram=0
+      ÃÄmotoresDerecha  0/8  Ram=0
+      ³  ÃÄM1_A  0/14  Ram=0
+      ³  ÀÄM2_H  0/14  Ram=0
+      ÃÄmotoresIzquierda  0/8  Ram=0
+      ³  ÃÄM1_H  0/14  Ram=0
+      ³  ÀÄM2_A  0/14  Ram=0
+      ÃÄmotoresAtras  0/8  Ram=0
+      ³  ÃÄM1_A  0/14  Ram=0
+      ³  ÀÄM2_A  0/14  Ram=0
+      ÀÄmotoresParar  0/6  Ram=0
+         ÀÄ*

@@ -1,0 +1,12 @@
+읕main
+   읕MAIN  0/58  Ram=0
+      쳐@cinit1  (Inline)  Ram=0
+      쳐M1_H  0/14  Ram=0
+      쳐M2_P  0/14  Ram=0
+      쳐M1_P  0/16  Ram=0
+      쳐M2_P  0/14  Ram=0
+      쳐@delay_ms1  0/42  Ram=1
+      쳐M1_A  0/16  Ram=0
+      쳐M2_A  0/16  Ram=0
+      쳐M1_H  0/14  Ram=0
+      읕M2_H  0/16  Ram=0
