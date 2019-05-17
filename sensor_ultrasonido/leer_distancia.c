@@ -56,9 +56,11 @@ void main(){
 
 		if (v_captura < 4425){
 			//cerca
+			led_on();
 		}
 		else{
 			//lejos
+			led_off();
 		}
 	}
 
