@@ -1,51 +1,53 @@
 
-ROM used:   358/16384 (1%)
-            362/16384 (1%) including unused fragments
+ROM used:   498/16384 (2%)
+            502/16384 (2%) including unused fragments
 
-            0.3 Average locations per line
-            5.2 Average locations per statement
+            0.5 Average locations per line
+            7.7 Average locations per statement
 
 RAM used:   25/2048 (1%) at main() level
-            26/2048 (1%) worst case
+            28/2048 (1%) worst case
 
-Stack used: 2 worst case (1 in main + 1 for interrupts)
+Stack used: 3 worst case (2 in main + 1 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   70    33  48  leer_distancia.c
-  151    36  52  tarjeta.h
+   70    29  45  leer_distancia.c
+  151    36  55  tarjeta.h
   821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
 ----- -----
- 1042    69 Total
+ 1042    65 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     42   6    1             @delay_ms1
+0     42   4    1             @delay_ms1
+0     78   8    1             @PUTCHAR_1_
 0     16   2    0    69  1.6  check_time_out
-0     42   6    0   195  3.6  capture
-0     32   4    0   112  3.0  pulseIn_ECHO_HIGH
-0     68   9    0   190  3.1  MAIN
+0     42   4    0   195  3.6  capture
+0     32   3    0   112  3.0  pulseIn_ECHO_HIGH
+0     68   7    0   136  2.0  MAIN
+0     62   6    2             @PRINTF_X_650
  Inline         0             @cinit1
 
 Program metrics:
     Functions               4
-    Statements              69
-    Comments                175
-    Volume (V)              814
-    Difficulty (D)          10.9
-    Effort to implement (E) 8874
-    Time to implement (T)   8 minutes
+    Statements              65
+    Comments                179
+    Volume (V)              745
+    Difficulty (D)          9.5
+    Effort to implement (E) 7070
+    Time to implement (T)   7 minutes
     Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   2
-    Maintainability (MI)    60
+    Cyclomatic Complexity   1
+    Maintainability (MI)    58
 
  Segment     Used  Free
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
 00808-008A0   154  0  
-008A2-07FFE   200  30358  
+008A2-07FFE   340  30218  
 
 
 

@@ -1,8 +1,8 @@
 D G "SR04_ECHO" 0 5 "PIN_B3"
-D G "__PCH__" 0 71 ""5.008""
-D G "__DEVICE__" 0 71 "4550"
-D G "__DATE__" 0 71 ""17-may.-19""
-D G "__TIME__" 0 71 ""16:43:18""
+D G "__PCH__" 0 43 ""5.008""
+D G "__DEVICE__" 0 43 "4550"
+D G "__DATE__" 0 43 ""17-may.-19""
+D G "__TIME__" 0 43 ""16:55:34""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -939,12 +939,9 @@ D G "SR04_TRIGG" 0 4 "PIN_A4"
 D G "SR04_ECHO" 0 5 "PIN_B3"
 V G "captura" 0 10 "int8" `656 
 V G "v_captura" 0 11 "int16" `657 
-F G "check_time_out" 0 14 "void()" `658 
-F G "capture" 0 23 "void()" `659 
-F G "pulseIn_ECHO_HIGH" 0 38 "void()" `660 
-C L "pulseIn_ECHO_HIGH" 0 8 1 "FUNCTION"
-F G "MAIN" 0 48 "void()" `661 
-C L "MAIN" 0 8 5 "FUNCTION"
+F G "capture" 0 16 "void()" `658 
+F G "pulseIn_ECHO_HIGH" 0 20 "void()" `659 
+F G "MAIN" 0 26 "void()" `660 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

@@ -16,6 +16,7 @@ void check_time_out(){
    disable_interrupts(INT_TIMER1);         
    v_captura = INF_16_BIT;
    captura = 0;
+   
 }
 
 

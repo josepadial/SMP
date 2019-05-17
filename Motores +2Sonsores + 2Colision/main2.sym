@@ -21,12 +21,13 @@
 013     @INTERRUPT_AREA
 014     @INTERRUPT_AREA
 015     @INTERRUPT_AREA
-016     captura
-017-018 v_captura
-019     @delay_ms1.P1
-019     @PRINTF_X_650.P2
-01A     @PRINTF_X_650.P1
-01B     @PUTCHAR_1_.P1
+016     estrategia
+017     velocidad
+018     valor
+019     duracion
+01A     estado
+01B     MAIN.@SCRATCH1
+01C     @delay_ms1.P1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
@@ -39,35 +40,44 @@ FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
 FE9-FEA @WRITE_PROGRAM_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-0008A2  check_time_out
-0008B2  capture
-0008DC  @delay_ms1
-000906  pulseIn_ECHO_HIGH
-000926  @PUTCHAR_1_
-000974  @PRINTF_X_650
-0009B2  MAIN
-0009B2  @cinit1
-0009CA  @cinit2
+000896  M1_P
+0008A4  M2_P
+0008B2  motoresParar
+0008B8  M1_A
+0008C6  M2_A
+0008D4  motoresAdelante
+0008DC  motoresDerecha
+0008E4  motoresIzquierda
+0008EC  M1_H
+0008FC  M2_H
+00090C  motoresAtras
+000914  tmr0_isr
+000954  @goto10653
+000978  @delay_ms1
+0009A2  inicializarTimer0PWM
+0009AE  MAIN
+0009AE  @cinit1
+0009E2  @cinit2
 
 Project Directory:
-    C:\Users\padul\Desktop\GitHub\SMP\sensor_ultrasonido\
+    C:\Users\padul\Desktop\GitHub\SMP\Motores +2Sonsores + 2Colision\
 
 Project Files:
-    leer_distancia.c                                        [17-may.-19 16:43  CRC=6385FBBD]
+    main2.c                                                 [17-may.-19 17:11  CRC=0BA537F1]
     tarjeta.h                                               [27-mar.-19 16:28  CRC=C119BE94]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 15:29  CRC=A157EDDE]
 
-Source signature=674F960D
+Source signature=0F6ED241
 
 Units:
-    leer_distancia (main)
+    main2 (main)
 
 Compiler Settings:
     Processor:      PIC18F4550
@@ -78,13 +88,13 @@ Compiler Settings:
     Float,Double:   32,32
 
 Output Files:
-    XREF file:   leer_distancia.xsym
-    Errors:      leer_distancia.err
-    Ext Symbols: leer_distancia.esym
-    INHX32:      leer_distancia.hex
-    Symbols:     leer_distancia.sym
-    List:        leer_distancia.lst
-    Debug/COFF:  leer_distancia.cof
-    Project:     leer_distancia.ccspjt
-    Call Tree:   leer_distancia.tre
-    Statistics:  leer_distancia.STA
+    XREF file:   main2.xsym
+    Errors:      main2.err
+    Ext Symbols: main2.esym
+    INHX32:      main2.hex
+    Symbols:     main2.sym
+    List:        main2.lst
+    Debug/COFF:  main2.cof
+    Project:     main2.ccspjt
+    Call Tree:   main2.tre
+    Statistics:  main2.STA

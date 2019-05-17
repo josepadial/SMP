@@ -1,22 +1,22 @@
 [PROJECT]
-Target=leer_distancia.hex
+Target=prueba.hex
 Processor_Text=PIC18F4550
 CCSVersion=5.008
 Compiler=PCH
 [Target Data]
-FileList=leer_distancia.c
+FileList=prueba.c
 [Directories]
 Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\sensor_ultrasonido\
-[leer_distancia.c]
+[prueba.c]
 Type=4
 [mru-list]
-1=leer_distancia.c
+1=prueba.c
 [Opened Files]
 1=tarjeta.h
 2=leer_distancia.c
 3=prueba.c
-4=
+4=..\Motores +2Sonsores + 2Colision\main2.c
 5=
 [Units]
 Count=1
-1=leer_distancia (main)
+1=prueba (main)

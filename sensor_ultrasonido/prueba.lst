@@ -1,16 +1,16 @@
-CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 16:43
+CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 16:55
 
-               Filename:   C:\Users\padul\Desktop\GitHub\SMP\sensor_ultrasonido\leer_distancia.lst
+               Filename:   C:\Users\padul\Desktop\GitHub\SMP\sensor_ultrasonido\prueba.lst
 
-               ROM used:   498 bytes (2%)
-                           Largest free fragment is 30218
+               ROM used:   272 bytes (1%)
+                           Largest free fragment is 30444
                RAM used:   25 (1%) at main() level
-                           28 (1%) worst case
-               Stack used: 3 locations (2 in main + 1 for interrupts)
+                           26 (1%) worst case
+               Stack used: 2 locations (1 in main + 1 for interrupts)
                Stack size: 31
 
 *
-0800:  GOTO   09B2
+0800:  GOTO   08DC
 *
 0808:  MOVWF  04
 080A:  MOVFF  FD8,05
@@ -29,32 +29,28 @@ CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 16:43
 083C:  MOVFF  01,0F
 0840:  MOVFF  02,10
 0844:  MOVFF  03,11
-0848:  BTFSS  F9D.0
+0848:  BTFSS  FA0.0
 084A:  GOTO   0854
-084E:  BTFSC  F9E.0
-0850:  GOTO   08A2
-0854:  BTFSS  FA0.0
-0856:  GOTO   0860
-085A:  BTFSC  FA1.0
-085C:  GOTO   08B2
-0860:  MOVFF  0E,00
-0864:  MOVFF  0F,01
-0868:  MOVFF  10,02
-086C:  MOVFF  11,03
-0870:  MOVFF  0C,FE9
-0874:  MOVFF  07,FEA
-0878:  BSF    07.7
-087A:  MOVFF  08,FE1
-087E:  MOVFF  09,FE2
-0882:  MOVFF  0A,FD9
-0886:  MOVFF  0B,FDA
-088A:  MOVFF  12,FF3
-088E:  MOVFF  13,FF4
-0892:  MOVFF  14,FFA
-0896:  MOVF   04,W
-0898:  MOVFF  06,FE0
-089C:  MOVFF  05,FD8
-08A0:  RETFIE 0
+084E:  BTFSC  FA1.0
+0850:  GOTO   0896
+0854:  MOVFF  0E,00
+0858:  MOVFF  0F,01
+085C:  MOVFF  10,02
+0860:  MOVFF  11,03
+0864:  MOVFF  0C,FE9
+0868:  MOVFF  07,FEA
+086C:  BSF    07.7
+086E:  MOVFF  08,FE1
+0872:  MOVFF  09,FE2
+0876:  MOVFF  0A,FD9
+087A:  MOVFF  0B,FDA
+087E:  MOVFF  12,FF3
+0882:  MOVFF  13,FF4
+0886:  MOVFF  14,FFA
+088A:  MOVF   04,W
+088C:  MOVFF  06,FE0
+0890:  MOVFF  05,FD8
+0894:  RETFIE 0
 .................... #include "tarjeta.h" 
 .................... #ifndef _TARJETA_ 
 .................... #define _TARJETA_ 
@@ -62,36 +58,6 @@ CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 16:43
 .................... #include <18F4550.h> 
 .................... //////// Standard Header file for the PIC18F4550 device //////////////// 
 .................... #device PIC18F4550 
-*
-0974:  BTFSC  1A.7
-0976:  BRA    0996
-0978:  MOVLW  0F
-097A:  MOVWF  00
-097C:  SWAPF  19,W
-097E:  ANDWF  00,F
-0980:  MOVLW  0A
-0982:  SUBWF  00,W
-0984:  BC    098C
-0986:  MOVLW  30
-0988:  ADDWF  00,F
-098A:  BRA    0990
-098C:  MOVF   1A,W
-098E:  ADDWF  00,F
-0990:  MOVFF  00,1B
-0994:  RCALL  0926
-0996:  MOVLW  0F
-0998:  ANDWF  19,F
-099A:  MOVLW  0A
-099C:  SUBWF  19,W
-099E:  BC    09A4
-09A0:  MOVLW  30
-09A2:  BRA    09A8
-09A4:  BCF    1A.7
-09A6:  MOVF   1A,W
-09A8:  ADDWF  19,F
-09AA:  MOVFF  19,1B
-09AE:  RCALL  0926
-09B0:  RETURN 0
 ....................  
 .................... #list 
 ....................  
@@ -244,208 +210,107 @@ CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 16:43
 ....................  
 .................... #use delay (clock=48000000) 
 *
-08DC:  CLRF   FEA
-08DE:  MOVLW  19
-08E0:  MOVWF  FE9
-08E2:  MOVF   FEF,W
-08E4:  BZ    0902
-08E6:  MOVLW  0F
-08E8:  MOVWF  01
-08EA:  CLRF   00
-08EC:  DECFSZ 00,F
-08EE:  BRA    08EC
-08F0:  DECFSZ 01,F
-08F2:  BRA    08EA
-08F4:  MOVLW  8F
-08F6:  MOVWF  00
-08F8:  DECFSZ 00,F
-08FA:  BRA    08F8
-08FC:  NOP   
-08FE:  DECFSZ FEF,F
-0900:  BRA    08E6
-0902:  GOTO   09D8 (RETURN)
+08A0:  CLRF   FEA
+08A2:  MOVLW  19
+08A4:  MOVWF  FE9
+08A6:  MOVF   FEF,W
+08A8:  BZ    08C6
+08AA:  MOVLW  0F
+08AC:  MOVWF  01
+08AE:  CLRF   00
+08B0:  DECFSZ 00,F
+08B2:  BRA    08B0
+08B4:  DECFSZ 01,F
+08B6:  BRA    08AE
+08B8:  MOVLW  8F
+08BA:  MOVWF  00
+08BC:  DECFSZ 00,F
+08BE:  BRA    08BC
+08C0:  NOP   
+08C2:  DECFSZ FEF,F
+08C4:  BRA    08AA
+08C6:  GOTO   090A (RETURN)
 .................... #define INF_16_BIT 65535 
 .................... #define SR04_TRIGG PIN_A4 
 .................... #define SR04_ECHO PIN_B3 
 .................... #use rs232(baud=9600, bits=8, parity=N, xmit=PIN_C4,rcv=PIN_C5) 
-*
-0926:  BCF    F94.4
-0928:  BCF    F8B.4
-092A:  MOVLW  08
-092C:  MOVWF  01
-092E:  BRA    0930
-0930:  NOP   
-0932:  BSF    01.7
-0934:  BRA    0952
-0936:  BCF    01.7
-0938:  RRCF   1B,F
-093A:  BTFSC  FD8.0
-093C:  BSF    F8B.4
-093E:  BTFSS  FD8.0
-0940:  BCF    F8B.4
-0942:  BSF    01.6
-0944:  BRA    0952
-0946:  BCF    01.6
-0948:  DECFSZ 01,F
-094A:  BRA    0938
-094C:  BRA    094E
-094E:  NOP   
-0950:  BSF    F8B.4
-0952:  MOVLW  01
-0954:  MOVWF  00
-0956:  CLRF   FE9
-0958:  DECFSZ FE9,F
-095A:  BRA    0958
-095C:  DECFSZ 00,F
-095E:  BRA    0956
-0960:  MOVLW  99
-0962:  MOVWF  FE9
-0964:  DECFSZ FE9,F
-0966:  BRA    0964
-0968:  NOP   
-096A:  BTFSC  01.7
-096C:  BRA    0936
-096E:  BTFSC  01.6
-0970:  BRA    0946
-0972:  RETURN 0
 ....................   
 .................... // 50 cm * (59 ms / 1 cm) * (3uds /2ms) = 4425 
 ....................  
 .................... int captura = 0; 
 .................... long v_captura; 
 ....................  
-.................... #INT_TIMER1 
-.................... void check_time_out(){ 
-....................    disable_interrupts(INT_CCP2); 
-*
-08A2:  BCF    FA0.0
-....................    disable_interrupts(INT_TIMER1);          
-08A4:  BCF    F9D.0
-....................    v_captura = INF_16_BIT; 
-08A6:  SETF   18
-08A8:  SETF   17
-....................    captura = 0; 
-08AA:  CLRF   16
-.................... } 
 ....................  
 ....................  
-08AC:  BCF    F9E.0
-08AE:  GOTO   0860
 .................... #INT_CCP2 
 .................... void capture(){ 
-....................    if (captura == 0){ 
-08B2:  MOVF   16,F
-08B4:  BNZ   08C8
-....................       set_timer1(0); 
-08B6:  CLRF   FCF
-08B8:  CLRF   FCE
-....................       captura++; 
-08BA:  INCF   16,F
-....................       enable_interrupts(INT_TIMER1);    
-08BC:  BSF    F9D.0
-....................       setup_ccp2(CCP_CAPTURE_FE);          
-08BE:  BSF    F94.1
-08C0:  CLRF   FBA
-08C2:  MOVLW  04
-08C4:  MOVWF  FBA
-....................    } 
-08C6:  BRA    08D6
-....................    else{ 
-....................       v_captura = CCP_2; 
-08C8:  MOVFF  FBC,18
-08CC:  MOVFF  FBB,17
-....................       captura = 0; 
-08D0:  CLRF   16
-....................       disable_interrupts(INT_CCP2); 
-08D2:  BCF    FA0.0
-....................       disable_interrupts(INT_TIMER1); 
-08D4:  BCF    F9D.0
-....................    } 
-08D6:  BCF    FA1.0
-08D8:  GOTO   0860
+....................    led_on(); 
+*
+0896:  BCF    F92.5
+0898:  BSF    F89.5
+089A:  BCF    FA1.0
+089C:  GOTO   0854
 .................... } 
 ....................  
 .................... void pulseIn_ECHO_HIGH(){ 
 ....................    setup_ccp2(CCP_CAPTURE_RE); 
 *
-0906:  BSF    F94.1
-0908:  CLRF   FBA
-090A:  MOVLW  05
-090C:  MOVWF  FBA
+08CA:  BSF    F94.1
+08CC:  CLRF   FBA
+08CE:  MOVLW  05
+08D0:  MOVWF  FBA
 ....................    enable_interrupts(INT_CCP2); 
-090E:  BSF    FA0.0
-....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_8); 
-0910:  MOVLW  B5
-0912:  MOVWF  FCD
-....................    v_captura = 0; 
-0914:  CLRF   18
-0916:  CLRF   17
-....................    while(v_captura == 0){ 
-0918:  MOVF   17,F
-091A:  BNZ   0922
-091C:  MOVF   18,F
-091E:  BNZ   0922
-0920:  BRA    0918
-....................       //led_on(); 
-....................    } 
-0922:  GOTO   09DE (RETURN)
+08D2:  BSF    FA0.0
+....................    set_timer1(0); 
+08D4:  CLRF   FCF
+08D6:  CLRF   FCE
+08D8:  GOTO   0910 (RETURN)
 .................... } 
 ....................  
 .................... void main(){ 
-*
-09B2:  CLRF   FF8
-09B4:  BCF    FD0.7
-09B6:  BSF    07.7
-09B8:  BCF    F94.4
-09BA:  BSF    F8B.4
-09BC:  CLRF   16
-09BE:  MOVF   FC1,W
-09C0:  ANDLW  C0
-09C2:  IORLW  0F
-09C4:  MOVWF  FC1
-09C6:  MOVLW  07
-09C8:  MOVWF  FB4
+08DC:  CLRF   FF8
+08DE:  BCF    FD0.7
+08E0:  BSF    07.7
+08E2:  BCF    F94.4
+08E4:  BSF    F8B.4
+08E6:  CLRF   16
+08E8:  MOVF   FC1,W
+08EA:  ANDLW  C0
+08EC:  IORLW  0F
+08EE:  MOVWF  FC1
+08F0:  MOVLW  07
+08F2:  MOVWF  FB4
 ....................     
 ....................    enable_interrupts(GLOBAL); 
-09CA:  MOVLW  C0
-09CC:  IORWF  FF2,F
+08F4:  MOVLW  C0
+08F6:  IORWF  FF2,F
+....................    setup_timer_1(T1_INTERNAL|T1_DIV_BY_8); 
+08F8:  MOVLW  B5
+08FA:  MOVWF  FCD
 ....................     
 ....................    while(1){ 
 ....................        
-....................       output_high(SR04_TRIGG); 
-09CE:  BCF    F92.4
-09D0:  BSF    F89.4
-....................       delay_ms(15); 
-09D2:  MOVLW  0F
-09D4:  MOVWF  19
-09D6:  BRA    08DC
 ....................       output_low(SR04_TRIGG); 
-09D8:  BCF    F92.4
-09DA:  BCF    F89.4
+08FC:  BCF    F92.4
+08FE:  BCF    F89.4
+....................       output_high(SR04_TRIGG); 
+0900:  BCF    F92.4
+0902:  BSF    F89.4
+....................       delay_ms(10); 
+0904:  MOVLW  0A
+0906:  MOVWF  19
+0908:  BRA    08A0
+....................       output_low(SR04_TRIGG); 
+090A:  BCF    F92.4
+090C:  BCF    F89.4
 ....................       pulseIn_ECHO_HIGH(); 
-09DC:  BRA    0906
-....................        
-....................       /*if(v_captura < 4425){ 
-....................          led_off(); 
-....................       } 
-....................       else{ 
-....................          led_on(); 
-....................       }*/ 
-....................       printf("%LX", v_captura); 
-09DE:  MOVFF  18,19
-09E2:  MOVLW  37
-09E4:  MOVWF  1A
-09E6:  RCALL  0974
-09E8:  MOVFF  17,19
-09EC:  MOVLW  37
-09EE:  MOVWF  1A
-09F0:  RCALL  0974
-09F2:  BRA    09CE
+090E:  BRA    08CA
+0910:  BRA    08FC
 ....................    } 
 ....................  
 .................... } 
 ....................  
-09F4:  SLEEP 
+0912:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO
