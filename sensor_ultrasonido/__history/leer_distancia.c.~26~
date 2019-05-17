@@ -1,4 +1,5 @@
 #include "tarjeta.h"
+#include <stdio.h>
 #use delay (clock=48000000)
 #define INF_16_BIT 65535
 #define SR04_TRIGG PIN_A4
@@ -55,7 +56,15 @@ void main(){
       output_low(SR04_TRIGG);
       pulseIn_ECHO_HIGH();
 
-      printf("%d", v_captura);
+      if (v_captura < 4425){
+         //cerca
+         led_on();
+         printf(v_captura);
+      }
+      else{
+         //lejos
+         led_off();
+      }
    }
 
 }

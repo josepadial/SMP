@@ -1,0 +1,22 @@
+[PROJECT]
+Target=leer_distancia.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=leer_distancia.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\sensor_ultrasonido\
+[leer_distancia.c]
+Type=4
+[mru-list]
+1=leer_distancia.c
+[Opened Files]
+1=tarjeta.h
+2=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+3=..\Motores + Sensor + Colision\main2.c
+4=
+5=
+[Units]
+Count=1
+1=leer_distancia (main)

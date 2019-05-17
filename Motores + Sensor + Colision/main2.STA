@@ -27,29 +27,29 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     14   1    0    48  1.1  M2_A
 0     16   1    0    48  1.1  M2_H
 0     14   1    0    48  1.1  M2_P
-0     40   4    1             @delay_ms1
+0     40   4    1   485  7.8  @delay_ms1
 0      6   1    0    21  1.0  motoresParar
 0      8   1    0    21  1.0  motoresAdelante
 0      8   1    0    21  1.0  motoresDerecha
 0      8   1    0    21  1.0  motoresIzquierda
 0      8   1    0    21  1.0  motoresAtras
 0     64   6    0   425  6.4  tmr0_isr
-0     36   3    0             @goto10653
+0     36   3    0   266  6.5  @goto10653
 0     12   1    0    69  1.6  inicializarTimer0PWM
 0    138  12    1   381  4.2  MAIN
- Inline         0             @cinit1
+ Inline         0   288  6.0  @cinit1
 
 Program metrics:
-    Functions               14
+    Functions               17
     Statements              92
     Comments                173
-    Volume (V)              2233
-    Difficulty (D)          24.0
-    Effort to implement (E) 53595
-    Time to implement (T)   50 minutes
-    Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   12
-    Maintainability (MI)    77
+    Volume (V)              4036
+    Difficulty (D)          44.7
+    Effort to implement (E) 180322
+    Time to implement (T)   2 hours, 47 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   20
+    Maintainability (MI)    66
 
  Segment     Used  Free
 -----------  ----  ----

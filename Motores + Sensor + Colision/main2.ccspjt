@@ -12,10 +12,10 @@ Type=4
 [mru-list]
 1=main2.c
 [Opened Files]
-1=main2.c
-2=tarjeta.h
-3=
-4=main2.c
+1=..\sensor_ultrasonido\tarjeta.h
+2=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+3=main2.c
+4=
 5=
 [Units]
 Count=1

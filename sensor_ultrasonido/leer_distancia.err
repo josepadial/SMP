@@ -1,0 +1,4 @@
+>>> Warning 203 "leer_distancia.c" Line 51(1,1): Condition always TRUE
+*** Error 132 "leer_distancia.c" Line 58(20,29): STDOUT not defined (may be missing #USE RS232)  ::
+      1 Errors,  1 Warnings.
+Build Failed.

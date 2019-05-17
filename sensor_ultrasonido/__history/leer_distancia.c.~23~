@@ -14,7 +14,6 @@ void check_time_out(){
    disable_interrupts(INT_CCP2);
    disable_interrupts(INT_TIMER1);         
    v_captura = INF_16_BIT;
-   captura = 0;
 }
 
 
@@ -55,7 +54,14 @@ void main(){
       output_low(SR04_TRIGG);
       pulseIn_ECHO_HIGH();
 
-      printf("%d", v_captura);
+      if (v_captura < 4425){
+         //cerca
+         led_on();
+      }
+      else{
+         //lejos
+         led_off();
+      }
    }
 
 }

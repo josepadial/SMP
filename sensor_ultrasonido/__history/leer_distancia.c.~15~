@@ -14,7 +14,6 @@ void check_time_out(){
    disable_interrupts(INT_CCP2);
    disable_interrupts(INT_TIMER1);         
    v_captura = INF_16_BIT;
-   captura = 0;
 }
 
 
@@ -28,9 +27,9 @@ void capture(){
    }
    else{
       v_captura = CCP_2;
-      captura = 0;
       disable_interrupts(INT_CCP2);
       disable_interrupts(INT_TIMER1);
+      captura = 0;
    }
 }
 
@@ -39,9 +38,9 @@ void pulseIn_ECHO_HIGH(){
    enable_interrupts(INT_CCP2);
    setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    v_captura = 0;
-   while(v_captura == 0){
-      //led_on();
-   }
+   while(v_captura == 0){}
+   disable_interrupts(INT_CCP2);
+   disable_interrupts(INT_TIMER1);
 }
 
 void main(){
@@ -55,7 +54,14 @@ void main(){
       output_low(SR04_TRIGG);
       pulseIn_ECHO_HIGH();
 
-      printf("%d", v_captura);
+      if (v_captura < 0){
+         //cerca
+         led_on();
+      }
+      else{
+         //lejos
+         led_off();
+      }
    }
 
 }
