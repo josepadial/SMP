@@ -103,8 +103,8 @@ void main(){
    estrategia = adelante;
    
    while(1){
-      if(estrategia != atras){
-         delay_ms(2000);
+      if(estrategia == atras){
+         delay_ms(1250);
       }
       
       if(!IN1){

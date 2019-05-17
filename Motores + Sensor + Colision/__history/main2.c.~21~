@@ -104,7 +104,7 @@ void main(){
    
    while(1){
       if(estrategia != atras){
-         delay_ms(2000);
+         delay_ms(1250);
       }
       
       if(!IN1){

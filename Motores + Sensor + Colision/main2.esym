@@ -1,7 +1,7 @@
-D G "__PCH__" 0 129 ""5.008""
-D G "__DEVICE__" 0 129 "4550"
-D G "__DATE__" 0 129 ""13-may.-19""
-D G "__TIME__" 0 129 ""18:46:53""
+D G "__PCH__" 0 125 ""5.008""
+D G "__DEVICE__" 0 125 "4550"
+D G "__DATE__" 0 125 ""17-may.-19""
+D G "__TIME__" 0 125 ""12:06:34""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -954,14 +954,7 @@ F G "motoresAtras" 0 45 "void()" `663
 F G "tmr0_isr" 0 51 "void()" `664 
 C L "tmr0_isr" 0 6 1 "FUNCTION"
 F G "inicializarTimer0PWM" 0 91 "void()" `666 
-V G "cnt" 0 97 "int8" `667 
-F G "interrupt" 0 99 "void()" `668  "Rutina de interrupción"
-C L "interrupt" 0 6 1 "FUNCTION"
-C L "interrupt" 0 6 1 "FUNCTION"
-C L "interrupt" 0 6 1 "FUNCTION"
-F G "MAIN" 0 105 "void()" `669 
-C L "MAIN" 0 6 1 "FUNCTION"
-C L "MAIN" 0 6 1 "FUNCTION"
+F G "MAIN" 0 99 "void()" `667 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

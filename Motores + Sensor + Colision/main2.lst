@@ -1,16 +1,16 @@
-CCS PCH C Compiler, Version 5.008, 5967               13-may.-19 18:33
+CCS PCH C Compiler, Version 5.008, 5967               17-may.-19 12:06
 
                Filename:   C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor + Colision\main2.lst
 
-               ROM used:   502 bytes (2%)
-                           Largest free fragment is 30214
-               RAM used:   27 (1%) at main() level
-                           28 (1%) worst case
+               ROM used:   562 bytes (2%)
+                           Largest free fragment is 30154
+               RAM used:   28 (1%) at main() level
+                           29 (1%) worst case
                Stack used: 4 locations (1 in main + 3 for interrupts)
                Stack size: 31
 
 *
-0800:  GOTO   0984
+0800:  GOTO   09AC
 *
 0808:  MOVWF  04
 080A:  MOVFF  FD8,05
@@ -276,6 +276,27 @@ CCS PCH C Compiler, Version 5.008, 5967               13-may.-19 18:33
 ....................  
 ....................  
 .................... #use delay (clock=48000000) 
+*
+0978:  CLRF   FEA
+097A:  MOVLW  1C
+097C:  MOVWF  FE9
+097E:  MOVF   FEF,W
+0980:  BZ    099E
+0982:  MOVLW  0F
+0984:  MOVWF  01
+0986:  CLRF   00
+0988:  DECFSZ 00,F
+098A:  BRA    0988
+098C:  DECFSZ 01,F
+098E:  BRA    0986
+0990:  MOVLW  8F
+0992:  MOVWF  00
+0994:  DECFSZ 00,F
+0996:  BRA    0994
+0998:  NOP   
+099A:  DECFSZ FEF,F
+099C:  BRA    0982
+099E:  RETURN 0
 ....................  
 .................... #use rs232(baud=9600,xmit=PIN_C6,rcv=PIN_C7,PARITY=N,BITS=8) 
 ....................  
@@ -299,6 +320,7 @@ CCS PCH C Compiler, Version 5.008, 5967               13-may.-19 18:33
 ....................  
 .................... void motoresParar(){ 
 ....................    M1_P(); 
+*
 08B2:  RCALL  0896
 ....................    M2_P(); 
 08B4:  RCALL  08A4
@@ -414,99 +436,111 @@ CCS PCH C Compiler, Version 5.008, 5967               13-may.-19 18:33
 .................... void inicializarTimer0PWM(){ 
 ....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_2|RTCC_8_BIT); 
 *
-0978:  MOVLW  C0
-097A:  MOVWF  FD5
+09A0:  MOVLW  C0
+09A2:  MOVWF  FD5
 ....................    enable_interrupts(INT_TIMER0); 
-097C:  BSF    FF2.5
+09A4:  BSF    FF2.5
 ....................    enable_interrupts(GLOBAL); 
-097E:  IORWF  FF2,F
-0980:  GOTO   09BA (RETURN)
+09A6:  IORWF  FF2,F
+09A8:  GOTO   09F0 (RETURN)
 .................... } 
+....................  
 ....................  
 ....................  
 .................... void main(){ 
-0984:  CLRF   FF8
-0986:  BCF    FD0.7
-0988:  BSF    07.7
-098A:  BSF    FB8.3
-098C:  MOVLW  E1
-098E:  MOVWF  FAF
-0990:  MOVLW  04
-0992:  MOVWF  FB0
-0994:  MOVLW  A6
-0996:  MOVWF  FAC
-0998:  MOVLW  90
-099A:  MOVWF  FAB
-099C:  MOVLW  01
-099E:  MOVWF  16
-09A0:  MOVLW  5A
-09A2:  MOVWF  17
-09A4:  CLRF   18
-09A6:  MOVLW  0C
-09A8:  MOVWF  19
-09AA:  CLRF   1A
-09AC:  MOVF   FC1,W
-09AE:  ANDLW  C0
-09B0:  IORLW  0F
-09B2:  MOVWF  FC1
-09B4:  MOVLW  07
-09B6:  MOVWF  FB4
+09AC:  CLRF   FF8
+09AE:  BCF    FD0.7
+09B0:  BSF    07.7
+09B2:  BSF    FB8.3
+09B4:  MOVLW  E1
+09B6:  MOVWF  FAF
+09B8:  MOVLW  04
+09BA:  MOVWF  FB0
+09BC:  MOVLW  A6
+09BE:  MOVWF  FAC
+09C0:  MOVLW  90
+09C2:  MOVWF  FAB
+09C4:  MOVLW  01
+09C6:  MOVWF  16
+09C8:  MOVLW  5A
+09CA:  MOVWF  17
+09CC:  CLRF   18
+09CE:  MOVLW  0C
+09D0:  MOVWF  19
+09D2:  CLRF   1A
+09D4:  MOVF   FC1,W
+09D6:  ANDLW  C0
+09D8:  IORLW  0F
+09DA:  MOVWF  FC1
+09DC:  MOVLW  07
+09DE:  MOVWF  FB4
+....................    delay_ms(3000); 
+09E0:  MOVLW  0C
+09E2:  MOVWF  1B
+09E4:  MOVLW  FA
+09E6:  MOVWF  1C
+09E8:  RCALL  0978
+09EA:  DECFSZ 1B,F
+09EC:  BRA    09E4
 ....................    inicializarTimer0PWM(); 
-09B8:  BRA    0978
+09EE:  BRA    09A0
 ....................    estado = estadoInicial; 
-09BA:  CLRF   1A
+09F0:  CLRF   1A
 ....................    estrategia = adelante; 
-09BC:  MOVLW  01
-09BE:  MOVWF  16
-....................     
-....................    while(1){ 
-....................       if(!IN1){ 
-09C0:  BSF    F95.0
-09C2:  BTFSC  F83.0
-09C4:  BRA    09D0
-....................          led_on(); 
-09C6:  BCF    F92.5
-09C8:  BSF    F89.5
-....................          estrategia = derecha; 
-09CA:  MOVLW  04
-09CC:  MOVWF  16
-....................       } 
-09CE:  BRA    09F6
-....................       else if(!IN2){ 
-09D0:  BSF    F95.1
-09D2:  BTFSC  F83.1
-09D4:  BRA    09EE
-....................          led_on(); 
-09D6:  BCF    F92.5
-09D8:  BSF    F89.5
-....................          int dur=200; 
-09DA:  MOVLW  C8
-09DC:  MOVWF  1B
-....................          while(dur !=255){ 
-09DE:  INCFSZ 1B,W
-09E0:  BRA    09E4
-09E2:  BRA    09EC
-....................             dur--; 
-09E4:  DECF   1B,F
-....................             estrategia = atras; 
-09E6:  MOVLW  02
-09E8:  MOVWF  16
-09EA:  BRA    09DE
-....................          } 
-....................       } 
-09EC:  BRA    09F6
-....................       else{ 
-....................          led_off(); 
-09EE:  BCF    F92.5
-09F0:  BCF    F89.5
-....................          estrategia = adelante; 
 09F2:  MOVLW  01
 09F4:  MOVWF  16
+....................     
+....................    while(1){ 
+....................       if(estrategia != atras){ 
+09F6:  MOVF   16,W
+09F8:  SUBLW  02
+09FA:  BZ    0A0A
+....................          delay_ms(2000); 
+09FC:  MOVLW  08
+09FE:  MOVWF  1B
+0A00:  MOVLW  FA
+0A02:  MOVWF  1C
+0A04:  RCALL  0978
+0A06:  DECFSZ 1B,F
+0A08:  BRA    0A00
 ....................       } 
-09F6:  BRA    09C0
+....................        
+....................       if(!IN1){ 
+0A0A:  BSF    F95.0
+0A0C:  BTFSC  F83.0
+0A0E:  BRA    0A1A
+....................          led_on(); 
+0A10:  BCF    F92.5
+0A12:  BSF    F89.5
+....................          estrategia = derecha; 
+0A14:  MOVLW  04
+0A16:  MOVWF  16
+....................       } 
+0A18:  BRA    0A32
+....................       else if(!IN2){ 
+0A1A:  BSF    F95.1
+0A1C:  BTFSC  F83.1
+0A1E:  BRA    0A2A
+....................          led_on(); 
+0A20:  BCF    F92.5
+0A22:  BSF    F89.5
+....................          estrategia = atras; 
+0A24:  MOVLW  02
+0A26:  MOVWF  16
+....................       } 
+0A28:  BRA    0A32
+....................       else{ 
+....................          led_off(); 
+0A2A:  BCF    F92.5
+0A2C:  BCF    F89.5
+....................          estrategia = adelante; 
+0A2E:  MOVLW  01
+0A30:  MOVWF  16
+....................       } 
+0A32:  BRA    09F6
 ....................    } 
 .................... } 
-09F8:  SLEEP 
+0A34:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO

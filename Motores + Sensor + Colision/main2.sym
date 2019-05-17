@@ -26,21 +26,22 @@
 018     valor
 019     duracion
 01A     estado
-01B     MAIN.dur
+01B     MAIN.@SCRATCH1
+01C     @delay_ms1.P1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1_LOW
 FBE     CCP_1
+FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
-FE1-FE2 @READ_PACKED_MEMORY.P1
-FE1-FE2 @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
 FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P3
 FE9-FEA @WRITE_PROGRAM_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
@@ -59,20 +60,21 @@ ROM Allocation:
 00090C  motoresAtras
 000914  tmr0_isr
 000954  @goto10653
-000978  inicializarTimer0PWM
-000984  MAIN
-000984  @cinit1
-0009B8  @cinit2
+000978  @delay_ms1
+0009A0  inicializarTimer0PWM
+0009AC  MAIN
+0009AC  @cinit1
+0009E0  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor + Colision\
 
 Project Files:
-    main2.c                                                 [13-may.-19 18:33  CRC=A3053CD5]
+    main2.c                                                 [17-may.-19 12:06  CRC=8598CC28]
     tarjeta.h                                               [27-mar.-19 16:28  CRC=C119BE94]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 15:29  CRC=A157EDDE]
 
-Source signature=A6CED725
+Source signature=89626678
 
 Units:
     main2 (main)
