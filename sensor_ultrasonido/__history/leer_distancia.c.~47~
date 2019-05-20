@@ -15,6 +15,7 @@ void check_time_out(){
    disable_interrupts(INT_CCP2);
    disable_interrupts(INT_TIMER1);         
    v_captura = INF_16_BIT;
+   led_on();
    captura = 0;
 }
 
@@ -22,7 +23,7 @@ void check_time_out(){
 #INT_CCP2
 void capture(){
    if (captura == 0){
-      led_on();
+      //led_on();
       set_timer1(0);
       captura++;
       enable_interrupts(INT_TIMER1);   
@@ -31,21 +32,20 @@ void capture(){
    else{
       v_captura = CCP_2;
       captura = 0;
-      disable_interrupts(INT_CCP2);
-      disable_interrupts(INT_TIMER1);
    }
 }
 
 void pulseIn_ECHO_HIGH(){
    v_captura = 0;
-   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    setup_ccp2(CCP_CAPTURE_RE);
    enable_interrupts(INT_CCP2);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    while(v_captura == 0){
       //led_on();
    }
-   //led_on();
-   
+   led_on();
+   disable_interrupts(INT_CCP2);
+   disable_interrupts(INT_TIMER1);
 }
 
 void main(){
@@ -57,7 +57,16 @@ void main(){
       output_high(SR04_TRIGG);
       delay_ms(15);
       output_low(SR04_TRIGG);
-      pulseIn_ECHO_HIGH(); 
+      pulseIn_ECHO_HIGH();
+      
+      if(v_captura > 4425){
+         //led_on();
+      }
+      else{
+         //led_off();
+      }
+      
+      
    }
 
 }

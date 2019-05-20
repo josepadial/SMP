@@ -1,12 +1,7 @@
 ÀÄleer_distancia
-   ÃÄMAIN  0/68  Ram=0
+   ÃÄMAIN  0/44  Ram=0
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/42  Ram=1
-   ³  ÃÄpulseIn_ECHO_HIGH  0/32  Ram=0
-   ³  ÃÄ@PRINTF_X_650  0/62  Ram=2
-   ³  ³  ÃÄ@PUTCHAR_1_  0/78  Ram=1
-   ³  ³  ÀÄ@PUTCHAR_1_  0/78  Ram=1
-   ³  ÀÄ@PRINTF_X_650  0/62  Ram=2
-   ³     ÀÄ*
+   ³  ÀÄpulseIn_ECHO_HIGH  0/32  Ram=0
    ÃÄcheck_time_out  0/16  Ram=0
-   ÀÄcapture  0/42  Ram=0
+   ÀÄcapture  0/46  Ram=0

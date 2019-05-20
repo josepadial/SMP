@@ -38,9 +38,9 @@ void capture(){
 
 void pulseIn_ECHO_HIGH(){
    v_captura = 0;
-   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    setup_ccp2(CCP_CAPTURE_RE);
    enable_interrupts(INT_CCP2);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    while(v_captura == 0){
       //led_on();
    }
@@ -57,7 +57,16 @@ void main(){
       output_high(SR04_TRIGG);
       delay_ms(15);
       output_low(SR04_TRIGG);
-      pulseIn_ECHO_HIGH(); 
+      pulseIn_ECHO_HIGH();
+      
+      if(v_captura > 4425){
+         //led_on();
+      }
+      else{
+         //led_off();
+      }
+      
+      
    }
 
 }

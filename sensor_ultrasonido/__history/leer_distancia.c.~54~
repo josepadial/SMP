@@ -38,9 +38,9 @@ void capture(){
 
 void pulseIn_ECHO_HIGH(){
    v_captura = 0;
-   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    setup_ccp2(CCP_CAPTURE_RE);
    enable_interrupts(INT_CCP2);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    while(v_captura == 0){
       //led_on();
    }

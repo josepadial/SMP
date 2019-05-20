@@ -1,8 +1,8 @@
 D G "SR04_ECHO" 0 5 "PIN_B3"
-D G "__PCH__" 0 71 ""5.008""
-D G "__DEVICE__" 0 71 "4550"
-D G "__DATE__" 0 71 ""17-may.-19""
-D G "__TIME__" 0 71 ""16:43:18""
+D G "__PCH__" 0 66 ""5.008""
+D G "__DEVICE__" 0 66 "4550"
+D G "__DATE__" 0 66 ""17-may.-19""
+D G "__TIME__" 0 66 ""19:00:43""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -937,14 +937,14 @@ D G "IN5" 1 137 "input(PIN_D4)"
 D G "INF_16_BIT" 0 3 "65535"
 D G "SR04_TRIGG" 0 4 "PIN_A4"
 D G "SR04_ECHO" 0 5 "PIN_B3"
-V G "captura" 0 10 "int8" `656 
-V G "v_captura" 0 11 "int16" `657 
-F G "check_time_out" 0 14 "void()" `658 
-F G "capture" 0 23 "void()" `659 
-F G "pulseIn_ECHO_HIGH" 0 38 "void()" `660 
-C L "pulseIn_ECHO_HIGH" 0 8 1 "FUNCTION"
-F G "MAIN" 0 48 "void()" `661 
-C L "MAIN" 0 8 5 "FUNCTION"
+V G "captura" 0 10 "int8" `650 
+V G "v_captura" 0 11 "int16" `651 
+F G "check_time_out" 0 14 "void()" `652 
+F G "capture" 0 23 "void()" `653 
+F G "pulseIn_ECHO_HIGH" 0 39 "void()" `654 
+C L "pulseIn_ECHO_HIGH" 0 6 1 "FUNCTION"
+C L "pulseIn_ECHO_HIGH" 0 6 1 "FUNCTION"
+F G "MAIN" 0 51 "void()" `655 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -1082,8 +1082,3 @@ F B "i2c_stop" 0 1
 F B "i2c_isr_state" 0 1
 F B "delay_ms" 1 0
 F B "delay_us" 1 0
-F B "putchar" 1 2
-F B "puts" 1 2
-F B "getch" 0 1
-F B "gets" 1 3
-F B "kbhit" 0 1
