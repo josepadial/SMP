@@ -41,11 +41,7 @@ void pulseIn_ECHO_HIGH(){
    setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);
    setup_ccp2(CCP_CAPTURE_RE);
    enable_interrupts(INT_CCP2);
-   while(v_captura == 0){
-      //led_on();
-   }
-   //led_on();
-   
+   while(v_captura == 0){}   
 }
 
 void main(){
@@ -53,7 +49,6 @@ void main(){
    enable_interrupts(GLOBAL);
    
    while(1){
-      
       output_high(SR04_TRIGG);
       delay_ms(15);
       output_low(SR04_TRIGG);
