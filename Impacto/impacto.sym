@@ -1,0 +1,74 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     MAIN.cont
+006     IMPACTO.@SCRATCH1
+007     @delay_ms1.P1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000808  M1_A
+000818  M2_A
+000828  M3_H
+000838  M4_H
+000848  @delay_ms1
+000870  M3_P
+00087E  M4_P
+00088C  M3_A
+00089C  M4_A
+0008AC  IMPACTO
+0008E8  MAIN
+0008E8  @cinit1
+0008F8  @cinit2
+
+Project Directory:
+    C:\Users\padul\Desktop\GitHub\SMP\Impacto\
+
+Project Files:
+    impacto.c                                               [06-jun.-19 18:14  CRC=45ED785B]
+    tarjeta.h                                               [24-may.-19 12:06  CRC=55507C43]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
+    mismov.h                                                [06-jun.-19 18:14  CRC=99F92C27]
+
+Source signature=70883ACA
+
+Units:
+    impacto (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   impacto.xsym
+    Errors:      impacto.err
+    Ext Symbols: impacto.esym
+    INHX32:      impacto.hex
+    Symbols:     impacto.sym
+    List:        impacto.lst
+    Debug/COFF:  impacto.cof
+    Project:     impacto.ccspjt
+    Call Tree:   impacto.tre
+    Statistics:  impacto.STA

@@ -1,0 +1,53 @@
+
+ROM used:   666/16384 (2%)
+            670/16384 (2%) including unused fragments
+
+            0.5 Average locations per line
+            2.0 Average locations per statement
+
+RAM used:   28/2048 (1%) at main() level
+            34/2048 (2%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   30    10   3  main.c
+  150    36  11  tarjeta.h
+  821     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+  223   171  53  srf02.h
+  147   108  33  lcd03.h
+----- -----
+ 1371   325 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     72   5    3             @I2C_READ_1
+0     72   5    1             @I2C_WRITE_1
+0     40   3    1             @delay_ms1
+0    378  28    6   711  3.9  srf_measure_cm
+0     18   1    1    17  0.8  lcd_init
+0     82   6   24   240  3.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              325
+    Comments                176
+    Volume (V)              1162
+    Difficulty (D)          8.4
+    Effort to implement (E) 9797
+    Time to implement (T)   9 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    32
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-007FE     0  2048  
+00800-00806     4  4  
+00808-07FFE   662  30050  
+
+
+

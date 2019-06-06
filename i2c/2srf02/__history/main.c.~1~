@@ -1,0 +1,34 @@
+#include "tarjeta.h"
+#use delay(clock=48000000)
+#include "srf02.h"
+#include "lcd03.h"
+
+
+void main() {
+unsigned int16 m;
+char msg[21];
+
+lcd_init();
+led_off();
+
+set_tris_a(0x00);
+set_tris_b(0x13);
+set_tris_c(0x00);
+set_tris_d(0x1F);
+set_tris_e(0x00);
+
+while(1){
+	lcd_clear();
+	m = srf_measure_cm();
+	sprintf(msg,"%lu cm\r", m);
+	lcd_print(msg);
+	m = srf_measure_in();
+	sprintf(msg,"%lu in\r", m);
+	lcd_print(msg);
+	m = srf_measure_us();
+	sprintf(msg,"%lu us\r", m);
+	lcd_print(msg);
+	delay_ms(500);
+}
+
+}

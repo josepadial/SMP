@@ -103,7 +103,7 @@ void main(){
    estrategia = atras;
    
    while(1){
-      if(estrategia != atras){
+      /*if(estrategia != atras){
          delay_ms(2000);
       }
       
@@ -118,7 +118,7 @@ void main(){
       else{
          led_off();
          estrategia = adelante;
-      }
+      }*/
       if(IN3){
          led_on();
          estrategia = adelante;

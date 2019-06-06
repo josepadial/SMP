@@ -1,0 +1,21 @@
+#ifndef _MISMOV_
+#define _MISMOV_
+
+#include "tarjeta.h" 
+
+void IMPACTO(){
+   M3_H();
+   M4_H();
+   delay_ms(250);
+   M3_P();
+   M4_P();
+   delay_ms(700);
+   M3_A();
+   M4_A();
+   delay_ms(250);
+   M3_P();
+   M4_P();
+   delay_ms(500);
+}
+
+#endif

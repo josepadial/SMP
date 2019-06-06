@@ -1,0 +1,22 @@
+[PROJECT]
+Target=impacto.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=impacto.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\Impacto\
+[impacto.c]
+Type=4
+[mru-list]
+1=impacto.c
+[Opened Files]
+1=impacto.c
+2=tarjeta.h
+3=..\Motores + Sensor + Colision\comportamientoFinal.c
+4=mismov.h
+5=
+[Units]
+Count=1
+1=impacto (main)

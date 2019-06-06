@@ -1,0 +1,17 @@
+ÀÄmain
+   ÀÄMAIN  0/82  Ram=24
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/18  Ram=1
+      ³  ÀÄ@delay_ms1  0/40  Ram=1
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄsrf_measure_cm  0/378  Ram=6
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@delay_ms1  0/40  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³  ÃÄ@I2C_READ_1  0/72  Ram=3
+      ³  ÀÄ@I2C_READ_1  0/72  Ram=3
+      ÀÄ@delay_ms1  0/40  Ram=1

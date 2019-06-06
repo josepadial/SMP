@@ -1,0 +1,6 @@
+>>> Warning 225 "C:\Users\padul\Desktop\GitHub\SMP\i2c\2srf02\lcd03.h" Line 7(16,21): Duplicate #define
+>>> Warning 203 "main.c" Line 20(1,1): Condition always TRUE
+>>> Warning 202 "main.c" Line 9(6,9): Variable never used:   msg
+      Memory usage:   ROM=2%      RAM=1% - 2%
+      0 Errors,  3 Warnings.
+Build Successful.
