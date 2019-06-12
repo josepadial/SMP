@@ -4,7 +4,7 @@
 void main() {
    
    delay_ms(3000);
-   ATRAS();
+   DELANTE();
    while(1){
       if(ULTRA_SONIDOS(60)){
          PARAR();

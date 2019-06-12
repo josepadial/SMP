@@ -32,13 +32,13 @@ void RECOGER(){
 
 void IMPACTO(){
    DISPARAR();
-   delay_ms(100);
+   delay_ms(250);
    PARAR();
-   delay_ms(100);
+   delay_ms(700);
    RECOGER();
-   delay_ms(200);
+   delay_ms(250);
    PARAR();
-   delay_ms(100);
+   delay_ms(500);
 }
 
 void DERECHA(long int t){
@@ -68,7 +68,7 @@ int ULTRA_SONIDOS(int dist){
    set_tris_d(0x1F);
    set_tris_e(0x00);
    
-   delay_ms(1);
+   delay_ms(500);
    if(srf_measure_cm() < dist) 
       return 1;
    else

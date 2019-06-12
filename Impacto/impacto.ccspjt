@@ -12,10 +12,10 @@ Type=4
 [mru-list]
 1=impacto.c
 [Opened Files]
-1=..\Controlar giro\controlar_giro.c
-2=..\Controlar giro\tarjeta.h
-3=impacto.c
-4=mismov.h
+1=mismov.h
+2=impacto.c
+3=..\mismov.h
+4=..\i2c\2srf02\main.c
 5=
 [Units]
 Count=1

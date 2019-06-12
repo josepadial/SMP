@@ -3,28 +3,26 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-005     MAIN.cont
-006     IMPACTO.@SCRATCH1
-006     MAIN.@SCRATCH1
-007     @delay_ms2.P1
-007     @delay_ms1.P2
+005     @delay_ms1.P1
+005     MAIN.@SCRATCH1
+006     @delay_ms2.P1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @READ_PACKED_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000808  @delay_ms2
@@ -32,27 +30,27 @@ ROM Allocation:
 000842  M4_H
 000852  DISPARAR
 00085A  @delay_ms1
-000882  M3_P
-000892  M4_P
-0008A2  PARAR_I
+000882  M1_P
+000892  M2_P
+0008A2  PARAR
 0008A8  M3_A
 0008B8  M4_A
 0008C8  RECOGER
 0008D0  IMPACTO
-000914  @cinit1
-000914  MAIN
-000924  @cinit2
+0008F4  @cinit1
+0008F4  MAIN
+000904  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Impacto\
 
 Project Files:
-    impacto.c                                               [12-jun.-19 13:11  CRC=48A61A21]
+    impacto.c                                               [12-jun.-19 18:23  CRC=40427AAA]
     tarjeta.h                                               [24-may.-19 12:06  CRC=55507C43]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
-    mismov.h                                                [12-jun.-19 13:12  CRC=604FFC26]
+    mismov.h                                                [12-jun.-19 18:45  CRC=103F543C]
 
-Source signature=FFEE7C8E
+Source signature=57698D43
 
 Units:
     impacto (main)

@@ -34,9 +34,9 @@ void IMPACTO(){
    DISPARAR();
    delay_ms(100);
    PARAR();
-   delay_ms(100);
+   delay_ms(50);
    RECOGER();
-   delay_ms(200);
+   delay_ms(100);
    PARAR();
    delay_ms(100);
 }

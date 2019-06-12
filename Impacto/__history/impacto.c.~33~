@@ -13,11 +13,8 @@ void main(){
    //inicializarTimer0PWM(); 
    //M1_A();
    //M2_A();
-   delay_ms(500);
    while(1){
-      
       if(IN2 /*&& cont<2*/){
-         //delay_ms(500);
          IMPACTO();
       }
       /*else if(IN2 && cont>2){
