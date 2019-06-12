@@ -12,10 +12,12 @@ Type=4
 [mru-list]
 1=motores_with_sensor.c
 [Opened Files]
-1=motores_with_sensor.c
-2=tarjeta.h
-3=
-4=
+1=..\Impacto\impacto.c
+2=..\Impacto\tarjeta.h
+3=..\Impacto\mismov.h
+4=..\i2c\2srf02\main.c
+5=motores_with_sensor.c
+6=
 [Units]
 Count=1
 1=motores_with_sensor (main)

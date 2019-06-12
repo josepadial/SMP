@@ -1,16 +1,16 @@
-CCS PCH C Compiler, Version 5.008, 5967               08-may.-19 16:57
+CCS PCH C Compiler, Version 5.008, 5967               06-jun.-19 19:22
 
                Filename:   C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor\motores_with_sensor.lst
 
-               ROM used:   86 bytes (0%)
-                           Largest free fragment is 30630
+               ROM used:   40 bytes (0%)
+                           Largest free fragment is 30676
                RAM used:   4 (0%) at main() level
                            4 (0%) worst case
-               Stack used: 1 locations
+               Stack used: 0 locations
                Stack size: 31
 
 *
-0800:  GOTO   0836
+0800:  GOTO   0808
 .................... #include "tarjeta.h"  
 .................... #ifndef _TARJETA_ 
 .................... #define _TARJETA_ 
@@ -53,16 +53,8 @@ CCS PCH C Compiler, Version 5.008, 5967               08-may.-19 16:57
 ....................  
 .................... void M1_H(){ 
 ....................    output_high(PIN_A1); 
-*
-0808:  BCF    F92.1
-080A:  BSF    F89.1
 ....................    output_low(PIN_D7); 
-080C:  BCF    F95.7
-080E:  BCF    F8C.7
 ....................    output_high(PIN_D6); 
-0810:  BCF    F95.6
-0812:  BSF    F8C.6
-0814:  RETURN 0
 .................... } 
 ....................  
 .................... void M1_P(){ 
@@ -79,28 +71,14 @@ CCS PCH C Compiler, Version 5.008, 5967               08-may.-19 16:57
 ....................  
 .................... void M2_H(){ 
 ....................    output_high(PIN_A0); 
-0816:  BCF    F92.0
-0818:  BSF    F89.0
 ....................    output_low(PIN_C2); 
-081A:  BCF    F94.2
-081C:  BCF    F8B.2
 ....................    output_high(PIN_D5); 
-081E:  BCF    F95.5
-0820:  BSF    F8C.5
-0822:  GOTO   0850 (RETURN)
 .................... } 
 ....................  
 .................... void M2_P(){ 
 ....................    output_high(PIN_A0); 
-0826:  BCF    F92.0
-0828:  BSF    F89.0
 ....................    output_low(PIN_C2); 
-082A:  BCF    F94.2
-082C:  BCF    F8B.2
 ....................    output_low(PIN_D5); 
-082E:  BCF    F95.5
-0830:  BCF    F8C.5
-0832:  GOTO   0856 (RETURN)
 .................... } 
 ....................  
 .................... void M3_A(){ 
@@ -200,37 +178,40 @@ CCS PCH C Compiler, Version 5.008, 5967               08-may.-19 16:57
 .................... }   
 ....................   
 .................... void main(){  
-0836:  CLRF   FF8
-0838:  BCF    FD0.7
-083A:  MOVF   FC1,W
-083C:  ANDLW  C0
-083E:  IORLW  0F
-0840:  MOVWF  FC1
-0842:  MOVLW  07
-0844:  MOVWF  FB4
+*
+0808:  CLRF   FF8
+080A:  BCF    FD0.7
+080C:  MOVF   FC1,W
+080E:  ANDLW  C0
+0810:  IORLW  0F
+0812:  MOVWF  FC1
+0814:  MOVLW  07
+0816:  MOVWF  FB4
 ....................    //inicializarTimer0PWM();  
 ....................      
 ....................    while(1){ 
 ....................       if(!IN1){ 
-0846:  BSF    F95.0
-0848:  BTFSC  F83.0
-084A:  BRA    0852
-....................          M1_H(); 
-084C:  RCALL  0808
-....................          M2_H(); 
-084E:  BRA    0816
+0818:  BSF    F95.0
+081A:  BTFSC  F83.0
+081C:  BRA    0824
+....................          led_off(); 
+081E:  BCF    F92.5
+0820:  BCF    F89.5
+....................          /*M1_H(); 
+....................          M2_H();*/ 
 ....................       } 
-0850:  BRA    0856
+0822:  BRA    0828
 ....................       else{ 
-....................          M1_H(); 
-0852:  RCALL  0808
-....................          M2_P(); 
-0854:  BRA    0826
+....................          /*M1_H(); 
+....................          M2_P();*/ 
+....................          led_on(); 
+0824:  BCF    F92.5
+0826:  BSF    F89.5
 ....................       } 
-0856:  BRA    0846
+0828:  BRA    0818
 ....................    } 
 .................... } 
-0858:  SLEEP 
+082A:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO

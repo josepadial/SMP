@@ -12,9 +12,9 @@ Type=4
 [mru-list]
 1=impacto.c
 [Opened Files]
-1=impacto.c
-2=tarjeta.h
-3=..\Motores + Sensor + Colision\comportamientoFinal.c
+1=..\Controlar giro\controlar_giro.c
+2=..\Controlar giro\tarjeta.h
+3=impacto.c
 4=mismov.h
 5=
 [Units]

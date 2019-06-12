@@ -1,0 +1,13 @@
+#include "mismov.h"
+#use delay (clock=48000000)
+
+void main() {
+   
+   delay_ms(3000);
+   while(1){
+      DELANTE();
+      if(ULTRA_SONIDOS(30)){
+         DERECHA(600);
+      }
+   }
+}

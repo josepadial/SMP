@@ -1,0 +1,55 @@
+#ifndef _MISMOV_
+#define _MISMOV_
+
+#include "tarjeta.h" 
+#use delay (clock=48000000)
+
+void DELANTE(){
+   M1_A();
+   M2_A();
+}
+
+void ATRAS(){
+   M1_H();
+   M2_H();
+}
+
+void PARAR(){
+   M1_P();
+   M2_P();
+}
+
+void IMPACTO(){
+   M3_H();
+   M4_H();
+   delay_ms(250);
+   PARAR();
+   delay_ms(700);
+   M3_A();
+   M4_A();
+   delay_ms(250);
+   PARAR();
+   delay_ms(500);
+}
+
+void DERECHA(long int t){
+   PARAR();
+   delay_ms(700);
+   M1_P();
+   M2_H();
+   delay_ms(t);
+   PARAR();
+   delay_ms(500);
+}
+
+void IZQUIERDA(long int t){
+   PARAR();
+   delay_ms(700);
+   M1_H();
+   M2_P();
+   delay_ms(t);
+   PARAR();
+   delay_ms(500);
+}
+
+#endif

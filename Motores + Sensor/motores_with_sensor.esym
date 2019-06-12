@@ -1,7 +1,8 @@
-D G "__PCH__" 0 0 ""5.008""
-D G "__DEVICE__" 0 0 ""
-D G "__DATE__" 0 0 ""08-may.-19""
-D G "__TIME__" 0 0 ""16:57:36""
+F G "inicializarTimer0PWM" 0 5 "void(maxptr ,int16 ,int8 )" `38 
+D G "__PCH__" 0 5 ""5.008""
+D G "__DEVICE__" 0 5 "4550"
+D G "__DATE__" 0 5 ""06-jun.-19""
+D G "__TIME__" 0 5 ""19:22:19""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -936,6 +937,8 @@ D G "IN5" 1 137 "input(PIN_D4)"
 C L "inicializarTimer0PWM" 1 10 5 "FUNCTION"
 F G "inicializarTimer0PWM" 0 5 "void()" `650 
 F G "MAIN" 0 11 "void()" `651  "inicializarTimer0PWM();"
+C L "MAIN" 0 17 2 "FUNCTION"
+C L "MAIN" 0 17 2 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

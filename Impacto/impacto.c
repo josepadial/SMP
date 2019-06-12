@@ -12,10 +12,11 @@ void inicializarTimer0PWM(){
 void main(){ 
    //inicializarTimer0PWM(); 
    int cont = 0;
-   M1_A();
-   M2_A();
+   //M1_A();
+   //M2_A();
    while(1){
       if(IN2 /*&& cont<2*/){
+         delay_ms(1000);
          IMPACTO();
          cont++;
       }

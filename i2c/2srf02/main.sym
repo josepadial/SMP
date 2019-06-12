@@ -3,58 +3,68 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-005-006 MAIN.m
-007-01B MAIN.msg
-01C-01D srf_measure_cm.m
-01C     lcd_init.@SCRATCH1
-01C     MAIN.@SCRATCH1
-01E-01F srf_measure_cm.m2
-020     @I2C_WRITE_1.P1
-020     @I2C_READ_1.P2
-020     @delay_ms1.P3
-020     srf_measure_cm.@SCRATCH1
-021     @I2C_READ_1.@SCRATCH1
-021     srf_measure_cm.@SCRATCH2
-022     @I2C_READ_1.@SCRATCH2
+005     ULTRA_SONIDOS.dist
+005     MAIN.@SCRATCH1
+006-007 srf_measure_cm.m
+006     @delay_ms3.P1
+006     @delay_ms2.P2
+006     ULTRA_SONIDOS.@SCRATCH1
+007     ULTRA_SONIDOS.@SCRATCH2
+008-009 srf_measure_cm.m2
+00A     @I2C_WRITE_1.P1
+00A     @delay_ms1.P2
+00A     @I2C_READ_1.P3
+00A     srf_measure_cm.@SCRATCH1
+00B     @I2C_READ_1.@SCRATCH1
+00B     srf_measure_cm.@SCRATCH2
+00C     @I2C_READ_1.@SCRATCH2
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
 FBB     CCP_2_LOW
 FBB     CCP_2
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
 FE9-FEA @READ_PACKED_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000808  @delay_ms1
-000830  lcd_init
-000842  @I2C_WRITE_1
-00088A  @I2C_READ_1
-0008D2  srf_measure_cm
-000A4C  @cinit1
-000A4C  MAIN
-000A5C  @cinit2
+000808  @delay_ms3
+000832  M1_A
+000842  M2_A
+000852  DELANTE
+00085A  @delay_ms2
+000884  @I2C_WRITE_1
+0008CC  @delay_ms1
+0008F6  @I2C_READ_1
+00093E  srf_measure_cm
+000AB8  ULTRA_SONIDOS
+000AF6  M1_P
+000B06  M2_P
+000B16  PARAR
+000B1E  @cinit1
+000B1E  MAIN
+000B2E  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\i2c\2srf02\
 
 Project Files:
-    main.c                                                  [31-may.-19 19:37  CRC=CF42E7A4]
+    main.c                                                  [12-jun.-19 13:55  CRC=D872A938]
+    mismov.h                                                [12-jun.-19 13:56  CRC=F483F585]
     tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
-    srf02.h                                                 [16-nov.-09 09:30  CRC=40690E43]
-    lcd03.h                                                 [01-abr.-09 11:34  CRC=4020CBB5]
+    srf02.h                                                 [12-jun.-19 13:38  CRC=4677C6D0]
 
-Source signature=ADDDF871
+Source signature=77D6977D
 
 Units:
     main (main)

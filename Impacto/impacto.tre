@@ -1,18 +1,20 @@
 ÀÄimpacto
-   ÀÄMAIN  0/36  Ram=1
+   ÀÄMAIN  0/46  Ram=2
       ÃÄ@cinit1  (Inline)  Ram=0
-      ÃÄM1_A  0/16  Ram=0
-      ÃÄM2_A  0/16  Ram=0
-      ÀÄIMPACTO  0/60  Ram=1
-         ÃÄM3_H  0/16  Ram=0
-         ÃÄM4_H  0/16  Ram=0
+      ÃÄ@delay_ms2  0/42  Ram=1
+      ÀÄIMPACTO  0/68  Ram=1
+         ÃÄDISPARAR  0/8  Ram=0
+         ³  ÃÄM3_H  0/16  Ram=0
+         ³  ÀÄM4_H  0/16  Ram=0
          ÃÄ@delay_ms1  0/40  Ram=1
-         ÃÄM3_P  0/14  Ram=0
-         ÃÄM4_P  0/14  Ram=0
+         ÃÄPARAR_I  0/6  Ram=0
+         ³  ÃÄM3_P  0/16  Ram=0
+         ³  ÀÄM4_P  0/16  Ram=0
          ÃÄ@delay_ms1  0/40  Ram=1
-         ÃÄM3_A  0/16  Ram=0
-         ÃÄM4_A  0/16  Ram=0
+         ÃÄRECOGER  0/8  Ram=0
+         ³  ÃÄM3_A  0/16  Ram=0
+         ³  ÀÄM4_A  0/16  Ram=0
          ÃÄ@delay_ms1  0/40  Ram=1
-         ÃÄM3_P  0/14  Ram=0
-         ÃÄM4_P  0/14  Ram=0
+         ÃÄPARAR_I  0/6  Ram=0
+         ³  ÀÄ*
          ÀÄ@delay_ms1  0/40  Ram=1

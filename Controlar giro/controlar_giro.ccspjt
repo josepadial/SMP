@@ -1,0 +1,22 @@
+[PROJECT]
+Target=controlar_giro.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=controlar_giro.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\Controlar giro\
+[controlar_giro.c]
+Type=4
+[mru-list]
+1=controlar_giro.c
+[Opened Files]
+1=controlar_giro.c
+2=tarjeta.h
+3=mismov.h
+4=
+5=
+[Units]
+Count=1
+1=controlar_giro (main)

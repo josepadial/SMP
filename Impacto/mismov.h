@@ -4,19 +4,65 @@
 #include "tarjeta.h" 
 #use delay (clock=48000000)
 
-void IMPACTO(){
+void DELANTE(){
+   M1_A();
+   M2_A();
+}
+
+void ATRAS(){
+   M1_H();
+   M2_H();
+}
+
+void PARAR(){
+   M1_P();
+   M2_P();
+}
+
+void DISPARAR(){
    M3_H();
    M4_H();
-   delay_ms(250);
-   M3_P();
-   M4_P();
-   delay_ms(700);
+}
+
+void RECOGER(){
    M3_A();
    M4_A();
-   delay_ms(250);
+}
+
+void PARAR_I(){
    M3_P();
    M4_P();
-   delay_ms(500);
+}
+
+void IMPACTO(){
+   DISPARAR();
+   delay_ms(350);
+   PARAR_I();
+   delay_ms(1000);
+   RECOGER();
+   delay_ms(350);
+   PARAR_I();
+   delay_ms(1000);
+}
+
+void DERECHA(long int t){
+   PARAR();
+   delay_ms(400);
+   M1_P();
+   M2_H();
+   delay_ms(t);
+   PARAR();
+   delay_ms(250);
+}
+
+void IZQUIERDA(long int t){
+   PARAR();
+   delay_ms(400);
+   M1_H();
+   M2_P();
+   delay_ms(t);
+   PARAR();
+   delay_ms(250);
 }
 
 #endif

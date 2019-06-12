@@ -22,22 +22,19 @@ FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000808  M1_H
-000816  M2_H
-000826  M2_P
-000836  @cinit1
-000836  MAIN
-000846  @cinit2
+000808  MAIN
+000808  @cinit1
+000818  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Motores + Sensor\
 
 Project Files:
-    motores_with_sensor.c                                   [08-may.-19 16:56  CRC=C5F7A2B6]
-    tarjeta.h                                               [27-mar.-19 16:28  CRC=C119BE94]
-    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 15:29  CRC=A157EDDE]
+    motores_with_sensor.c                                   [06-jun.-19 19:21  CRC=C5F7A2B6]
+    tarjeta.h                                               [24-may.-19 12:06  CRC=55507C43]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
 
-Source signature=C9C13D06
+Source signature=5DF7FAB5
 
 Units:
     motores_with_sensor (main)
