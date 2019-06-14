@@ -1,8 +1,7 @@
-C L "MAIN" 0 11 1 "FUNCTION"
-D G "__PCH__" 0 16 ""5.008""
-D G "__DEVICE__" 0 16 "4550"
-D G "__DATE__" 0 16 ""12-jun.-19""
-D G "__TIME__" 0 16 ""13:56:28""
+D G "__PCH__" 0 22 ""5.008""
+D G "__DEVICE__" 0 22 "4550"
+D G "__DATE__" 0 22 ""13-jun.-19""
+D G "__TIME__" 0 22 ""18:56:32""
 D G "_MISMOV_" 1 2 ""
 D G "_TARJETA_" 2 3 ""
 c L "set_tris_a" 3 1 22 "FUNCTION"
@@ -973,6 +972,8 @@ F G "IZQUIERDA" 1 54 "void(int16 t)" `681
 V L "dist" 1 64 "int8" `684 
 F G "ULTRA_SONIDOS" 1 64 "int8(int8 dist)" `683 
 F G "MAIN" 0 4 "void()" `689 
+C L "MAIN" 0 11 1 "FUNCTION"
+C L "MAIN" 0 11 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

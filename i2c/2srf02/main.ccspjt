@@ -12,10 +12,10 @@ Type=4
 [mru-list]
 1=main.c
 [Opened Files]
-1=main.c
-2=tarjeta.h
+1=..\..\Motores + Sensor\motores_with_sensor.c
+2=main.c
 3=mismov.h
-4=srf02.h
+4=
 5=
 6=
 [Units]

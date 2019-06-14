@@ -1,9 +1,9 @@
 
-ROM used:   842/16384 (3%)
-            846/16384 (3%) including unused fragments
+ROM used:   840/16384 (3%)
+            844/16384 (3%) including unused fragments
 
-            0.7 Average locations per line
-            3.3 Average locations per statement
+            0.6 Average locations per line
+            3.2 Average locations per statement
 
 RAM used:   5/2048 (0%) at main() level
             12/2048 (1%) worst case
@@ -13,49 +13,46 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   15     7   3  main.c
+   21    11   4  main.c
    79    41  16  mismov.h
   150    36  14  tarjeta.h
   821     0   0  ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
-  224   171  67  srf02.h
+  224   171  66  srf02.h
 ----- -----
- 1289   255 Total
+ 1295   259 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     16   1    0    48  1.1  M1_A
-0     16   1    0    48  1.1  M1_P
-0     16   1    0    48  1.1  M2_A
-0     16   1    0    48  1.1  M2_P
+0     16   1    0    48  1.1  M1_H
+0     16   1    0    48  1.1  M2_H
 0     72   4    3             @I2C_READ_1
 0     72   4    1             @I2C_WRITE_1
-0     42   2    1   711  3.9  @delay_ms1
+0     42   2    1             @delay_ms1
 0    378  22    6   711  3.9  srf_measure_cm
-0     42   2    1    21  1.0  @delay_ms2
-0      8   0    0    21  1.0  DELANTE
-0      8   0    0    21  1.0  PARAR
+0     42   2    1             @delay_ms2
+0      8   0    0    21  1.0  ATRAS
 0     62   4    3   195  3.1  ULTRA_SONIDOS
-0     42   2    1    90  2.0  @delay_ms3
-0     48   3    1    84  1.9  MAIN
+0     40   2    1             @delay_ms3
+0     88   5    1   183  2.7  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               12
-    Statements              255
-    Comments                172
-    Volume (V)              3205
-    Difficulty (D)          23.7
-    Effort to implement (E) 75982
-    Time to implement (T)   1 hours, 10 minutes
-    Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   3
-    Maintainability (MI)    72
+    Functions               6
+    Statements              259
+    Comments                173
+    Volume (V)              1699
+    Difficulty (D)          12.9
+    Effort to implement (E) 21872
+    Time to implement (T)   20 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    125
 
  Segment     Used  Free
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
-00808-07FFE   838  29874  
+00808-07FFE   836  29876  
 
 
 

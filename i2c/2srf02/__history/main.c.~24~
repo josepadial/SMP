@@ -7,7 +7,7 @@ void main() {
    ATRAS();
    led_off();
    while(1){
-      if(ULTRA_SONIDOS(30)){
+      if(ULTRA_SONIDOS(60)){
          //PARAR();
          led_on();
          delay_ms(500);

@@ -1,0 +1,16 @@
+읕config
+   읕MAIN  0/572  Ram=1
+      쳐@cinit1  (Inline)  Ram=0
+      쳐@delay_ms1  0/42  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      쳐@I2C_WRITE_1  0/72  Ram=1
+      읕@I2C_WRITE_1  0/72  Ram=1

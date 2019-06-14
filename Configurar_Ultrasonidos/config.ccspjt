@@ -1,0 +1,20 @@
+[PROJECT]
+Target=config.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=config.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\Configurar_Ultrasonidos\
+[config.c]
+Type=4
+[mru-list]
+1=config.c
+[Opened Files]
+1=..\i2c\2srf02\srf02.h
+2=config.c
+3=
+[Units]
+Count=1
+1=config (main)

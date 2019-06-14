@@ -1,0 +1,48 @@
+
+ROM used:   690/16384 (2%)
+            694/16384 (2%) including unused fragments
+
+            0.7 Average locations per line
+            8.5 Average locations per statement
+
+RAM used:   5/2048 (0%) at main() level
+            6/2048 (0%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   66    45  56  config.c
+  150    36  44  tarjeta.h
+  821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+----- -----
+ 1037    81 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     72   5    1             @I2C_WRITE_1
+0     42   3    1             @delay_ms1
+0    572  41    1  1090  2.0  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              81
+    Comments                171
+    Volume (V)              1098
+    Difficulty (D)          1.9
+    Effort to implement (E) 2065
+    Time to implement (T)   2 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    113
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-007FE     0  2048  
+00800-00806     4  4  
+00808-07FFE   686  30026  
+
+
+

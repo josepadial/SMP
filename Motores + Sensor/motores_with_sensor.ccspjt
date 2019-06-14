@@ -12,8 +12,8 @@ Type=4
 [mru-list]
 1=motores_with_sensor.c
 [Opened Files]
-1=..\Impacto\impacto.c
-2=..\Impacto\tarjeta.h
+1=motores_with_sensor.c
+2=
 3=..\Impacto\mismov.h
 4=..\i2c\2srf02\main.c
 5=motores_with_sensor.c

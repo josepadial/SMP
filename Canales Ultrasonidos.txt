@@ -1,0 +1,3 @@
+0 blanco
+2 naranja
+4 amarillo

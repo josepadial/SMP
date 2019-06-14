@@ -1,8 +1,0 @@
->>> Warning 204 "leer_distancia_bucle.c" Line 17(1,1): Condition always FALSE
->>> Warning 203 "leer_distancia_bucle.c" Line 20(1,1): Condition always TRUE
->>> Warning 203 "leer_distancia_bucle.c" Line 33(1,1): Condition always TRUE
->>> Warning 202 "leer_distancia_bucle.c" Line 6(5,12): Variable never used:   captura
->>> Warning 202 "leer_distancia_bucle.c" Line 7(6,15): Variable never used:   v_captura
-      Memory usage:   ROM=2%      RAM=0% - 1%
-      0 Errors,  5 Warnings.
-Build Successful.

@@ -38,33 +38,30 @@ FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000808  @delay_ms3
-000832  M1_A
-000842  M2_A
-000852  DELANTE
-00085A  @delay_ms2
-000884  @I2C_WRITE_1
-0008CC  @delay_ms1
-0008F6  @I2C_READ_1
-00093E  srf_measure_cm
-000AB8  ULTRA_SONIDOS
-000AF6  M1_P
-000B06  M2_P
-000B16  PARAR
-000B1E  @cinit1
-000B1E  MAIN
-000B2E  @cinit2
+000830  M1_H
+000840  M2_H
+000850  ATRAS
+000858  @delay_ms2
+000882  @I2C_WRITE_1
+0008CA  @delay_ms1
+0008F4  @I2C_READ_1
+00093C  srf_measure_cm
+000AB6  ULTRA_SONIDOS
+000AF4  @cinit1
+000AF4  MAIN
+000B04  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\i2c\2srf02\
 
 Project Files:
-    main.c                                                  [12-jun.-19 13:55  CRC=D872A938]
+    main.c                                                  [13-jun.-19 18:56  CRC=99F92C27]
     mismov.h                                                [12-jun.-19 13:56  CRC=F483F585]
     tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
     ..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
     srf02.h                                                 [12-jun.-19 13:38  CRC=4677C6D0]
 
-Source signature=77D6977D
+Source signature=395D1A6C
 
 Units:
     main (main)

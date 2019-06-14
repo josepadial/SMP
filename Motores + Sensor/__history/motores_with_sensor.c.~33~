@@ -10,14 +10,15 @@ void inicializarTimer0PWM(){
  
 void main(){ 
    //inicializarTimer0PWM(); 
-   led_off();
-   
+    
    while(1){
       if(!IN1){
-         led_off();
+         M1_H();
+         M2_H();
       }
       else{
-         led_on();
+         M1_H();
+         M2_P();
       }
    }
 }
