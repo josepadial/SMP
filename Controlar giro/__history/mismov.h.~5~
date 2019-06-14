@@ -2,7 +2,7 @@
 #define _MISMOV_
 
 #include "tarjeta.h"
-#include "srf02.h"
+//#include "srf02.h"
 #use delay (clock=48000000)
 
 void DELANTE(){

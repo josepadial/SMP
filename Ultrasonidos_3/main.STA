@@ -1,0 +1,58 @@
+
+ROM used:   820/16384 (3%)
+            824/16384 (3%) including unused fragments
+
+            0.6 Average locations per line
+            2.6 Average locations per statement
+
+RAM used:   5/2048 (0%) at main() level
+            12/2048 (1%) worst case
+
+Stack used: 3 worst case (3 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   21    11   3  main.c
+   91    44  14  mismov.h
+  150    36  11  tarjeta.h
+  821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
+  296   225  71  srf02.h
+----- -----
+ 1379   316 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     16   1    0    48  1.1  M1_H
+0     16   1    0    48  1.1  M2_H
+0     72   4    3             @I2C_READ_1
+0     72   4    1             @I2C_WRITE_1
+0     42   3    1             @delay_ms1
+0    378  23    6   711  3.9  srf_measure_cm_izqui
+0     42   3    1             @delay_ms2
+0      8   0    0    21  1.0  ATRAS
+0     42   3    3    86  2.8  ULTRA_SONIDOS_IZQUI
+0     40   2    1             @delay_ms3
+0     88   5    1   183  2.7  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               6
+    Statements              316
+    Comments                173
+    Volume (V)              1533
+    Difficulty (D)          12.7
+    Effort to implement (E) 19439
+    Time to implement (T)   18 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   2
+    Maintainability (MI)    123
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-007FE     0  2048  
+00800-00806     4  4  
+00808-07FFE   816  29896  
+
+
+

@@ -13,18 +13,10 @@ void main(){
    //inicializarTimer0PWM(); 
    delay_ms(3000);
    while(1){
-      PARAR();
-      delay_ms(500);
       DELANTE();
       delay_ms(1000);
-      PARAR();
-      delay_ms(500);
-      DERECHA(2500);
-      PARAR();
-      delay_ms(500);
-      IZQUIERDA(2500);
-      PARAR();
-      delay_ms(500);
+      DERECHA(1200);
+      IZQUIERDA(1200);
       ATRAS();
       delay_ms(1000); 
    }  

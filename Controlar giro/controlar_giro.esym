@@ -1,7 +1,7 @@
 D G "__PCH__" 0 28 ""5.008""
 D G "__DEVICE__" 0 28 "4550"
-D G "__DATE__" 0 28 ""12-jun.-19""
-D G "__TIME__" 0 28 ""12:39:10""
+D G "__DATE__" 0 28 ""15-jun.-19""
+D G "__TIME__" 0 28 ""00:17:04""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -934,16 +934,20 @@ D G "IN3" 1 135 "input(PIN_D2)"
 D G "IN4" 1 136 "input(PIN_D3)"
 D G "IN5" 1 137 "input(PIN_D4)"
 D G "_MISMOV_" 3 2 ""
-F G "DELANTE" 3 7 "void()" `650 
-F G "ATRAS" 3 12 "void()" `651 
-F G "PARAR" 3 17 "void()" `652 
-F G "IMPACTO" 3 22 "void()" `653 
-V L "t" 3 35 "int16" `655 
-F G "DERECHA" 3 35 "void(int16 t)" `654 
-V L "t" 3 45 "int16" `657 
-F G "IZQUIERDA" 3 45 "void(int16 t)" `656 
-F G "inicializarTimer0PWM" 0 6 "void()" `662 
-F G "MAIN" 0 12 "void()" `663  "inicializarTimer0PWM();"
+C L "DELANTE" 3 5 1 "FUNCTION"
+F G "DELANTE" 3 8 "void()" `650 
+F G "ATRAS" 3 13 "void()" `651 
+F G "PARAR" 3 18 "void()" `652 
+F G "DISPARAR" 3 23 "void()" `653 
+F G "RECOGER" 3 28 "void()" `654 
+F G "IMPACTO" 3 33 "void()" `655 
+V L "t" 3 44 "int16" `657 
+F G "DERECHA" 3 44 "void(int16 t)" `656 
+V L "t" 3 54 "int16" `659 
+F G "IZQUIERDA" 3 54 "void(int16 t)" `658 
+C L "inicializarTimer0PWM" 3 5 19 "FUNCTION"
+F G "inicializarTimer0PWM" 0 6 "void()" `664 
+F G "MAIN" 0 12 "void()" `665  "inicializarTimer0PWM();"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

@@ -1,0 +1,87 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+005     ULTRA_SONIDOS_IZQUI.dist
+005     MAIN.@SCRATCH1
+006     @delay_ms2.P1
+006-007 srf_measure_cm_izqui.m
+006     @delay_ms3.P1
+006     ULTRA_SONIDOS_IZQUI.@SCRATCH1
+007     ULTRA_SONIDOS_IZQUI.@SCRATCH2
+008-009 srf_measure_cm_izqui.m2
+00A     @I2C_READ_1.P1
+00A     @I2C_WRITE_1.P2
+00A     @delay_ms1.P3
+00A     srf_measure_cm_izqui.@SCRATCH1
+00B     @I2C_READ_1.@SCRATCH1
+00B     srf_measure_cm_izqui.@SCRATCH2
+00C     @I2C_READ_1.@SCRATCH2
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000808  @delay_ms3
+000830  M1_H
+000840  M2_H
+000850  ATRAS
+000858  @delay_ms2
+000882  @I2C_WRITE_1
+0008CA  @delay_ms1
+0008F4  @I2C_READ_1
+00093C  srf_measure_cm_izqui
+000AB6  ULTRA_SONIDOS_IZQUI
+000AE0  @cinit1
+000AE0  MAIN
+000AF0  @cinit2
+
+Project Directory:
+    C:\Users\padul\Desktop\GitHub\SMP\Ultrasonidos_3\
+
+Project Files:
+    main.c                                                  [14-jun.-19 19:34  CRC=99F92C27]
+    mismov.h                                                [14-jun.-19 19:31  CRC=304E5E1B]
+    tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
+    srf02.h                                                 [14-jun.-19 19:32  CRC=9189F93F]
+
+Source signature=0B4BE7E0
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

@@ -12,9 +12,9 @@ Type=4
 [mru-list]
 1=impacto.c
 [Opened Files]
-1=mismov.h
-2=impacto.c
-3=..\mismov.h
+1=impacto.c
+2=mismov.h
+3=
 4=..\i2c\2srf02\main.c
 5=
 [Units]

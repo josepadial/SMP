@@ -12,8 +12,8 @@ Type=4
 [mru-list]
 1=controlar_giro.c
 [Opened Files]
-1=controlar_giro.c
-2=tarjeta.h
+1=..\mismov.h
+2=controlar_giro.c
 3=mismov.h
 4=
 5=

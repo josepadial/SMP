@@ -17,14 +17,8 @@ void main(){
       delay_ms(500);
       DELANTE();
       delay_ms(1000);
-      PARAR();
-      delay_ms(500);
       DERECHA(2500);
-      PARAR();
-      delay_ms(500);
       IZQUIERDA(2500);
-      PARAR();
-      delay_ms(500);
       ATRAS();
       delay_ms(1000); 
    }  

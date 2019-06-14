@@ -6,13 +6,13 @@
 #use delay (clock=48000000)
 
 void DELANTE(){
-   M1_H();
-   M2_H();
+   M1_A();
+   M2_A();
 }
 
 void ATRAS(){
-   M1_A();
-   M2_A();
+   M1_H();
+   M2_H();
 }
 
 void PARAR(){
@@ -45,7 +45,7 @@ void DERECHA(long int t){
    PARAR();
    delay_ms(400);
    M1_P();
-   M2_A();
+   M2_H();
    delay_ms(t);
    PARAR();
    delay_ms(250);
@@ -54,7 +54,7 @@ void DERECHA(long int t){
 void IZQUIERDA(long int t){
    PARAR();
    delay_ms(400);
-   M1_A();
+   M1_H();
    M2_P();
    delay_ms(t);
    PARAR();

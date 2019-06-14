@@ -15,11 +15,10 @@ void main(){
    //M2_A();
    delay_ms(500);
    while(1){
-      M4_H();
+      
       if(IN2 /*&& cont<2*/){
          //delay_ms(500);
-         //IMPACTO();
-         M4_A();
+         IMPACTO();
       }
       /*else if(IN2 && cont>2){
          M1_A();

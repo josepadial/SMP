@@ -1,0 +1,21 @@
+ÀÄmain
+   ÀÄMAIN  0/88  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms3  0/40  Ram=1
+      ÃÄATRAS  0/8  Ram=0
+      ³  ÃÄM1_H  0/16  Ram=0
+      ³  ÀÄM2_H  0/16  Ram=0
+      ÃÄULTRA_SONIDOS_IZQUI  0/42  Ram=3
+      ³  ÃÄ@delay_ms2  0/42  Ram=1
+      ³  ÀÄsrf_measure_cm_izqui  0/378  Ram=6
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@delay_ms1  0/42  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_READ_1  0/72  Ram=3
+      ³     ÀÄ@I2C_READ_1  0/72  Ram=3
+      ÃÄ@delay_ms3  0/40  Ram=1
+      ÀÄ@delay_ms3  0/40  Ram=1

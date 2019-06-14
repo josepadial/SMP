@@ -1,0 +1,20 @@
+#include "mismov.h"
+#use delay (clock=48000000)
+
+void main() {
+   
+   delay_ms(3000);
+   ATRAS();
+   led_off();
+   while(1){
+      if(ULTRA_SONIDOS(30)){
+         //PARAR();
+         led_on();
+         delay_ms(500);
+         //DERECHA(600);
+      }
+      else
+         led_off();
+         delay_ms(500);
+   }
+}
