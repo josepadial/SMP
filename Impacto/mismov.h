@@ -2,7 +2,7 @@
 #define _MISMOV_
 
 #include "tarjeta.h"
-//#include "srf02.h"
+#include "srf02.h"
 #use delay (clock=48000000)
 
 void DELANTE(){
@@ -20,24 +20,26 @@ void PARAR(){
    M2_P();
 }
 
+void PARAR_I(){
+   M4_P();
+}
+
 void DISPARAR(){
-   M3_H();
    M4_H();
 }
 
 void RECOGER(){
-   M3_A();
    M4_A();
 }
 
 void IMPACTO(){
    DISPARAR();
-   delay_ms(200);
-   PARAR();
-   delay_ms(300);
+   delay_ms(250);
+   PARAR_I();
+   delay_ms(700);
    RECOGER();
-   delay_ms(500);
-   PARAR();
+   delay_ms(250);
+   PARAR_I();
    delay_ms(500);
 }
 
@@ -61,7 +63,7 @@ void IZQUIERDA(long int t){
    delay_ms(250);
 }
 
-/*int ULTRA_SONIDOS_FRENTE(int dist){
+int ULTRA_SONIDOS_FRENTE(int dist){
    delay_ms(1);
    if(srf_measure_cm_frente() < dist) 
       return 1;
@@ -84,7 +86,7 @@ int ULTRA_SONIDOS_IZQUI(int dist){
       return 1;
    else
       return 0;
-}*/
+}
 
 
 #endif

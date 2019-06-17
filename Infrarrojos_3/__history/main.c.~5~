@@ -1,0 +1,16 @@
+#include "mismov.h"
+#use delay (clock=48000000)
+
+void main() {
+   led_on();
+   delay_ms(3000);
+   led_off();
+   //DELANTE();
+   while(1){
+      if(IN1){
+         led_on();
+      }
+      else
+         led_off();
+   }
+}

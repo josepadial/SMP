@@ -3,19 +3,33 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
+005     ULTRA_SONIDOS_DERE.dist
+005     ULTRA_SONIDOS_FRENTE.dist
 005     ULTRA_SONIDOS_IZQUI.dist
 005     MAIN.@SCRATCH1
 006     @delay_ms2.P1
-006-007 srf_measure_cm_izqui.m
+006-007 srf_measure_cm_dere.m
 006     @delay_ms3.P1
+006-007 srf_measure_cm_frente.m
+006-007 srf_measure_cm_izqui.m
+006     ULTRA_SONIDOS_FRENTE.@SCRATCH1
+006     ULTRA_SONIDOS_DERE.@SCRATCH1
 006     ULTRA_SONIDOS_IZQUI.@SCRATCH1
+007     ULTRA_SONIDOS_FRENTE.@SCRATCH2
+007     ULTRA_SONIDOS_DERE.@SCRATCH2
 007     ULTRA_SONIDOS_IZQUI.@SCRATCH2
 008-009 srf_measure_cm_izqui.m2
+008-009 srf_measure_cm_dere.m2
+008-009 srf_measure_cm_frente.m2
 00A     @I2C_READ_1.P1
 00A     @I2C_WRITE_1.P2
 00A     @delay_ms1.P3
+00A     srf_measure_cm_frente.@SCRATCH1
+00A     srf_measure_cm_dere.@SCRATCH1
 00A     srf_measure_cm_izqui.@SCRATCH1
 00B     @I2C_READ_1.@SCRATCH1
+00B     srf_measure_cm_frente.@SCRATCH2
+00B     srf_measure_cm_dere.@SCRATCH2
 00B     srf_measure_cm_izqui.@SCRATCH2
 00C     @I2C_READ_1.@SCRATCH2
 F83     PSP_DATA
@@ -30,8 +44,8 @@ FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
 FE9-FEA @WRITE_PROGRAM_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
@@ -39,29 +53,36 @@ FF6-FF8 @READ_PROGRAM_MEMORY.P2
 ROM Allocation:
 000808  @delay_ms3
 000830  M1_H
-000840  M2_H
-000850  ATRAS
-000858  @delay_ms2
-000882  @I2C_WRITE_1
-0008CA  @delay_ms1
-0008F4  @I2C_READ_1
-00093C  srf_measure_cm_izqui
-000AB6  ULTRA_SONIDOS_IZQUI
-000AE0  @cinit1
-000AE0  MAIN
-000AF0  @cinit2
+000840  M2_A
+000850  DELANTE
+000856  @delay_ms2
+00087E  @I2C_WRITE_1
+0008C6  @delay_ms1
+0008EE  @I2C_READ_1
+000936  srf_measure_cm_izqui
+000AB0  ULTRA_SONIDOS_IZQUI
+000ADA  srf_measure_cm_frente
+000C54  ULTRA_SONIDOS_FRENTE
+000C7E  M1_P
+000C8E  M2_P
+000C9E  PARAR
+000CA6  srf_measure_cm_dere
+000E20  ULTRA_SONIDOS_DERE
+000E4A  MAIN
+000E4A  @cinit1
+000E5A  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Ultrasonidos_3\
 
 Project Files:
-    main.c                                                  [14-jun.-19 19:34  CRC=99F92C27]
-    mismov.h                                                [14-jun.-19 19:31  CRC=304E5E1B]
+    main.c                                                  [16-jun.-19 22:19  CRC=45E4B57D]
+    mismov.h                                                [16-jun.-19 22:52  CRC=83DC9D46]
     tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
     srf02.h                                                 [14-jun.-19 19:32  CRC=9189F93F]
 
-Source signature=0B4BE7E0
+Source signature=0AC5B061
 
 Units:
     main (main)

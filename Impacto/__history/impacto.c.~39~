@@ -19,8 +19,8 @@ void main(){
       //M4_H();
       if(IN5 /*&& cont<2*/){
          led_on();
-         //delay_ms(1000);
-         IMPACTO();
+         delay_ms(1000);
+         //IMPACTO();
          //M4_A();
       }
       /*else if(IN2 && cont>2){

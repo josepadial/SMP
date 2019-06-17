@@ -15,13 +15,11 @@ void main(){
    //M2_A();
    delay_ms(500);
    while(1){
-      led_off();
-      //M4_H();
+      M4_H();
       if(IN5 /*&& cont<2*/){
-         led_on();
-         //delay_ms(1000);
-         IMPACTO();
-         //M4_A();
+         //delay_ms(500);
+         //IMPACTO();
+         M4_A();
       }
       /*else if(IN2 && cont>2){
          M1_A();

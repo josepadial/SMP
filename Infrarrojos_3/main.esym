@@ -1,7 +1,7 @@
-D G "__PCH__" 0 27 ""5.008""
-D G "__DEVICE__" 0 27 "4550"
-D G "__DATE__" 0 27 ""16-jun.-19""
-D G "__TIME__" 0 27 ""22:52:09""
+D G "__PCH__" 0 18 ""5.008""
+D G "__DEVICE__" 0 18 "4550"
+D G "__DATE__" 0 18 ""16-jun.-19""
+D G "__TIME__" 0 18 ""22:06:31""
 D G "_MISMOV_" 1 2 ""
 D G "_TARJETA_" 2 3 ""
 c L "set_tris_a" 3 1 22 "FUNCTION"
@@ -934,62 +934,21 @@ D G "IN2" 2 135 "input(PIN_D1)"
 D G "IN3" 2 136 "input(PIN_D2)"
 D G "IN4" 2 137 "input(PIN_D3)"
 D G "IN5" 2 138 "input(PIN_D4)"
-D G "_SRF02_" 4 3 ""
-D G "SRF02W" 4 5 "0xE0"
-D G "SRF02WW" 4 6 "0xE0"
-D G "SRF02WO" 4 7 "0xE2"
-D G "SRF02WY" 4 8 "0xE4"
-D G "COMMAND" 4 9 "0"
-D G "SRF02R" 4 10 "0xE1"
-D G "SRF02RW" 4 11 "0xE1"
-D G "SRF02RO" 4 12 "0xE3"
-D G "SRF02RY" 4 13 "0xE5"
-D G "MEASUREH" 4 14 "2"
-D G "MEASUREL" 4 15 "3"
-F G "srf_measure_cm_frente" 4 18 "int16()" `650 
-V L "m" 4 19 "int16" `651 
-V L "m2" 4 19 "int16" `652 
-F G "srf_measure_cm_dere" 4 51 "int16()" `653 
-V L "m" 4 52 "int16" `654 
-V L "m2" 4 52 "int16" `655 
-F G "srf_measure_cm_izqui" 4 84 "int16()" `656 
-V L "m" 4 85 "int16" `657 
-V L "m2" 4 85 "int16" `658 
-F G "srf_measure_in" 4 117 "int16()" `659 
-V L "m" 4 118 "int16" `660 
-V L "m2" 4 118 "int16" `661 
-F G "srf_measure_us" 4 150 "int16()" `662 
-V L "m" 4 151 "int16" `663 
-V L "m2" 4 151 "int16" `664 
-F G "srf_false_measure_cm" 4 183 "int16()" `665 
-V L "m" 4 184 "int16" `666 
-V L "m2" 4 184 "int16" `667 
-F G "srf_false_measure_in" 4 216 "int16()" `668 
-V L "m" 4 217 "int16" `669 
-V L "m2" 4 217 "int16" `670 
-F G "srf_false_measure_us" 4 249 "int16()" `671 
-V L "m" 4 250 "int16" `672 
-V L "m2" 4 250 "int16" `673 
-F G "srf_burst" 4 282 "void()" `674 
-F G "DELANTE" 1 8 "void()" `679 
-F G "ATRAS" 1 13 "void()" `680 
-F G "PARAR" 1 18 "void()" `681 
-F G "DISPARAR" 1 23 "void()" `682 
-F G "RECOGER" 1 28 "void()" `683 
-F G "IMPACTO" 1 33 "void()" `684 
-V L "t" 1 44 "int16" `686 
-F G "DERECHA" 1 44 "void(int16 t)" `685 
-V L "t" 1 54 "int16" `688 
-F G "IZQUIERDA" 1 54 "void(int16 t)" `687 
-V L "dist" 1 64 "int8" `690 
-F G "ULTRA_SONIDOS_FRENTE" 1 64 "int8(int8 dist)" `689 
-V L "dist" 1 72 "int8" `692 
-F G "ULTRA_SONIDOS_DERE" 1 72 "int8(int8 dist)" `691 
-V L "dist" 1 81 "int8" `694 
-F G "ULTRA_SONIDOS_IZQUI" 1 81 "int8(int8 dist)" `693 
-F G "MAIN" 0 4 "void()" `699 
-C L "MAIN" 0 15 1 "FUNCTION"
-C L "MAIN" 0 15 1 "FUNCTION"
+C L "DELANTE" 2 11 5 "FUNCTION"
+C L "DELANTE" 1 5 1 "FUNCTION"
+F G "DELANTE" 1 8 "void()" `650 
+F G "ATRAS" 1 13 "void()" `651 
+F G "PARAR" 1 18 "void()" `652 
+F G "DISPARAR" 1 23 "void()" `653 
+F G "RECOGER" 1 28 "void()" `654 
+F G "IMPACTO" 1 33 "void()" `655 
+V L "t" 1 44 "int16" `657 
+F G "DERECHA" 1 44 "void(int16 t)" `656 
+V L "t" 1 54 "int16" `659 
+F G "IZQUIERDA" 1 54 "void(int16 t)" `658 
+C L "MAIN" 1 5 19 "FUNCTION"
+F G "MAIN" 0 4 "void()" `664 
+C L "MAIN" 0 8 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -1125,8 +1084,6 @@ F B "i2c_write" 1 2
 F B "i2c_start" 0 2
 F B "i2c_stop" 0 1
 F B "i2c_isr_state" 0 1
-F B "delay_ms" 1 0
-F B "delay_us" 1 0
 F B "delay_ms" 1 0
 F B "delay_us" 1 0
 F B "delay_ms" 1 0

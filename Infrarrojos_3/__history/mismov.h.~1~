@@ -20,26 +20,24 @@ void PARAR(){
    M2_P();
 }
 
-void PARAR_I(){
-   M4_P();
-}
-
 void DISPARAR(){
+   M3_H();
    M4_H();
 }
 
 void RECOGER(){
+   M3_A();
    M4_A();
 }
 
 void IMPACTO(){
    DISPARAR();
    delay_ms(250);
-   PARAR_I();
+   PARAR();
    delay_ms(700);
    RECOGER();
    delay_ms(250);
-   PARAR_I();
+   PARAR();
    delay_ms(500);
 }
 

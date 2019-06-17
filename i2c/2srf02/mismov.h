@@ -6,13 +6,13 @@
 #use delay (clock=48000000)
 
 void DELANTE(){
-   M1_A();
-   M2_A();
+   M1_H();
+   M2_H();
 }
 
 void ATRAS(){
-   M1_H();
-   M2_H();
+   M1_A();
+   M2_A();
 }
 
 void PARAR(){
@@ -20,24 +20,26 @@ void PARAR(){
    M2_P();
 }
 
+void PARAR_I(){
+   M4_P();
+}
+
 void DISPARAR(){
-   M3_H();
    M4_H();
 }
 
 void RECOGER(){
-   M3_A();
    M4_A();
 }
 
 void IMPACTO(){
    DISPARAR();
    delay_ms(250);
-   PARAR();
+   PARAR_I();
    delay_ms(700);
    RECOGER();
    delay_ms(250);
-   PARAR();
+   PARAR_I();
    delay_ms(500);
 }
 
@@ -45,7 +47,7 @@ void DERECHA(long int t){
    PARAR();
    delay_ms(400);
    M1_P();
-   M2_H();
+   M2_A();
    delay_ms(t);
    PARAR();
    delay_ms(250);
@@ -54,25 +56,37 @@ void DERECHA(long int t){
 void IZQUIERDA(long int t){
    PARAR();
    delay_ms(400);
-   M1_H();
+   M1_A();
    M2_P();
    delay_ms(t);
    PARAR();
    delay_ms(250);
 }
 
-int ULTRA_SONIDOS(int dist){
-   set_tris_a(0x00);
-   set_tris_b(0x13);
-   set_tris_c(0x00);
-   set_tris_d(0x1F);
-   set_tris_e(0x00);
-   
+int ULTRA_SONIDOS_FRENTE(int dist){
    delay_ms(1);
-   if(srf_measure_cm() < dist) 
+   if(srf_measure_cm_frente() < dist) 
       return 1;
    else
       return 0;
 }
+
+int ULTRA_SONIDOS_DERE(int dist){
+   delay_ms(1);
+   if(srf_measure_cm_dere() < dist) 
+      return 1;
+   else
+      return 0;
+}
+
+
+int ULTRA_SONIDOS_IZQUI(int dist){
+   delay_ms(1);
+   if(srf_measure_cm_izqui() < dist) 
+      return 1;
+   else
+      return 0;
+}
+
 
 #endif

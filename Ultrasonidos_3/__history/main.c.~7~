@@ -7,18 +7,24 @@ void main() {
    DELANTE();
    led_off();
    while(1){
-      if(ULTRA_SONIDOS_IZQUI(30)){
+      /*if(ULTRA_SONIDOS_IZQUI(30)){
+         //PARAR();
          led_on();
+         delay_ms(500);
+         //DERECHA(600);
       }
-      else if(ULTRA_SONIDOS_FRENTE(30)){
+      else */if(ULTRA_SONIDOS_FRENTE(30)){
          PARAR();
          //led_on();
          delay_ms(1000);
          //DERECHA(600);
-      }
+      }/*
       else if(ULTRA_SONIDOS_DERE(30)){
+         //PARAR();
          led_on();
-      }
+         delay_ms(500);
+         //DERECHA(600);
+      }*/
       else
          DELANTE();
    }
