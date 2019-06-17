@@ -14,8 +14,8 @@ Type=4
 [Opened Files]
 1=main.c
 2=mismov.h
-3=
-4=mismov.h
+3=..\mismov.h
+4=
 5=..\Controlar giro\controlar_giro.c
 6=
 [Units]

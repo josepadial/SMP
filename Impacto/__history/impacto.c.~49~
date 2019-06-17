@@ -10,13 +10,17 @@ void inicializarTimer0PWM(){
 }  
  
 void main(){ 
-   //inicializarTimer0PWM();
-   delay_ms(3000);
+   //inicializarTimer0PWM(); 
    DELANTE();
    //delay_ms(500);
    while(1){
       led_off();
-      IMPACTO();
+      DISPARAR();
+      delay_ms(200);
+      PARAR_I();
+      delay_ms(200);
+      RECOGER();
+      delay_ms(200);
       DELANTE();
       delay_ms(500);
       /*if(IN5 /*&& cont<2){

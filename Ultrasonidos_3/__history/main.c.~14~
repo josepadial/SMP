@@ -7,13 +7,13 @@ void main() {
    DELANTE();
    led_off();
    while(1){
-      if(ULTRA_SONIDOS_FRENTE(100)){
+      if(ULTRA_SONIDOS_FRENTE(30)){
          PARAR();
          //led_on();
          delay_ms(2000);
          //DERECHA(600);
       }
-      else if(ULTRA_SONIDOS_FRENTE(250)){
+      else if(ULTRA_SONIDOS_FRENTE(90)){
          IMPACTO();
          DELANTE();
       }

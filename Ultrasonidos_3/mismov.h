@@ -7,12 +7,12 @@
 
 void DELANTE(){
    M1_H();
-   M2_H();
+   M2_A();
 }
 
 void ATRAS(){
    M1_A();
-   M2_A();
+   M2_H();
 }
 
 void PARAR(){
@@ -34,13 +34,13 @@ void RECOGER(){
 
 void IMPACTO(){
    DISPARAR();
-   delay_ms(250);
+   delay_ms(50);
    PARAR_I();
-   delay_ms(700);
+   delay_ms(50);
    RECOGER();
-   delay_ms(250);
+   delay_ms(50);
    PARAR_I();
-   delay_ms(500);
+   delay_ms(50);
 }
 
 void DERECHA(long int t){
@@ -64,7 +64,7 @@ void IZQUIERDA(long int t){
 }
 
 int ULTRA_SONIDOS_FRENTE(int dist){
-   delay_ms(1);
+   //delay_ms(1);
    if(srf_measure_cm_frente() < dist) 
       return 1;
    else
@@ -72,7 +72,7 @@ int ULTRA_SONIDOS_FRENTE(int dist){
 }
 
 int ULTRA_SONIDOS_DERE(int dist){
-   delay_ms(1);
+   //delay_ms(1);
    if(srf_measure_cm_dere() < dist) 
       return 1;
    else
@@ -81,7 +81,7 @@ int ULTRA_SONIDOS_DERE(int dist){
 
 
 int ULTRA_SONIDOS_IZQUI(int dist){
-   delay_ms(1);
+   //delay_ms(1);
    if(srf_measure_cm_izqui() < dist) 
       return 1;
    else

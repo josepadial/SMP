@@ -27,28 +27,31 @@ FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000808  @delay_ms2
-000832  M4_H
-000842  DISPARAR
-000848  @delay_ms1
-000870  M4_P
-000880  PARAR_I
-000884  M4_A
-000894  RECOGER
-00089A  IMPACTO
-0008D6  MAIN
-0008D6  @cinit1
-0008E6  @cinit2
+000830  M1_H
+000840  M2_A
+000850  DELANTE
+000856  M4_H
+000866  DISPARAR
+00086C  @delay_ms1
+000894  M4_P
+0008A4  PARAR_I
+0008A8  M4_A
+0008B8  RECOGER
+0008BE  IMPACTO
+0008FA  @cinit1
+0008FA  MAIN
+00090A  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Impacto\
 
 Project Files:
-    impacto.c                                               [17-jun.-19 15:36  CRC=B6102EC5]
+    impacto.c                                               [17-jun.-19 18:29  CRC=E7EE8B03]
     tarjeta.h                                               [24-may.-19 12:06  CRC=55507C43]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
-    mismov.h                                                [17-jun.-19 15:39  CRC=A77A8E28]
+    mismov.h                                                [17-jun.-19 18:27  CRC=A77A8E28]
 
-Source signature=FBADB536
+Source signature=2D8C1174
 
 Units:
     impacto (main)

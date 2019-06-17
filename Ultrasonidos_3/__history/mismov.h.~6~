@@ -64,7 +64,7 @@ void IZQUIERDA(long int t){
 }
 
 int ULTRA_SONIDOS_FRENTE(int dist){
-   //delay_ms(1);
+   delay_ms(1);
    if(srf_measure_cm_frente() < dist) 
       return 1;
    else
@@ -72,7 +72,7 @@ int ULTRA_SONIDOS_FRENTE(int dist){
 }
 
 int ULTRA_SONIDOS_DERE(int dist){
-   //delay_ms(1);
+   delay_ms(1);
    if(srf_measure_cm_dere() < dist) 
       return 1;
    else
@@ -81,7 +81,7 @@ int ULTRA_SONIDOS_DERE(int dist){
 
 
 int ULTRA_SONIDOS_IZQUI(int dist){
-   //delay_ms(1);
+   delay_ms(1);
    if(srf_measure_cm_izqui() < dist) 
       return 1;
    else

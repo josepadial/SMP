@@ -1,10 +1,8 @@
-C L "MAIN" 0 14 1 "FUNCTION"
-C L "MAIN" 0 14 1 "FUNCTION"
-C L "MAIN" 0 14 6 "FUNCTION"
-D G "__PCH__" 0 37 ""5.008""
-D G "__DEVICE__" 0 37 "4550"
-D G "__DATE__" 0 37 ""17-jun.-19""
-D G "__TIME__" 0 37 ""15:39:23""
+C L "MAIN" 0 16 13 "FUNCTION"
+D G "__PCH__" 0 49 ""5.008""
+D G "__DEVICE__" 0 49 "4550"
+D G "__DATE__" 0 49 ""17-jun.-19""
+D G "__TIME__" 0 49 ""18:29:25""
 D G "_TARJETA_" 1 2 ""
 c L "set_tris_a" 2 1 22 "FUNCTION"
 v L "value" 2 36 "int8" `54 
@@ -944,17 +942,15 @@ F G "PARAR" 3 18 "void()" `652
 F G "PARAR_I" 3 23 "void()" `653 
 F G "DISPARAR" 3 27 "void()" `654 
 F G "RECOGER" 3 31 "void()" `655 
-F G "IMPACTO" 3 35 "void(int16 t)" `656 
+F G "IMPACTO" 3 35 "void()" `656 
 V L "t" 3 46 "int16" `658 
-F G "DERECHA" 3 46 "void(int16 t,int16 DERECHA)" `657 
+F G "DERECHA" 3 46 "void(int16 t)" `657 
 V L "t" 3 56 "int16" `660 
-F G "IZQUIERDA" 3 56 "void(int16 t,int8 )" `659 
+F G "IZQUIERDA" 3 56 "void(int16 t)" `659 
 C L "inicializarTimer0PWM" 3 5 19 "FUNCTION"
 F G "inicializarTimer0PWM" 0 6 "void()" `665 
 F G "MAIN" 0 12 "void()" `666  "inicializarTimer0PWM();"
-C L "MAIN" 0 14 2 "FUNCTION"
-C L "MAIN" 0 14 1 "FUNCTION"
-C L "MAIN" 0 14 1 "FUNCTION"
+C L "MAIN" 0 16 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

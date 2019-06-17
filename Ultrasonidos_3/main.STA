@@ -1,9 +1,9 @@
 
-ROM used:   1712/16384 (5%)
-            1716/16384 (5%) including unused fragments
+ROM used:   1812/16384 (6%)
+            1816/16384 (6%) including unused fragments
 
-            1.2 Average locations per line
-            5.3 Average locations per statement
+            1.3 Average locations per line
+            5.6 Average locations per statement
 
 RAM used:   5/2048 (0%) at main() level
             12/2048 (1%) worst case
@@ -13,13 +13,13 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   26    17   5  main.c
-   91    44  14  mismov.h
+   32    23   7  main.c
+   93    40  12  mismov.h
   150    36  11  tarjeta.h
   821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
-  296   225  70  srf02.h
+  296   225  69  srf02.h
 ----- -----
- 1384   322 Total
+ 1392   324 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -27,39 +27,46 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     16   0    0    48  1.1  M1_P
 0     16   0    0    48  1.1  M2_A
 0     16   0    0    48  1.1  M2_P
+0     16   0    0    48  1.1  M4_A
+0     16   0    0    48  1.1  M4_H
+0     16   0    0    75  0.2  M4_P
 0     72   2    3             @I2C_READ_1
 0     72   2    1             @I2C_WRITE_1
 0     40   1    1             @delay_ms1
-0    378  11    6   711  3.9  srf_measure_cm_frente
-0    378  11    6   711  3.9  srf_measure_cm_dere
-0    378  11    6   711  3.9  srf_measure_cm_izqui
-0     40   1    1   344  2.8  @delay_ms2
+0    378  10    6   711  3.9  srf_measure_cm_frente
+0    378  10    6   711  3.9  srf_measure_cm_dere
+0    378  10    6   711  3.9  srf_measure_cm_izqui
+0     40   1    1             @delay_ms2
 0      6   0    0    21  1.0  DELANTE
 0      8   0    0    21  1.0  PARAR
-0     42   1    3    86  2.8  ULTRA_SONIDOS_FRENTE
-0     42   1    3    86  2.8  ULTRA_SONIDOS_DERE
-0     42   1    3    86  2.8  ULTRA_SONIDOS_IZQUI
+0      4   0    0    12  0.8  PARAR_I
+0      6   0    0    12  0.8  DISPARAR
+0      6   0    0    12  0.8  RECOGER
+0     36   1    0   123  1.3  IMPACTO
+0     34   1    3    66  2.6  ULTRA_SONIDOS_FRENTE
+0     36   1    3    66  2.6  ULTRA_SONIDOS_DERE
+0     36   1    3    66  2.6  ULTRA_SONIDOS_IZQUI
 0     40   1    1             @delay_ms3
-0    106   3    1   294  2.8  MAIN
+0    126   3    1   408  2.8  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               14
-    Statements              322
-    Comments                173
-    Volume (V)              5260
-    Difficulty (D)          33.6
-    Effort to implement (E) 176666
-    Time to implement (T)   2 hours, 44 minutes
+    Functions               20
+    Statements              324
+    Comments                176
+    Volume (V)              5629
+    Difficulty (D)          35.8
+    Effort to implement (E) 201473
+    Time to implement (T)   3 hours, 7 minutes
     Est Delivered Bugs (B)  1
-    Cyclomatic Complexity   9
-    Maintainability (MI)    52
+    Cyclomatic Complexity   7
+    Maintainability (MI)    47
 
  Segment     Used  Free
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
-00808-07FFE  1708  29004  
+00808-07FFE  1808  28904  
 
 
 

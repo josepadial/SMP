@@ -1,24 +1,11 @@
 ÀÄmain
-   ÀÄMAIN  0/106  Ram=1
+   ÀÄMAIN  0/126  Ram=1
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@delay_ms3  0/40  Ram=1
       ÃÄDELANTE  0/6  Ram=0
       ³  ÃÄM1_H  0/16  Ram=0
       ³  ÀÄM2_A  0/16  Ram=0
-      ÃÄULTRA_SONIDOS_IZQUI  0/42  Ram=3
-      ³  ÃÄ@delay_ms2  0/40  Ram=1
-      ³  ÀÄsrf_measure_cm_izqui  0/378  Ram=6
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@delay_ms1  0/40  Ram=1
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
-      ³     ÃÄ@I2C_READ_1  0/72  Ram=3
-      ³     ÀÄ@I2C_READ_1  0/72  Ram=3
-      ÃÄULTRA_SONIDOS_FRENTE  0/42  Ram=3
-      ³  ÃÄ@delay_ms2  0/40  Ram=1
+      ÃÄULTRA_SONIDOS_FRENTE  0/34  Ram=3
       ³  ÀÄsrf_measure_cm_frente  0/378  Ram=6
       ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
       ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
@@ -33,8 +20,37 @@
       ³  ÃÄM1_P  0/16  Ram=0
       ³  ÀÄM2_P  0/16  Ram=0
       ÃÄ@delay_ms3  0/40  Ram=1
-      ÃÄULTRA_SONIDOS_DERE  0/42  Ram=3
+      ÃÄULTRA_SONIDOS_FRENTE  0/34  Ram=3
+      ³  ÀÄ*
+      ÃÄIMPACTO  0/36  Ram=0
+      ³  ÃÄDISPARAR  0/6  Ram=0
+      ³  ³  ÀÄM4_H  0/16  Ram=0
       ³  ÃÄ@delay_ms2  0/40  Ram=1
+      ³  ÃÄPARAR_I  0/4  Ram=0
+      ³  ³  ÀÄM4_P  0/16  Ram=0
+      ³  ÃÄ@delay_ms2  0/40  Ram=1
+      ³  ÃÄRECOGER  0/6  Ram=0
+      ³  ³  ÀÄM4_A  0/16  Ram=0
+      ³  ÃÄ@delay_ms2  0/40  Ram=1
+      ³  ÃÄPARAR_I  0/4  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms2  0/40  Ram=1
+      ÃÄDELANTE  0/6  Ram=0
+      ³  ÀÄ*
+      ÃÄULTRA_SONIDOS_IZQUI  0/36  Ram=3
+      ³  ÀÄsrf_measure_cm_izqui  0/378  Ram=6
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@delay_ms1  0/40  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
+      ³     ÃÄ@I2C_READ_1  0/72  Ram=3
+      ³     ÀÄ@I2C_READ_1  0/72  Ram=3
+      ÃÄDELANTE  0/6  Ram=0
+      ³  ÀÄ*
+      ÃÄULTRA_SONIDOS_DERE  0/36  Ram=3
       ³  ÀÄsrf_measure_cm_dere  0/378  Ram=6
       ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
       ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
@@ -45,5 +61,7 @@
       ³     ÃÄ@I2C_WRITE_1  0/72  Ram=1
       ³     ÃÄ@I2C_READ_1  0/72  Ram=3
       ³     ÀÄ@I2C_READ_1  0/72  Ram=3
+      ÃÄDELANTE  0/6  Ram=0
+      ³  ÀÄ*
       ÀÄDELANTE  0/6  Ram=0
          ÀÄ*

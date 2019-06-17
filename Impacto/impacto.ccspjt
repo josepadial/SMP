@@ -14,8 +14,8 @@ Type=4
 [Opened Files]
 1=impacto.c
 2=mismov.h
-3=
-4=..\i2c\2srf02\main.c
+3=..\mismov.h
+4=
 5=
 [Units]
 Count=1

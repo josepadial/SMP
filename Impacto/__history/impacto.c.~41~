@@ -10,31 +10,26 @@ void inicializarTimer0PWM(){
 }  
  
 void main(){ 
-   //inicializarTimer0PWM();
-   delay_ms(3000);
-   DELANTE();
-   //delay_ms(500);
+   //inicializarTimer0PWM(); 
+   //M1_A();
+   //M2_A();
+   delay_ms(500);
    while(1){
       led_off();
-      IMPACTO();
-      DELANTE();
-      delay_ms(500);
-      /*if(IN5 /*&& cont<2){
+      //M4_H();
+      if(IN5 /*&& cont<2*/){
          led_on();
          //delay_ms(1000);
-         //IMPACTO();
-         M4_A();
-         delay_ms(300);
+         IMPACTO();
+         //M4_A();
       }
-      else if(IN4){
-         /*M1_A();
+      /*else if(IN2 && cont>2){
+         M1_A();
          M2_A();
          cont=0;
          delay_ms(500);
-         M4_H();
-         delay_ms(300);
-      }
-        */ 
+      }*/
+         
    }  
 }
 
