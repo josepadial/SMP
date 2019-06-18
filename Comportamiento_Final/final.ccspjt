@@ -11,6 +11,10 @@ Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers
 Type=4
 [mru-list]
 1=final.c
+[Opened Files]
+1=final.c
+2=mismov.h
+3=
 [Units]
 Count=1
 1=final (main)

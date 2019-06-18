@@ -1,4 +1,7 @@
 青final
-   青MAIN  0/42  Ram=1
+   青MAIN  0/44  Ram=1
       団@cinit1  (Inline)  Ram=0
-      青@delay_ms3  0/42  Ram=1
+      団@delay_ms3  0/42  Ram=1
+      青DELANTE  0/8  Ram=0
+         団M1_H  0/16  Ram=0
+         青M2_A  0/16  Ram=0

@@ -1,16 +1,16 @@
-CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:18
+CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 
                Filename:   C:\Users\padul\Desktop\GitHub\SMP\Comportamiento_Final\final.lst
 
-               ROM used:   88 bytes (0%)
-                           Largest free fragment is 30628
+               ROM used:   130 bytes (0%)
+                           Largest free fragment is 30586
                RAM used:   5 (0%) at main() level
                            6 (0%) worst case
-               Stack used: 1 locations
+               Stack used: 2 locations
                Stack size: 31
 
 *
-0800:  GOTO   0832
+0800:  GOTO   085A
 .................... #include "mismov.h" 
 .................... #ifndef _MISMOV_ 
 .................... #define _MISMOV_ 
@@ -58,8 +58,16 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:18
 ....................  
 .................... void M1_H(){ 
 ....................    output_high(PIN_A1); 
+*
+0832:  BCF    F92.1
+0834:  BSF    F89.1
 ....................    output_low(PIN_D7); 
+0836:  BCF    F95.7
+0838:  BCF    F8C.7
 ....................    output_high(PIN_D6); 
+083A:  BCF    F95.6
+083C:  BSF    F8C.6
+083E:  GOTO   0854 (RETURN)
 .................... } 
 ....................  
 .................... void M1_P(){ 
@@ -70,8 +78,15 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:18
 ....................  
 .................... void M2_A(){ 
 ....................    output_high(PIN_A0); 
+0842:  BCF    F92.0
+0844:  BSF    F89.0
 ....................    output_high(PIN_C2); 
+0846:  BCF    F94.2
+0848:  BSF    F8B.2
 ....................    output_low(PIN_D5); 
+084A:  BCF    F95.5
+084C:  BCF    F8C.5
+084E:  GOTO   0856 (RETURN)
 .................... } 
 ....................  
 .................... void M2_H(){ 
@@ -472,7 +487,10 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:18
 ....................  
 .................... void DELANTE(){ 
 ....................    M1_H(); 
+0852:  BRA    0832
 ....................    M2_A(); 
+0854:  BRA    0842
+0856:  GOTO   0882 (RETURN)
 .................... } 
 ....................  
 .................... void ATRAS(){ 
@@ -577,38 +595,40 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:18
 0828:  NOP   
 082A:  DECFSZ FEF,F
 082C:  BRA    0812
-082E:  GOTO   0850 (RETURN)
+082E:  GOTO   0878 (RETURN)
 ....................  
 .................... void main() { 
-0832:  CLRF   FF8
-0834:  BCF    FD0.7
-0836:  MOVF   FC1,W
-0838:  ANDLW  C0
-083A:  IORLW  0F
-083C:  MOVWF  FC1
-083E:  MOVLW  07
-0840:  MOVWF  FB4
+*
+085A:  CLRF   FF8
+085C:  BCF    FD0.7
+085E:  MOVF   FC1,W
+0860:  ANDLW  C0
+0862:  IORLW  0F
+0864:  MOVWF  FC1
+0866:  MOVLW  07
+0868:  MOVWF  FB4
 ....................    led_on(); 
-0842:  BCF    F92.5
-0844:  BSF    F89.5
+086A:  BCF    F92.5
+086C:  BSF    F89.5
 ....................    delay_ms(3000); 
-0846:  MOVLW  0C
-0848:  MOVWF  05
-084A:  MOVLW  FA
-084C:  MOVWF  06
-084E:  BRA    0808
-0850:  DECFSZ 05,F
-0852:  BRA    084A
+086E:  MOVLW  0C
+0870:  MOVWF  05
+0872:  MOVLW  FA
+0874:  MOVWF  06
+0876:  BRA    0808
+0878:  DECFSZ 05,F
+087A:  BRA    0872
 ....................    led_off(); 
-0854:  BCF    F92.5
-0856:  BCF    F89.5
-....................     
+087C:  BCF    F92.5
+087E:  BCF    F89.5
+....................    DELANTE(); 
+0880:  BRA    0852
 ....................    while(1){ 
-0858:  BRA    0858
+0882:  BRA    0882
 ....................     
 ....................    } 
 .................... } 
-085A:  SLEEP 
+0884:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO
