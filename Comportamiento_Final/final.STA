@@ -1,42 +1,41 @@
 
-ROM used:   130/16384 (0%)
-            134/16384 (0%) including unused fragments
+ROM used:   278/16384 (1%)
+            282/16384 (1%) including unused fragments
 
-            0.1 Average locations per line
-            0.4 Average locations per statement
+            0.2 Average locations per line
+            0.9 Average locations per statement
 
-RAM used:   5/2048 (0%) at main() level
-            6/2048 (0%) worst case
+RAM used:   26/2048 (1%) at main() level
+            27/2048 (1%) worst case
 
-Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack used: 2 worst case (1 in main + 1 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   13     6   2  final.c
-   93    40  13  mismov.h
+   35    13   4  final.c
+   86    34  11  mismov.h
   150    36  12  tarjeta.h
   821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
-  296   225  73  srf02.h
+  295   225  73  srf02.h
 ----- -----
- 1373   307 Total
+ 1387   308 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     16   6    0    48  1.1  M1_H
-0     16   6    0    48  1.1  M2_A
-0      8   3    0    21  1.0  DELANTE
-0     42  16    1             @delay_ms3
-0     44  17    1    80  1.6  MAIN
+0     42   8    1             @delay_ms3
+0     14   3    0    69  1.6  inicializarTimer0PWM
+0     30   5    0    76  2.7  tmr0
+0     46   8    1    61  1.5  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               4
-    Statements              307
-    Comments                174
-    Volume (V)              311
-    Difficulty (D)          4.6
-    Effort to implement (E) 1435
+    Functions               3
+    Statements              308
+    Comments                178
+    Volume (V)              295
+    Difficulty (D)          5.4
+    Effort to implement (E) 1601
     Time to implement (T)   1 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
@@ -46,7 +45,8 @@ Program metrics:
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
-00808-07FFE   126  30586  
+00808-00894   142  0  
+00896-07FFE   132  30438  
 
 
 

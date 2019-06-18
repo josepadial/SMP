@@ -1,16 +1,56 @@
-CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
+CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 14:44
 
                Filename:   C:\Users\padul\Desktop\GitHub\SMP\Comportamiento_Final\final.lst
 
-               ROM used:   130 bytes (0%)
-                           Largest free fragment is 30586
-               RAM used:   5 (0%) at main() level
-                           6 (0%) worst case
-               Stack used: 2 locations
+               ROM used:   278 bytes (1%)
+                           Largest free fragment is 30438
+               RAM used:   26 (1%) at main() level
+                           27 (1%) worst case
+               Stack used: 2 locations (1 in main + 1 for interrupts)
                Stack size: 31
 
 *
-0800:  GOTO   085A
+0800:  GOTO   08EC
+*
+0808:  MOVWF  04
+080A:  MOVFF  FD8,05
+080E:  MOVFF  FE0,06
+0812:  MOVLB  0
+0814:  MOVFF  FE9,0C
+0818:  MOVFF  FEA,07
+081C:  MOVFF  FE1,08
+0820:  MOVFF  FE2,09
+0824:  MOVFF  FD9,0A
+0828:  MOVFF  FDA,0B
+082C:  MOVFF  FF3,12
+0830:  MOVFF  FF4,13
+0834:  MOVFF  FFA,14
+0838:  MOVFF  00,0E
+083C:  MOVFF  01,0F
+0840:  MOVFF  02,10
+0844:  MOVFF  03,11
+0848:  BTFSS  FF2.5
+084A:  GOTO   0854
+084E:  BTFSC  FF2.2
+0850:  GOTO   0896
+0854:  MOVFF  0E,00
+0858:  MOVFF  0F,01
+085C:  MOVFF  10,02
+0860:  MOVFF  11,03
+0864:  MOVFF  0C,FE9
+0868:  MOVFF  07,FEA
+086C:  BSF    07.7
+086E:  MOVFF  08,FE1
+0872:  MOVFF  09,FE2
+0876:  MOVFF  0A,FD9
+087A:  MOVFF  0B,FDA
+087E:  MOVFF  12,FF3
+0882:  MOVFF  13,FF4
+0886:  MOVFF  14,FFA
+088A:  MOVF   04,W
+088C:  MOVFF  06,FE0
+0890:  MOVFF  05,FD8
+0894:  RETFIE 0
 .................... #include "mismov.h" 
 .................... #ifndef _MISMOV_ 
 .................... #define _MISMOV_ 
@@ -58,16 +98,8 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 ....................  
 .................... void M1_H(){ 
 ....................    output_high(PIN_A1); 
-*
-0832:  BCF    F92.1
-0834:  BSF    F89.1
 ....................    output_low(PIN_D7); 
-0836:  BCF    F95.7
-0838:  BCF    F8C.7
 ....................    output_high(PIN_D6); 
-083A:  BCF    F95.6
-083C:  BSF    F8C.6
-083E:  GOTO   0854 (RETURN)
 .................... } 
 ....................  
 .................... void M1_P(){ 
@@ -78,15 +110,8 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 ....................  
 .................... void M2_A(){ 
 ....................    output_high(PIN_A0); 
-0842:  BCF    F92.0
-0844:  BSF    F89.0
 ....................    output_high(PIN_C2); 
-0846:  BCF    F94.2
-0848:  BSF    F8B.2
 ....................    output_low(PIN_D5); 
-084A:  BCF    F95.5
-084C:  BCF    F8C.5
-084E:  GOTO   0856 (RETURN)
 .................... } 
 ....................  
 .................... void M2_H(){ 
@@ -187,7 +212,6 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 .................... #endif 
 ....................  
 .................... #include "srf02.h" 
-....................  
 .................... #ifndef _SRF02_ 
 .................... #define _SRF02_ 
 ....................  
@@ -487,10 +511,7 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 ....................  
 .................... void DELANTE(){ 
 ....................    M1_H(); 
-0852:  BRA    0832
 ....................    M2_A(); 
-0854:  BRA    0842
-0856:  GOTO   0882 (RETURN)
 .................... } 
 ....................  
 .................... void ATRAS(){ 
@@ -526,24 +547,18 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 ....................    delay_ms(50); 
 .................... } 
 ....................  
-.................... void DERECHA(long int t){ 
+.................... void DERECHA(){ 
 ....................    PARAR(); 
 ....................    delay_ms(400); 
 ....................    M1_P(); 
-....................    M2_A(); 
-....................    delay_ms(t); 
-....................    PARAR(); 
-....................    delay_ms(250); 
+....................    M2_H(); 
 .................... } 
 ....................  
-.................... void IZQUIERDA(long int t){ 
+.................... void IZQUIERDA(){ 
 ....................    PARAR(); 
 ....................    delay_ms(400); 
 ....................    M1_A(); 
 ....................    M2_P(); 
-....................    delay_ms(t); 
-....................    PARAR(); 
-....................    delay_ms(250); 
 .................... } 
 ....................  
 .................... int ULTRA_SONIDOS_FRENTE(int dist){ 
@@ -571,64 +586,107 @@ CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 13:23
 ....................       return 0; 
 .................... } 
 ....................  
-....................  
 .................... #endif 
 ....................  
 .................... #use delay (clock=48000000) 
 *
-0808:  CLRF   FEA
-080A:  MOVLW  06
-080C:  MOVWF  FE9
-080E:  MOVF   FEF,W
-0810:  BZ    082E
-0812:  MOVLW  0F
-0814:  MOVWF  01
-0816:  CLRF   00
-0818:  DECFSZ 00,F
-081A:  BRA    0818
-081C:  DECFSZ 01,F
-081E:  BRA    0816
-0820:  MOVLW  8F
-0822:  MOVWF  00
-0824:  DECFSZ 00,F
-0826:  BRA    0824
-0828:  NOP   
-082A:  DECFSZ FEF,F
-082C:  BRA    0812
-082E:  GOTO   0878 (RETURN)
+08B4:  CLRF   FEA
+08B6:  MOVLW  1A
+08B8:  MOVWF  FE9
+08BA:  MOVF   FEF,W
+08BC:  BZ    08DA
+08BE:  MOVLW  0F
+08C0:  MOVWF  01
+08C2:  CLRF   00
+08C4:  DECFSZ 00,F
+08C6:  BRA    08C4
+08C8:  DECFSZ 01,F
+08CA:  BRA    08C2
+08CC:  MOVLW  8F
+08CE:  MOVWF  00
+08D0:  DECFSZ 00,F
+08D2:  BRA    08D0
+08D4:  NOP   
+08D6:  DECFSZ FEF,F
+08D8:  BRA    08BE
+08DA:  GOTO   090C (RETURN)
+....................  
+.................... const long int valor = 255; 
+.................... int movimiento; 
+.................... long int contador = valor; 
+....................  
+.................... void inicializarTimer0PWM(){  
+....................    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_4 | RTCC_8_BIT);  
+08DE:  MOVLW  C1
+08E0:  MOVWF  FD5
+....................    enable_interrupts(INT_TIMER0);  
+08E2:  BSF    FF2.5
+....................    enable_interrupts(GLOBAL);  
+08E4:  MOVLW  C0
+08E6:  IORWF  FF2,F
+08E8:  GOTO   0912 (RETURN)
+.................... }  
+....................  
+.................... #INT_TIMER0 
+.................... void tmr0(){ 
+....................    contador--; 
+*
+0896:  MOVF   17,W
+0898:  BTFSC  FD8.2
+089A:  DECF   18,F
+089C:  DECF   17,F
+....................  
+....................    if(contador == 0){ 
+089E:  MOVF   17,F
+08A0:  BNZ   08AE
+08A2:  MOVF   18,F
+08A4:  BNZ   08AE
+....................       led_off(); 
+08A6:  BCF    F92.5
+08A8:  BCF    F89.5
+....................       //PARAR(); 
+....................       contador = valor; 
+08AA:  CLRF   18
+08AC:  SETF   17
+....................    } 
+08AE:  BCF    FF2.2
+08B0:  GOTO   0854
+.................... } 
 ....................  
 .................... void main() { 
 *
-085A:  CLRF   FF8
-085C:  BCF    FD0.7
-085E:  MOVF   FC1,W
-0860:  ANDLW  C0
-0862:  IORLW  0F
-0864:  MOVWF  FC1
-0866:  MOVLW  07
-0868:  MOVWF  FB4
-....................    led_on(); 
-086A:  BCF    F92.5
-086C:  BSF    F89.5
+08EC:  CLRF   FF8
+08EE:  BCF    FD0.7
+08F0:  BSF    07.7
+08F2:  CLRF   18
+08F4:  SETF   17
+08F6:  MOVF   FC1,W
+08F8:  ANDLW  C0
+08FA:  IORLW  0F
+08FC:  MOVWF  FC1
+08FE:  MOVLW  07
+0900:  MOVWF  FB4
 ....................    delay_ms(3000); 
-086E:  MOVLW  0C
-0870:  MOVWF  05
-0872:  MOVLW  FA
-0874:  MOVWF  06
-0876:  BRA    0808
-0878:  DECFSZ 05,F
-087A:  BRA    0872
-....................    led_off(); 
-087C:  BCF    F92.5
-087E:  BCF    F89.5
-....................    DELANTE(); 
-0880:  BRA    0852
+0902:  MOVLW  0C
+0904:  MOVWF  19
+0906:  MOVLW  FA
+0908:  MOVWF  1A
+090A:  BRA    08B4
+090C:  DECFSZ 19,F
+090E:  BRA    0906
+....................    inicializarTimer0PWM(); 
+0910:  BRA    08DE
+....................    led_on(); 
+0912:  BCF    F92.5
+0914:  BSF    F89.5
+....................    //led_off(); 
+....................    //DERECHA(); 
 ....................    while(1){ 
-0882:  BRA    0882
-....................     
+0916:  BRA    0916
+....................       //DELANTE(); 
 ....................    } 
 .................... } 
-0884:  SLEEP 
+0918:  SLEEP 
 
 Configuration Fuses:
    Word  1: 0E24   PLL5 CPUDIV1 USBDIV HSPLL NOFCMEN NOIESO

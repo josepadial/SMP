@@ -3,46 +3,65 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-005     MAIN.@SCRATCH1
-006     @delay_ms3.P1
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     movimiento
+017-018 contador
+019     MAIN.@SCRATCH1
+01A     @delay_ms3.P1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2
 FBB     CCP_2_LOW
+FBB     CCP_2
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @WRITE_PACKED_MEMORY.P1
-FE9-FEA @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000808  @delay_ms3
-000832  M1_H
-000842  M2_A
-000852  DELANTE
-00085A  MAIN
-00085A  @cinit1
-00086A  @cinit2
+000896  tmr0
+0008B4  @delay_ms3
+0008DE  inicializarTimer0PWM
+0008EC  MAIN
+0008EC  @cinit1
+000902  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Comportamiento_Final\
 
 Project Files:
-    final.c                                                 [18-jun.-19 13:23  CRC=D872A938]
-    mismov.h                                                [17-jun.-19 19:10  CRC=2CB10B94]
+    final.c                                                 [18-jun.-19 14:44  CRC=48006FD0]
+    mismov.h                                                [18-jun.-19 14:34  CRC=3CE11B43]
     tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
-    srf02.h                                                 [14-jun.-19 19:32  CRC=9189F93F]
+    srf02.h                                                 [18-jun.-19 13:43  CRC=2FD3BF81]
 
-Source signature=4628126A
+Source signature=02797535
 
 Units:
     final (main)

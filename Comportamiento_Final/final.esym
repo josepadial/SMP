@@ -1,8 +1,8 @@
-D G "MEASUREL" 4 15 "3"
-D G "__PCH__" 0 14 ""5.008""
-D G "__DEVICE__" 0 14 "4550"
-D G "__DATE__" 0 14 ""18-jun.-19""
-D G "__TIME__" 0 14 ""13:23:51""
+C L "MAIN" 0 19 1 "FUNCTION"
+D G "__PCH__" 0 36 ""5.008""
+D G "__DEVICE__" 0 36 "4550"
+D G "__DATE__" 0 36 ""18-jun.-19""
+D G "__TIME__" 0 36 ""14:44:43""
 D G "_MISMOV_" 1 2 ""
 D G "_TARJETA_" 2 3 ""
 c L "set_tris_a" 3 1 22 "FUNCTION"
@@ -935,43 +935,43 @@ D G "IN2" 2 135 "input(PIN_D1)"
 D G "IN3" 2 136 "input(PIN_D2)"
 D G "IN4" 2 137 "input(PIN_D3)"
 D G "IN5" 2 138 "input(PIN_D4)"
-D G "_SRF02_" 4 3 ""
-D G "SRF02W" 4 5 "0xE0"
-D G "SRF02WW" 4 6 "0xE0"
-D G "SRF02WO" 4 7 "0xE2"
-D G "SRF02WY" 4 8 "0xE4"
-D G "COMMAND" 4 9 "0"
-D G "SRF02R" 4 10 "0xE1"
-D G "SRF02RW" 4 11 "0xE1"
-D G "SRF02RO" 4 12 "0xE3"
-D G "SRF02RY" 4 13 "0xE5"
-D G "MEASUREH" 4 14 "2"
-D G "MEASUREL" 4 15 "3"
-F G "srf_measure_cm_frente" 4 18 "int16()" `650 
-V L "m" 4 19 "int16" `651 
-V L "m2" 4 19 "int16" `652 
-F G "srf_measure_cm_dere" 4 51 "int16()" `653 
-V L "m" 4 52 "int16" `654 
-V L "m2" 4 52 "int16" `655 
-F G "srf_measure_cm_izqui" 4 84 "int16()" `656 
-V L "m" 4 85 "int16" `657 
-V L "m2" 4 85 "int16" `658 
-F G "srf_measure_in" 4 117 "int16()" `659 
-V L "m" 4 118 "int16" `660 
-V L "m2" 4 118 "int16" `661 
-F G "srf_measure_us" 4 150 "int16()" `662 
-V L "m" 4 151 "int16" `663 
-V L "m2" 4 151 "int16" `664 
-F G "srf_false_measure_cm" 4 183 "int16()" `665 
-V L "m" 4 184 "int16" `666 
-V L "m2" 4 184 "int16" `667 
-F G "srf_false_measure_in" 4 216 "int16()" `668 
-V L "m" 4 217 "int16" `669 
-V L "m2" 4 217 "int16" `670 
-F G "srf_false_measure_us" 4 249 "int16()" `671 
-V L "m" 4 250 "int16" `672 
-V L "m2" 4 250 "int16" `673 
-F G "srf_burst" 4 282 "void()" `674 
+D G "_SRF02_" 4 2 ""
+D G "SRF02W" 4 4 "0xE0"
+D G "SRF02WW" 4 5 "0xE0"
+D G "SRF02WO" 4 6 "0xE2"
+D G "SRF02WY" 4 7 "0xE4"
+D G "COMMAND" 4 8 "0"
+D G "SRF02R" 4 9 "0xE1"
+D G "SRF02RW" 4 10 "0xE1"
+D G "SRF02RO" 4 11 "0xE3"
+D G "SRF02RY" 4 12 "0xE5"
+D G "MEASUREH" 4 13 "2"
+D G "MEASUREL" 4 14 "3"
+F G "srf_measure_cm_frente" 4 17 "int16()" `650 
+V L "m" 4 18 "int16" `651 
+V L "m2" 4 18 "int16" `652 
+F G "srf_measure_cm_dere" 4 50 "int16()" `653 
+V L "m" 4 51 "int16" `654 
+V L "m2" 4 51 "int16" `655 
+F G "srf_measure_cm_izqui" 4 83 "int16()" `656 
+V L "m" 4 84 "int16" `657 
+V L "m2" 4 84 "int16" `658 
+F G "srf_measure_in" 4 116 "int16()" `659 
+V L "m" 4 117 "int16" `660 
+V L "m2" 4 117 "int16" `661 
+F G "srf_measure_us" 4 149 "int16()" `662 
+V L "m" 4 150 "int16" `663 
+V L "m2" 4 150 "int16" `664 
+F G "srf_false_measure_cm" 4 182 "int16()" `665 
+V L "m" 4 183 "int16" `666 
+V L "m2" 4 183 "int16" `667 
+F G "srf_false_measure_in" 4 215 "int16()" `668 
+V L "m" 4 216 "int16" `669 
+V L "m2" 4 216 "int16" `670 
+F G "srf_false_measure_us" 4 248 "int16()" `671 
+V L "m" 4 249 "int16" `672 
+V L "m2" 4 249 "int16" `673 
+F G "srf_burst" 4 281 "void()" `674 
 F G "DELANTE" 1 8 "void()" `679 
 F G "ATRAS" 1 13 "void()" `680 
 F G "PARAR" 1 18 "void()" `681 
@@ -979,17 +979,22 @@ F G "PARAR_I" 1 23 "void()" `682
 F G "DISPARAR" 1 27 "void()" `683 
 F G "RECOGER" 1 31 "void()" `684 
 F G "IMPACTO" 1 35 "void()" `685 
-V L "t" 1 46 "int16" `687 
-F G "DERECHA" 1 46 "void(int16 t)" `686 
-V L "t" 1 56 "int16" `689 
-F G "IZQUIERDA" 1 56 "void(int16 t)" `688 
-V L "dist" 1 66 "int8" `691 
-F G "ULTRA_SONIDOS_FRENTE" 1 66 "int8(int8 dist)" `690  "delay_ms(1);"
-V L "dist" 1 74 "int8" `693 
-F G "ULTRA_SONIDOS_DERE" 1 74 "int8(int8 dist)" `692  "delay_ms(1);"
-V L "dist" 1 83 "int8" `695 
-F G "ULTRA_SONIDOS_IZQUI" 1 83 "int8(int8 dist)" `694  "delay_ms(1);"
-F G "MAIN" 0 4 "void()" `700 
+F G "DERECHA" 1 46 "void()" `686 
+F G "IZQUIERDA" 1 53 "void()" `687 
+V L "dist" 1 60 "int8" `689 
+F G "ULTRA_SONIDOS_FRENTE" 1 60 "int8(int8 dist)" `688  "delay_ms(1);"
+V L "dist" 1 68 "int8" `691 
+F G "ULTRA_SONIDOS_DERE" 1 68 "int8(int8 dist)" `690  "delay_ms(1);"
+V L "dist" 1 77 "int8" `693 
+F G "ULTRA_SONIDOS_IZQUI" 1 77 "int8(int8 dist)" `692  "delay_ms(1);"
+V G "valor" 0 4 "int16" `698 
+V G "movimiento" 0 5 "int8" `700 
+V G "contador" 0 6 "int16" `701 
+F G "inicializarTimer0PWM" 0 8 "void()" `702 
+F G "tmr0" 0 15 "void()" `703 
+C L "tmr0" 0 20 1 "FUNCTION"
+F G "MAIN" 0 25 "void()" `704 
+C L "MAIN" 0 20 2 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

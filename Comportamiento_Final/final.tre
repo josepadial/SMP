@@ -1,7 +1,6 @@
 ÀÄfinal
-   ÀÄMAIN  0/44  Ram=1
-      ÃÄ@cinit1  (Inline)  Ram=0
-      ÃÄ@delay_ms3  0/42  Ram=1
-      ÀÄDELANTE  0/8  Ram=0
-         ÃÄM1_H  0/16  Ram=0
-         ÀÄM2_A  0/16  Ram=0
+   ÃÄMAIN  0/46  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms3  0/42  Ram=1
+   ³  ÀÄinicializarTimer0PWM  0/14  Ram=0
+   ÀÄtmr0  0/30  Ram=0

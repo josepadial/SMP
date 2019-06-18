@@ -47,13 +47,13 @@ void DERECHA(){
    PARAR();
    delay_ms(400);
    M1_P();
-   M2_H();
+   M2_A();
 }
 
 void IZQUIERDA(){
    PARAR();
    delay_ms(400);
-   M1_A();
+   M1_H();
    M2_P();
 }
 

@@ -43,18 +43,24 @@ void IMPACTO(){
    delay_ms(50);
 }
 
-void DERECHA(){
+void DERECHA(long int t){
    PARAR();
    delay_ms(400);
    M1_P();
-   M2_H();
+   M2_A();
+   delay_ms(t);
+   PARAR();
+   delay_ms(250);
 }
 
-void IZQUIERDA(){
+void IZQUIERDA(long int t){
    PARAR();
    delay_ms(400);
    M1_A();
    M2_P();
+   delay_ms(t);
+   PARAR();
+   delay_ms(250);
 }
 
 int ULTRA_SONIDOS_FRENTE(int dist){
@@ -81,5 +87,6 @@ int ULTRA_SONIDOS_IZQUI(int dist){
    else
       return 0;
 }
+
 
 #endif

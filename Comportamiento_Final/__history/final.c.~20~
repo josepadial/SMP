@@ -1,8 +1,8 @@
 #include "mismov.h"
 #use delay (clock=48000000)
 
-const long int valor = 255;
-int movimiento;
+const long int valor = 65000/8;
+
 long int contador = valor;
 
 void inicializarTimer0PWM(){ 
@@ -17,18 +17,16 @@ void tmr0(){
 
    if(contador == 0){
       led_off();
-      //PARAR();
       contador = valor;
    }
 }
 
 void main() {
    delay_ms(3000);
+   
    inicializarTimer0PWM();
    led_on();
    //led_off();
-   //DERECHA();
-   while(1){
-      //DELANTE();
-   }
+   //DELANTE();
+   while(1){}
 }
