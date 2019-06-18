@@ -1,0 +1,16 @@
+[PROJECT]
+Target=final.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.008
+Compiler=PCH
+[Target Data]
+FileList=final.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\padul\Desktop\GitHub\SMP\Comportamiento_Final\
+[final.c]
+Type=4
+[mru-list]
+1=final.c
+[Units]
+Count=1
+1=final (main)
