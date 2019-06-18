@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
+CCS PCH C Compiler, Version 5.008, 5967               18-jun.-19 21:04
 
                Filename:   C:\Users\padul\Desktop\GitHub\SMP\Controlar giro\controlar_giro.lst
 
@@ -48,29 +48,29 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 .................... void M1_A(){ 
 ....................    output_high(PIN_A1); 
 *
-08E8:  BCF    F92.1
-08EA:  BSF    F89.1
+08DA:  BCF    F92.1
+08DC:  BSF    F89.1
 ....................    output_high(PIN_D7); 
-08EC:  BCF    F95.7
-08EE:  BSF    F8C.7
+08DE:  BCF    F95.7
+08E0:  BSF    F8C.7
 ....................    output_low(PIN_D6); 
-08F0:  BCF    F95.6
-08F2:  BCF    F8C.6
-08F4:  RETURN 0
+08E2:  BCF    F95.6
+08E4:  BCF    F8C.6
+08E6:  RETURN 0
 .................... } 
 ....................  
 .................... void M1_H(){ 
 ....................    output_high(PIN_A1); 
 *
-0852:  BCF    F92.1
-0854:  BSF    F89.1
+0856:  BCF    F92.1
+0858:  BSF    F89.1
 ....................    output_low(PIN_D7); 
-0856:  BCF    F95.7
-0858:  BCF    F8C.7
+085A:  BCF    F95.7
+085C:  BCF    F8C.7
 ....................    output_high(PIN_D6); 
-085A:  BCF    F95.6
-085C:  BSF    F8C.6
-085E:  GOTO   0874 (RETURN)
+085E:  BCF    F95.6
+0860:  BSF    F8C.6
+0862:  RETURN 0
 .................... } 
 ....................  
 .................... void M1_P(){ 
@@ -84,49 +84,49 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 ....................    output_low(PIN_D6); 
 0838:  BCF    F95.6
 083A:  BCF    F8C.6
-083C:  RETURN 0
+083C:  GOTO   0852 (RETURN)
 .................... } 
 ....................  
 .................... void M2_A(){ 
 ....................    output_high(PIN_A0); 
 *
-08A2:  BCF    F92.0
-08A4:  BSF    F89.0
+08E8:  BCF    F92.0
+08EA:  BSF    F89.0
 ....................    output_high(PIN_C2); 
-08A6:  BCF    F94.2
-08A8:  BSF    F8B.2
+08EC:  BCF    F94.2
+08EE:  BSF    F8B.2
 ....................    output_low(PIN_D5); 
-08AA:  BCF    F95.5
-08AC:  BCF    F8C.5
-08AE:  RETURN 0
+08F0:  BCF    F95.5
+08F2:  BCF    F8C.5
+08F4:  RETURN 0
 .................... } 
 ....................  
 .................... void M2_H(){ 
 ....................    output_high(PIN_A0); 
 *
-0862:  BCF    F92.0
-0864:  BSF    F89.0
+0864:  BCF    F92.0
+0866:  BSF    F89.0
 ....................    output_low(PIN_C2); 
-0866:  BCF    F94.2
-0868:  BCF    F8B.2
+0868:  BCF    F94.2
+086A:  BCF    F8B.2
 ....................    output_high(PIN_D5); 
-086A:  BCF    F95.5
-086C:  BSF    F8C.5
-086E:  GOTO   0876 (RETURN)
+086C:  BCF    F95.5
+086E:  BSF    F8C.5
+0870:  RETURN 0
 .................... } 
 ....................  
 .................... void M2_P(){ 
 ....................    output_high(PIN_A0); 
 *
-083E:  BCF    F92.0
-0840:  BSF    F89.0
+0840:  BCF    F92.0
+0842:  BSF    F89.0
 ....................    output_low(PIN_C2); 
-0842:  BCF    F94.2
-0844:  BCF    F8B.2
+0844:  BCF    F94.2
+0846:  BCF    F8B.2
 ....................    output_low(PIN_D5); 
-0846:  BCF    F95.5
-0848:  BCF    F8C.5
-084A:  RETURN 0
+0848:  BCF    F95.5
+084A:  BCF    F8C.5
+084C:  GOTO   0854 (RETURN)
 .................... } 
 ....................  
 .................... void M3_A(){ 
@@ -399,91 +399,93 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 .................... void DELANTE(){ 
 ....................    M1_H(); 
 *
-0872:  BRA    0852
+0872:  RCALL  0856
 ....................    M2_H(); 
-0874:  BRA    0862
+0874:  RCALL  0864
 0876:  GOTO   0966 (RETURN)
 .................... } 
 ....................  
 .................... void ATRAS(){ 
 ....................    M1_A(); 
 *
-092E:  RCALL  08E8
+092E:  RCALL  08DA
 ....................    M2_A(); 
-0930:  RCALL  08A2
+0930:  RCALL  08E8
 0932:  GOTO   09BA (RETURN)
 .................... } 
 ....................  
 .................... void PARAR(){ 
 ....................    M1_P(); 
 *
-084C:  RCALL  0830
+0850:  BRA    0830
 ....................    M2_P(); 
-084E:  RCALL  083E
-0850:  RETURN 0
+0852:  BRA    0840
+0854:  RETURN 0
+.................... } 
+....................  
+.................... void PARAR_I(){ 
+....................    M4_P(); 
 .................... } 
 ....................  
 .................... void DISPARAR(){ 
-....................    M3_H(); 
 ....................    M4_H(); 
 .................... } 
 ....................  
 .................... void RECOGER(){ 
-....................    M3_A(); 
 ....................    M4_A(); 
 .................... } 
 ....................  
 .................... void IMPACTO(){ 
 ....................    DISPARAR(); 
 ....................    delay_ms(250); 
-....................    PARAR(); 
+....................    PARAR_I(); 
 ....................    delay_ms(700); 
 ....................    RECOGER(); 
 ....................    delay_ms(250); 
-....................    PARAR(); 
+....................    PARAR_I(); 
 ....................    delay_ms(500); 
 .................... } 
 ....................  
 .................... void DERECHA(long int t){ 
 ....................    PARAR(); 
 *
-08B0:  RCALL  084C
+08A2:  RCALL  0850
 ....................    delay_ms(400); 
-08B2:  MOVLW  02
-08B4:  MOVWF  07
-08B6:  MOVLW  C8
-08B8:  MOVWF  08
-08BA:  RCALL  087A
-08BC:  DECFSZ 07,F
-08BE:  BRA    08B6
-....................    M1_P(); 
-08C0:  RCALL  0830
-....................    M2_A(); 
-08C2:  RCALL  08A2
+08A4:  MOVLW  02
+08A6:  MOVWF  07
+08A8:  MOVLW  C8
+08AA:  MOVWF  08
+08AC:  RCALL  087A
+08AE:  DECFSZ 07,F
+08B0:  BRA    08A8
+....................    M1_H(); 
+08B2:  RCALL  0856
+....................    M2_H(); 
+08B4:  RCALL  0864
 ....................    delay_ms(t); 
-08C4:  MOVFF  06,07
-08C8:  INCF   07,F
-08CA:  DECF   07,F
-08CC:  BTFSC  FD8.2
-08CE:  BRA    08D6
-08D0:  SETF   08
-08D2:  RCALL  087A
-08D4:  BRA    08CA
-08D6:  MOVFF  05,08
-08DA:  RCALL  087A
+08B6:  MOVFF  06,07
+08BA:  INCF   07,F
+08BC:  DECF   07,F
+08BE:  BTFSC  FD8.2
+08C0:  BRA    08C8
+08C2:  SETF   08
+08C4:  RCALL  087A
+08C6:  BRA    08BC
+08C8:  MOVFF  05,08
+08CC:  RCALL  087A
 ....................    PARAR(); 
-08DC:  RCALL  084C
+08CE:  RCALL  0850
 ....................    delay_ms(250); 
-08DE:  MOVLW  FA
-08E0:  MOVWF  08
-08E2:  RCALL  087A
-08E4:  GOTO   098E (RETURN)
+08D0:  MOVLW  FA
+08D2:  MOVWF  08
+08D4:  RCALL  087A
+08D6:  GOTO   098E (RETURN)
 .................... } 
 ....................  
 .................... void IZQUIERDA(long int t){ 
 ....................    PARAR(); 
 *
-08F6:  RCALL  084C
+08F6:  RCALL  0850
 ....................    delay_ms(400); 
 08F8:  MOVLW  02
 08FA:  MOVWF  07
@@ -493,9 +495,9 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 0902:  DECFSZ 07,F
 0904:  BRA    08FC
 ....................    M1_A(); 
-0906:  RCALL  08E8
-....................    M2_P(); 
-0908:  RCALL  083E
+0906:  RCALL  08DA
+....................    M2_A(); 
+0908:  RCALL  08E8
 ....................    delay_ms(t); 
 090A:  MOVFF  06,07
 090E:  INCF   07,F
@@ -508,7 +510,7 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 091C:  MOVFF  05,08
 0920:  RCALL  087A
 ....................    PARAR(); 
-0922:  RCALL  084C
+0922:  RCALL  0850
 ....................    delay_ms(250); 
 0924:  MOVLW  FA
 0926:  MOVWF  08
@@ -595,7 +597,7 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 0952:  BRA    094A
 ....................    while(1){ 
 ....................       PARAR(); 
-0954:  RCALL  084C
+0954:  RCALL  0850
 ....................       delay_ms(500); 
 0956:  MOVLW  02
 0958:  MOVWF  05
@@ -615,7 +617,7 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 0970:  DECFSZ 05,F
 0972:  BRA    096A
 ....................       PARAR(); 
-0974:  RCALL  084C
+0974:  RCALL  0850
 ....................       delay_ms(500); 
 0976:  MOVLW  02
 0978:  MOVWF  05
@@ -629,9 +631,9 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 0986:  MOVWF  06
 0988:  MOVLW  C4
 098A:  MOVWF  05
-098C:  BRA    08B0
+098C:  BRA    08A2
 ....................       PARAR(); 
-098E:  RCALL  084C
+098E:  RCALL  0850
 ....................       delay_ms(500); 
 0990:  MOVLW  02
 0992:  MOVWF  05
@@ -647,7 +649,7 @@ CCS PCH C Compiler, Version 5.008, 5967               15-jun.-19 00:17
 09A4:  MOVWF  05
 09A6:  BRA    08F6
 ....................       PARAR(); 
-09A8:  RCALL  084C
+09A8:  RCALL  0850
 ....................       delay_ms(500); 
 09AA:  MOVLW  02
 09AC:  MOVWF  05

@@ -3,12 +3,12 @@
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@delay_ms2  0/40  Ram=1
       ÃÄPARAR  0/6  Ram=0
-      ³  ÃÄM1_P  0/14  Ram=0
-      ³  ÀÄM2_P  0/14  Ram=0
+      ³  ÃÄM1_P  0/16  Ram=0
+      ³  ÀÄM2_P  0/16  Ram=0
       ÃÄ@delay_ms2  0/40  Ram=1
       ÃÄDELANTE  0/8  Ram=0
-      ³  ÃÄM1_H  0/16  Ram=0
-      ³  ÀÄM2_H  0/16  Ram=0
+      ³  ÃÄM1_H  0/14  Ram=0
+      ³  ÀÄM2_H  0/14  Ram=0
       ÃÄ@delay_ms2  0/40  Ram=1
       ÃÄPARAR  0/6  Ram=0
       ³  ÀÄ*
@@ -17,8 +17,8 @@
       ³  ÃÄPARAR  0/6  Ram=0
       ³  ³  ÀÄ*
       ³  ÃÄ@delay_ms1  0/40  Ram=1
-      ³  ÃÄM1_P  0/14  Ram=0
-      ³  ÃÄM2_A  0/14  Ram=0
+      ³  ÃÄM1_H  0/14  Ram=0
+      ³  ÃÄM2_H  0/14  Ram=0
       ³  ÃÄ@delay_ms1  0/40  Ram=1
       ³  ÃÄ@delay_ms1  0/40  Ram=1
       ³  ÃÄPARAR  0/6  Ram=0
@@ -32,7 +32,7 @@
       ³  ³  ÀÄ*
       ³  ÃÄ@delay_ms1  0/40  Ram=1
       ³  ÃÄM1_A  0/14  Ram=0
-      ³  ÃÄM2_P  0/14  Ram=0
+      ³  ÃÄM2_A  0/14  Ram=0
       ³  ÃÄ@delay_ms1  0/40  Ram=1
       ³  ÃÄ@delay_ms1  0/40  Ram=1
       ³  ÃÄPARAR  0/6  Ram=0

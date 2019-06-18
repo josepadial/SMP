@@ -16,14 +16,14 @@ FB4.7   C2OUT
 FBB     CCP_2
 FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
 FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
@@ -31,15 +31,15 @@ FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 ROM Allocation:
 000808  @delay_ms2
 000830  M1_P
-00083E  M2_P
-00084C  PARAR
-000852  M1_H
-000862  M2_H
+000840  M2_P
+000850  PARAR
+000856  M1_H
+000864  M2_H
 000872  DELANTE
 00087A  @delay_ms1
-0008A2  M2_A
-0008B0  DERECHA
-0008E8  M1_A
+0008A2  DERECHA
+0008DA  M1_A
+0008E8  M2_A
 0008F6  IZQUIERDA
 00092E  ATRAS
 000936  MAIN
@@ -53,9 +53,9 @@ Project Files:
     controlar_giro.c                                        [15-jun.-19 00:17  CRC=AE174556]
     tarjeta.h                                               [24-may.-19 12:06  CRC=55507C43]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
-    mismov.h                                                [15-jun.-19 00:13  CRC=F2E9BEA6]
+    mismov.h                                                [18-jun.-19 21:04  CRC=A77A8E28]
 
-Source signature=8A932CC3
+Source signature=F3B4CBC7
 
 Units:
     controlar_giro (main)

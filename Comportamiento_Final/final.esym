@@ -1,8 +1,8 @@
-C L "MAIN" 0 19 1 "FUNCTION"
-D G "__PCH__" 0 36 ""5.008""
-D G "__DEVICE__" 0 36 "4550"
-D G "__DATE__" 0 36 ""18-jun.-19""
-D G "__TIME__" 0 36 ""14:44:43""
+D G "MOVIMIENTO_PARAR" 0 7 "4"
+D G "__PCH__" 0 125 ""5.008""
+D G "__DEVICE__" 0 125 "4550"
+D G "__DATE__" 0 125 ""18-jun.-19""
+D G "__TIME__" 0 125 ""19:00:17""
 D G "_MISMOV_" 1 2 ""
 D G "_TARJETA_" 2 3 ""
 c L "set_tris_a" 3 1 22 "FUNCTION"
@@ -980,21 +980,27 @@ F G "DISPARAR" 1 27 "void()" `683
 F G "RECOGER" 1 31 "void()" `684 
 F G "IMPACTO" 1 35 "void()" `685 
 F G "DERECHA" 1 46 "void()" `686 
-F G "IZQUIERDA" 1 53 "void()" `687 
-V L "dist" 1 60 "int8" `689 
-F G "ULTRA_SONIDOS_FRENTE" 1 60 "int8(int8 dist)" `688  "delay_ms(1);"
-V L "dist" 1 68 "int8" `691 
-F G "ULTRA_SONIDOS_DERE" 1 68 "int8(int8 dist)" `690  "delay_ms(1);"
-V L "dist" 1 77 "int8" `693 
-F G "ULTRA_SONIDOS_IZQUI" 1 77 "int8(int8 dist)" `692  "delay_ms(1);"
-V G "valor" 0 4 "int16" `698 
-V G "movimiento" 0 5 "int8" `700 
-V G "contador" 0 6 "int16" `701 
-F G "inicializarTimer0PWM" 0 8 "void()" `702 
-F G "tmr0" 0 15 "void()" `703 
-C L "tmr0" 0 20 1 "FUNCTION"
-F G "MAIN" 0 25 "void()" `704 
-C L "MAIN" 0 20 2 "FUNCTION"
+F G "IZQUIERDA" 1 51 "void()" `687 
+V L "dist" 1 56 "int8" `689 
+F G "ULTRA_SONIDOS_FRENTE" 1 56 "int8(int8 dist)" `688  "delay_ms(1);"
+V L "dist" 1 64 "int8" `691 
+F G "ULTRA_SONIDOS_DERE" 1 64 "int8(int8 dist)" `690  "delay_ms(1);"
+V L "dist" 1 73 "int8" `693 
+F G "ULTRA_SONIDOS_IZQUI" 1 73 "int8(int8 dist)" `692  "delay_ms(1);"
+D G "MOVIMIENTO_DELANTE" 0 3 "0"
+D G "MOVIMIENTO_IZQUIERDA" 0 4 "1"
+D G "MOVIMIENTO_DERECHA" 0 5 "2"
+D G "MOVIMIENTO_ATRAS" 0 6 "3"
+D G "MOVIMIENTO_PARAR" 0 7 "4"
+V G "contador" 0 9 "int8" `698 
+V G "indice_movimiento" 0 10 "int8" `699 
+V G "num_movimientos" 0 11 "int8" `700 
+V G "array_movimientos" 0 13 "int8[5]" `701 
+V G "array_tiempos" 0 14 "int8[5]" `702 
+V G "interrupcion" 0 16 "int8" `703 
+F G "inicializarTimer0PWM" 0 20 "void()" `704 
+F G "tmr0" 0 26 "void()" `705 
+F G "MAIN" 0 64 "void()" `707  "Delay inicial"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1

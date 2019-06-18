@@ -3,7 +3,7 @@ ROM used:   456/16384 (1%)
             460/16384 (1%) including unused fragments
 
             0.4 Average locations per line
-            8.8 Average locations per statement
+            8.9 Average locations per statement
 
 RAM used:   5/2048 (0%) at main() level
             8/2048 (0%) worst case
@@ -13,21 +13,21 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   33    20  38  controlar_giro.c
+   33    20  39  controlar_giro.c
   151     0   0  tarjeta.h
   821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
-   91    32  62  mismov.h
+   93    31  61  mismov.h
 ----- -----
- 1096    52 Total
+ 1098    51 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     14   2    0    48  1.1  M1_A
-0     16   2    0    48  1.1  M1_H
-0     14   2    0    48  1.1  M1_P
+0     14   2    0    48  1.1  M1_H
+0     16   2    0    48  1.1  M1_P
 0     14   2    0    48  1.1  M2_A
-0     16   2    0    48  1.1  M2_H
-0     14   2    0    48  1.1  M2_P
+0     14   2    0    48  1.1  M2_H
+0     16   2    0    48  1.1  M2_P
 0     40   4    1             @delay_ms1
 0      8   1    0    21  1.0  DELANTE
 0      8   1    0    21  1.0  ATRAS
@@ -40,7 +40,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 
 Program metrics:
     Functions               14
-    Statements              52
+    Statements              51
     Comments                168
     Volume (V)              1900
     Difficulty (D)          18.9

@@ -1,52 +1,81 @@
 
-ROM used:   278/16384 (1%)
-            282/16384 (1%) including unused fragments
+ROM used:   2308/16384 (7%)
+            2312/16384 (7%) including unused fragments
 
-            0.2 Average locations per line
-            0.9 Average locations per statement
+            1.6 Average locations per line
+            6.4 Average locations per statement
 
-RAM used:   26/2048 (1%) at main() level
-            27/2048 (1%) worst case
+RAM used:   38/2048 (2%) at main() level
+            46/2048 (2%) worst case
 
-Stack used: 2 worst case (1 in main + 1 for interrupts)
+Stack used: 6 worst case (3 in main + 3 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   35    13   4  final.c
-   86    34  11  mismov.h
-  150    36  12  tarjeta.h
+  122    72  20  final.c
+   82    30   8  mismov.h
+  150    36  10  tarjeta.h
   821     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h
-  295   225  73  srf02.h
+  295   225  62  srf02.h
 ----- -----
- 1387   308 Total
+ 1470   363 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     42   8    1             @delay_ms3
-0     14   3    0    69  1.6  inicializarTimer0PWM
-0     30   5    0    76  2.7  tmr0
-0     46   8    1    61  1.5  MAIN
- Inline         0             @cinit1
+0     14   0    0    48  1.1  M1_A
+0     14   0    0    48  1.1  M1_H
+0     16   0    0    48  1.1  M1_P
+0     14   0    0    48  1.1  M2_A
+0     14   0    0    48  1.1  M2_H
+0     14   0    0    48  1.1  M2_P
+0     16   0    0    48  1.1  M4_A
+0     16   0    0    48  1.1  M4_H
+0     16   0    0    75  0.2  M4_P
+0     72   2    3             @I2C_READ_1
+0     72   2    1             @I2C_WRITE_1
+0     40   1    1             @delay_ms1
+0    378   8    6   711  3.9  srf_measure_cm_frente
+0    378   8    6   711  3.9  srf_measure_cm_dere
+0    378   8    6   711  3.9  srf_measure_cm_izqui
+0     40   1    1             @delay_ms2
+0      6   0    0    21  1.0  DELANTE
+0      6   0    0    21  1.0  ATRAS
+0      6   0    0    21  1.0  PARAR
+0      4   0    0    12  0.8  PARAR_I
+0      6   0    0    12  0.8  DISPARAR
+0      6   0    0    12  0.8  RECOGER
+0     36   1    0   123  1.3  IMPACTO
+0      8   0    0    21  1.0  DERECHA
+0      8   0    0    21  1.0  IZQUIERDA
+0     36   1    3    66  2.6  ULTRA_SONIDOS_FRENTE
+0     36   1    3    66  2.6  ULTRA_SONIDOS_DERE
+0     36   1    3    73  1.6  ULTRA_SONIDOS_IZQUI
+0     40   1    1             @delay_ms3
+0     12   0    0    42  1.4  inicializarTimer0PWM
+0    100   2    0   528  7.0  tmr0
+0     36   1    0   528  7.0  @goto11093
+0    288   6    1  1386  5.9  MAIN
+ Inline         0  1418  5.9  @cinit1
 
 Program metrics:
-    Functions               3
-    Statements              308
-    Comments                178
-    Volume (V)              295
-    Difficulty (D)          5.4
-    Effort to implement (E) 1601
-    Time to implement (T)   1 minutes
-    Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   1
-    Maintainability (MI)    42
+    Functions               29
+    Statements              363
+    Comments                175
+    Volume (V)              11831
+    Difficulty (D)          66.6
+    Effort to implement (E) 788157
+    Time to implement (T)   12 hours, 10 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   31
+    Maintainability (MI)    68
 
  Segment     Used  Free
 -----------  ----  ----
 00000-007FE     0  2048  
 00800-00806     4  4  
 00808-00894   142  0  
-00896-07FFE   132  30438  
+00896-07FFE  2162  28408  
 
 
 

@@ -44,15 +44,11 @@ void IMPACTO(){
 }
 
 void DERECHA(){
-   PARAR();
-   delay_ms(400);
-   M1_P();
+   M1_A();
    M2_H();
 }
 
 void IZQUIERDA(){
-   PARAR();
-   delay_ms(400);
    M1_A();
    M2_P();
 }

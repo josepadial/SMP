@@ -21,47 +21,108 @@
 013     @INTERRUPT_AREA
 014     @INTERRUPT_AREA
 015     @INTERRUPT_AREA
-016     movimiento
-017-018 contador
-019     MAIN.@SCRATCH1
-01A     @delay_ms3.P1
+016     @INTERRUPT_AREA
+017     contador
+018     indice_movimiento
+019     num_movimientos
+01A-01E array_movimientos
+01F-023 array_tiempos
+024     interrupcion
+025     ULTRA_SONIDOS_FRENTE.dist
+025     ULTRA_SONIDOS_DERE.dist
+025     @delay_ms2.P1
+025     ULTRA_SONIDOS_IZQUI.dist
+025     MAIN.@SCRATCH1
+026-027 srf_measure_cm_izqui.m
+026-027 srf_measure_cm_frente.m
+026-027 srf_measure_cm_dere.m
+026     ULTRA_SONIDOS_FRENTE.@SCRATCH1
+026     ULTRA_SONIDOS_DERE.@SCRATCH1
+026     ULTRA_SONIDOS_IZQUI.@SCRATCH1
+027     ULTRA_SONIDOS_FRENTE.@SCRATCH2
+027     ULTRA_SONIDOS_DERE.@SCRATCH2
+027     ULTRA_SONIDOS_IZQUI.@SCRATCH2
+028-029 srf_measure_cm_frente.m2
+028-029 srf_measure_cm_dere.m2
+028-029 srf_measure_cm_izqui.m2
+02A     @delay_ms1.P1
+02A     @I2C_READ_1.P2
+02A     @I2C_WRITE_1.P3
+02A     srf_measure_cm_frente.@SCRATCH1
+02A     srf_measure_cm_dere.@SCRATCH1
+02A     srf_measure_cm_izqui.@SCRATCH1
+02B     @I2C_READ_1.@SCRATCH1
+02B     srf_measure_cm_frente.@SCRATCH2
+02B     srf_measure_cm_dere.@SCRATCH2
+02B     srf_measure_cm_izqui.@SCRATCH2
+02C     @I2C_READ_1.@SCRATCH2
+02D     @delay_ms3.P1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P1
 FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P3
-FE9-FEA @READ_PROGRAM_MEMORY.P4
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000896  tmr0
-0008B4  @delay_ms3
-0008DE  inicializarTimer0PWM
-0008EC  MAIN
-0008EC  @cinit1
-000902  @cinit2
+000896  M1_H
+0008A4  M2_A
+0008B2  DELANTE
+0008B8  M1_A
+0008C6  M2_P
+0008D4  IZQUIERDA
+0008DC  M2_H
+0008EA  DERECHA
+0008F2  ATRAS
+0008F8  M1_P
+000908  PARAR
+00090E  @delay_ms3
+000936  tmr0
+00099A  @goto11093
+0009BE  inicializarTimer0PWM
+0009CA  M4_H
+0009DA  DISPARAR
+0009E0  @delay_ms2
+000A08  M4_P
+000A18  PARAR_I
+000A1C  M4_A
+000A2C  RECOGER
+000A32  IMPACTO
+000A56  @I2C_WRITE_1
+000A9E  @delay_ms1
+000AC6  @I2C_READ_1
+000B0E  srf_measure_cm_frente
+000C88  ULTRA_SONIDOS_FRENTE
+000CAC  srf_measure_cm_izqui
+000E26  ULTRA_SONIDOS_IZQUI
+000E4A  srf_measure_cm_dere
+000FC4  ULTRA_SONIDOS_DERE
+000FE8  MAIN
+000FE8  @cinit1
+000FFE  @cinit2
 
 Project Directory:
     C:\Users\padul\Desktop\GitHub\SMP\Comportamiento_Final\
 
 Project Files:
-    final.c                                                 [18-jun.-19 14:44  CRC=48006FD0]
-    mismov.h                                                [18-jun.-19 14:34  CRC=3CE11B43]
+    final.c                                                 [18-jun.-19 19:00  CRC=DCDDE6CD]
+    mismov.h                                                [18-jun.-19 18:22  CRC=F1551C31]
     tarjeta.h                                               [06-oct.-14 11:59  CRC=7C987D42]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18F4550.h [03-jul.-13 14:29  CRC=A157EDDE]
     srf02.h                                                 [18-jun.-19 13:43  CRC=2FD3BF81]
 
-Source signature=02797535
+Source signature=4BCAED20
 
 Units:
     final (main)

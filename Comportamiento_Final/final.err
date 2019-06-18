@@ -1,5 +1,7 @@
->>> Warning 203 "final.c" Line 31(1,1): Condition always TRUE
->>> Warning 202 "final.c" Line 5(5,15): Variable never used:   movimiento
-      Memory usage:   ROM=1%      RAM=1% - 1%
-      0 Errors,  2 Warnings.
+>>> Warning 203 "final.c" Line 70(1,1): Condition always TRUE
+>>> Warning 216 "final.c" Line 121(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms3)
+>>> Warning 216 "final.c" Line 121(1,2): Interrupts disabled during call to prevent re-entrancy:  (DELANTE)
+>>> Warning 216 "final.c" Line 121(1,2): Interrupts disabled during call to prevent re-entrancy:  (ATRAS)
+      Memory usage:   ROM=7%      RAM=2% - 2%
+      0 Errors,  4 Warnings.
 Build Successful.

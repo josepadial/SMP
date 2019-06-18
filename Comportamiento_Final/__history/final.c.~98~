@@ -1,0 +1,86 @@
+#include "mismov.h"
+#use delay (clock=48000000)
+#define MOVIMIENTO_DELANTE 0
+#define MOVIMIENTO_IZQUIERDA 1
+#define MOVIMIENTO_DERECHA 2
+#define MOVIMIENTO_ATRAS 3
+#define MOVIMIENTO_PARAR 4
+
+const long int valor = 0;
+long int contador = valor;
+int indice_movimiento = 0;
+int num_movimientos = 3;
+
+int array_movimientos[2] ;
+int array_tiempos[2];
+
+int interrupcion = 0;
+   
+
+
+void inicializarTimer0PWM(){ 
+   setup_timer_0(RTCC_INTERNAL|RTCC_DIV_4); 
+   enable_interrupts(GLOBAL); 
+} 
+
+#INT_TIMER0
+void tmr0(){
+   if (contador != 0){
+      switch(array_movimientos[indice_movimiento]){
+         case 0:
+            DELANTE();
+            break;
+         case 1:
+            IZQUIERDA();
+            break;
+         case 2:
+            DERECHA();
+            break;
+         case 3:
+            ATRAS();
+            break;
+         case 4:
+            PARAR();
+            break;
+      }
+      
+      contador --;
+   }
+   else{
+      indice_movimiento++;
+      if (indice_movimiento == num_movimientos){
+         disable_interrupts(INT_TIMER0);
+         interrupcion = 0;
+         indice_movimiento = 0;
+      }
+      else{
+         contador = array_tiempos[indice_movimiento];
+         PARAR();
+         delay_ms(100);
+      }
+   }
+   
+}
+
+void main() {
+   delay_ms(3000);
+   inicializarTimer0PWM();
+   led_on();
+   DELANTE();
+   
+   while(1){
+      if(!IN1 && interrupcion == 0){
+         array_movimientos[0] = 4;
+         array_movimientos[1] = 2;
+         array_movimientos[2] = 2;
+         array_tiempos[0] = 15;
+         array_tiempos[1] = 60;
+         array_tiempos[2] = 150;
+         contador = array_tiempos[0];
+         interrupcion = 1;
+         enable_interrupts(INT_TIMER0);
+         
+      }
+      
+   }
+}
