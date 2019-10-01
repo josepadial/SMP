@@ -3,7 +3,7 @@
 SMP-UGR(Sistemas microprocesador)
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Tabla de contenidos
 
 * [Acerca del projecto](#about-the-project)
   * [Construido con](#built-with)
