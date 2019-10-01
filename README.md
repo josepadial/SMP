@@ -25,6 +25,6 @@ Desarrollo de un Robot de Combate usando PIC16F84.
 Distribuido bajo la licencia MIT. Vea `LICENSE` para más información.
 
 <!-- CONTACTO -->
-## CONTACTO
+## Contacto
 
 Jose Antonio Padial Molina - joseapadialmolina@gmail.com
