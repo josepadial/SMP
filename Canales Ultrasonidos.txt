@@ -1,3 +1,0 @@
-0 blanco frente
-2 naranja derecha
-4 amarillo izquierda
