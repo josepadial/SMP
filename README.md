@@ -1,5 +1,5 @@
 <!-- PROJECT -->
-# SMP
+# SMP-UGR
 SMP-UGR(Sistemas microprocesador)
 
 <!-- TABLE OF CONTENTS -->
@@ -12,7 +12,7 @@ SMP-UGR(Sistemas microprocesador)
 
 
 <!-- Acerca del projecto -->
-## Acerca del projecto
+## Acerca del projecto 
 
 Desarrollo de un Robot de Combate usando PIC16F84.
 
